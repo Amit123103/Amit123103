@@ -11,6 +11,13 @@
 
 <br />
 
+<!-- PROFESSIONAL PROFILE IMAGE DISPLAY -->
+<div align="center">
+  <img src="assets/images/profile.png" width="220" style="border-radius: 50%; border: 3px solid #00F5FF; box-shadow: 0 0 20px #00F5FF;" alt="Amit Akhil Professional Profile Photo" />
+</div>
+
+<br />
+
 <!-- CYBERPUNK HUD NAVIGATION BAR -->
 <div align="center">
   <table border="0">
