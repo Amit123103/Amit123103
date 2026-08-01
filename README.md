@@ -11,6 +11,22 @@
 
 <br />
 
+<!-- CYBERPUNK HUD NAVIGATION BAR -->
+<div align="center">
+  <table border="0">
+    <tr>
+      <td align="center"><a href="#-whoami--architecture--overview"><b>💻 [ ABOUT ME ]</b></a></td>
+      <td align="center"><a href="#-3d-skills--tech-telemetry-matrix"><b>🧠 [ SKILLS MATRIX ]</b></a></td>
+      <td align="center"><a href="#-live-github-telemetry--analytics"><b>📊 [ TELEMETRY ]</b></a></td>
+      <td align="center"><a href="#-3d-project-showcase-gallery"><b>🚀 [ PROJECTS ]</b></a></td>
+      <td align="center"><a href="#-evolution--career-timeline"><b>🗺️ [ TIMELINE ]</b></a></td>
+      <td align="center"><a href="#-github-trophy-room"><b>🏆 [ TROPHIES ]</b></a></td>
+    </tr>
+  </table>
+</div>
+
+<br />
+
 <!-- QUICK HUD SOCIAL LINK BADGES -->
 <div align="center">
   <a href="https://www.linkedin.com/in/amit-akhil/" target="_blank">
@@ -28,6 +44,13 @@
   <a href="https://github.com/Amit123103">
     <img src="https://img.shields.io/badge/PORTFOLIO-00F5FF?style=for-the-badge&logo=firefox&logoColor=black" alt="Portfolio" />
   </a>
+</div>
+
+<br />
+
+<!-- OPERATIONAL STATS TELEMETRY BANNER -->
+<div align="center">
+  <img src="assets/svg/cyber_stats_banner.svg" alt="Operational Telemetry Banner" width="100%" />
 </div>
 
 <br />
@@ -81,7 +104,7 @@ I am a passionate **Machine Learning Engineer** and **Software Developer** focus
 <!-- =================================================================================== -->
 
 <div align="center">
-  <h2>🧠 3D SKILLS & TECH TELEMETRY MATRIX</h2>
+  <h2>🧠 3D SKILLS &amp; TECH TELEMETRY MATRIX</h2>
   <img src="assets/svg/skills_dashboard.svg" alt="3D Skills Dashboard Matrix" width="100%" />
 </div>
 
@@ -161,6 +184,14 @@ I am a passionate **Machine Learning Engineer** and **Software Developer** focus
 
 <br />
 
+### 📈 LIVE ACTIVITY GRAPH TELEMETRY
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Amit123103&theme=tokyo-night&area=true&hide_border=false" alt="GitHub Activity Graph" width="100%" />
+</div>
+
+<br />
+
 ### 🐍 3D CONTRIBUTION SNAKE ANIMATION
 
 <div align="center">
@@ -181,15 +212,21 @@ I am a passionate **Machine Learning Engineer** and **Software Developer** focus
   <table border="0">
     <tr>
       <td>
-        <img src="assets/svg/project_card_1.svg" alt="Project 1: Gesture Canvas" width="100%" />
+        <a href="https://github.com/Amit123103">
+          <img src="assets/svg/project_card_1.svg" alt="Project 1: Gesture Canvas" width="100%" />
+        </a>
       </td>
       <td>
-        <img src="assets/svg/project_card_2.svg" alt="Project 2: Emotion Detection AI" width="100%" />
+        <a href="https://github.com/Amit123103">
+          <img src="assets/svg/project_card_2.svg" alt="Project 2: Emotion Detection AI" width="100%" />
+        </a>
       </td>
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="assets/svg/project_card_3.svg" alt="Project 3: LLM Automation Pipeline" width="90%" />
+        <a href="https://github.com/Amit123103">
+          <img src="assets/svg/project_card_3.svg" alt="Project 3: LLM Automation Pipeline" width="90%" />
+        </a>
       </td>
     </tr>
   </table>
@@ -259,7 +296,7 @@ Welcome to the complete manual for maintaining and deploying this 3D Cyberpunk A
 This README is built using a hybrid architecture of:
 1. **Native Animated SVG Assets (`assets/svg/`)**: Custom SVG vectors rendered with `<style>`, `@keyframes`, radial/linear gradients, filter drop-shadows, and glassmorphism blurs compatible with GitHub markdown.
 2. **GitHub Actions Telemetry (`.github/workflows/`)**: Automated workflows (`snake.yml`, `metrics.yml`, `update.yml`) that refresh 3D contribution graphs and profile stats.
-3. **Dynamic API Telemetry Cards**: Integrated live services for GitHub Stats, Top Languages, Streak Stats, and Trophies.
+3. **Dynamic API Telemetry Cards**: Integrated live services for GitHub Stats, Top Languages, Activity Graph, Streak Stats, and Trophies.
 
 ---
 
@@ -292,21 +329,9 @@ If you wish to modify the neon cyberpunk color scheme across all SVGs:
 | **Card Container** | `#0B1020` | Secondary Glass Layer |
 | **Border Shimmer** | `#111827` | Inner Panel Fill |
 
-To update colors in the SVGs, search and replace the hex codes in `assets/svg/*.svg`.
-
 ---
 
-### 🚀 4. How to Update Project Showcase Cards
-
-To modify or add project cards in `assets/svg/project_card_1.svg`, `project_card_2.svg`, or `project_card_3.svg`:
-1. Open the respective SVG file in your editor.
-2. Update the title text inside `<text x="0" y="0" class="sans">`.
-3. Modify the tech stack pills inside `<rect>` and `<text>` tags.
-4. Update link buttons `href` parameters in `README.md`.
-
----
-
-### 📬 5. Support & Contact
+### 📬 4. Support & Contact
 
 - **GitHub**: [@Amit123103](https://github.com/Amit123103)
 - **LinkedIn**: [Amit Akhil](https://www.linkedin.com/in/amit-akhil/)
