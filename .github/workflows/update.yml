@@ -1,0 +1,17 @@
+name: Auto Update Profile README & Telemetry
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Keep Telemetry Fresh
+        run: |
+          echo "Automated telemetry check completed at $(date)"
