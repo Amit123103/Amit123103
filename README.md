@@ -1,8 +1,8 @@
 <!-- =================================================================================== -->
 <!-- ⚡ VIRTUAL 3D AI OPERATING SYSTEM - GITHUB PROFILE README                            -->
 <!-- Architecture Designed for Amit Akhil (@Amit123103)                                   -->
-<!-- Theme: Luxury Glassmorphism | Midnight Graphite | Cyan, Indigo & Emerald Glow        -->
-<!-- Design System: Inspired by Apple, OpenAI, Vercel, Linear, Tesla & Framer             -->
+<!-- Headline: Final Year CSE Student | Creator of MyKernel (64-bit x86_64 OS)             -->
+<!-- Tagline: "Building systems from the kernel to the cloud."                            -->
 <!-- =================================================================================== -->
 
 <div align="center">
@@ -24,11 +24,11 @@
   <table border="0">
     <tr>
       <td align="center"><a href="#-whoami--architecture--overview"><b>💻 [ ABOUT ME ]</b></a></td>
+      <td align="center"><a href="#-flagship-project-spotlight--mykernel-64-bit-x86_64-os"><b>⚙️ [ MYKERNEL OS ]</b></a></td>
       <td align="center"><a href="#-3d-skills--tech-telemetry-matrix"><b>🧠 [ SKILLS MATRIX ]</b></a></td>
       <td align="center"><a href="#-live-github-telemetry--analytics"><b>📊 [ TELEMETRY ]</b></a></td>
       <td align="center"><a href="#-3d-project-showcase-gallery"><b>🚀 [ PROJECTS ]</b></a></td>
-      <td align="center"><a href="#-evolution--career-timeline"><b>🗺️ [ TIMELINE ]</b></a></td>
-      <td align="center"><a href="#-github-trophy-room"><b>🏆 [ TROPHIES ]</b></a></td>
+      <td align="center"><a href="#-target-opportunities--career-goals"><b>🎯 [ CAREER GOALS ]</b></a></td>
     </tr>
   </table>
 </div>
@@ -79,25 +79,63 @@
 ```syslog
 [SYSTEM DIAGNOSTIC LOG :: AMIT AKHIL]
 ---------------------------------------------------------------------------------------
-> CORE ROLE        : Machine Learning Engineer & Software Developer
-> FOCUS DOMAINS    : Computer Vision, Deep Learning, Full-Stack Web & Automation
-> LOCATION         : India [IN]
-> STATUS           : Engineering Next-Gen Interactive AI & Web Applications
-> CORE PHILOSOPHY  : "Learning by building is the fastest vector to mastery."
+> EDUCATION        : Final Year Computer Science Engineering (CSE) Student
+> FLAGSHIP BUILD   : Creator of MyKernel (64-Bit x86_64 Operating System Kernel)
+> SPECIALIZATIONS  : Operating Systems, Systems Programming, Machine Learning, MLOps, DevOps
+> MOTTO            : "Building systems from the kernel to the cloud."
+> PHILOSOPHY       : "The best way to learn is by building from scratch."
 ---------------------------------------------------------------------------------------
 ```
 
-I am a **Machine Learning Engineer** and **Software Developer** focused on turning complex algorithms into intuitive, real-world interactive systems. I work at the convergence of artificial intelligence, computer vision, and scalable full-stack web applications.
+I am a **Final Year Computer Science Engineering student** passionate about **Operating Systems, Systems Programming, Machine Learning, MLOps, DevOps, and Blockchain**. I enjoy solving complex engineering problems by building software from the ground up and continuously exploring how modern computing systems work.
 
-- 🤖 **Deep Learning & Vision**: Designing real-time gesture-controlled systems, object detection pipelines, and facial emotion analysis engines.
-- ⚡ **Full-Stack Development**: Engineering high-performance web platforms using React, Vite, FastAPI, Flask, and Node.js.
-- ☁️ **Cloud & Automation**: Building CI/CD pipelines, containerized microservices with Docker, and agentic LLM workflows.
-- 💡 **Open Source Commitment**: Actively developing, experimenting, and sharing production-ready code with the global developer ecosystem.
+Alongside low-level systems programming, I specialize in building end-to-end Machine Learning pipelines, Python automation, Docker & Kubernetes container orchestration, CI/CD pipelines, and cloud infrastructure.
+
+> *"Building software from scratch deepens architectural understanding and empowers engineers to create robust, production-grade applications that scale reliably from low-level hardware to cloud deployments."*
 
 <br />
 
 <!-- =================================================================================== -->
-<!-- 🪪 SECTION 2: 3D GLASSMORPHISM PROFILE HUD                                          -->
+<!-- ⚙️ SECTION 2: FLAGSHIP PROJECT SPOTLIGHT - MYKERNEL (64-BIT x86_64 OS)             -->
+<!-- =================================================================================== -->
+
+<div align="center">
+  <h2>⚙️ FLAGSHIP PROJECT SPOTLIGHT :: MYKERNEL</h2>
+</div>
+
+### 🚀 **MyKernel — 64-Bit x86_64 Modular Operating System Kernel**
+*Built from scratch using C and NASM Assembly Language.*
+
+**MyKernel** is a bare-metal 64-bit operating system kernel engineered to provide deep hands-on implementation of core operating system concepts, computer architecture, and low-level networking.
+
+#### 🛠️ Architectural Components & Technical Highlights:
+- 🔌 **Multiboot2 Support**: Boots seamlessly via GRUB with full Multiboot2 specification compliance.
+- 🧠 **Memory Management Unit**: Features physical page allocation, 4-level paging virtual memory, and kernel heap management (`kmalloc`/`kfree`).
+- ⚡ **Process Scheduling & IPC**: Preemptive process context switching, task state management, and inter-process communication (IPC) queues.
+- 📁 **Virtual File System (VFS)**: Abstraction layer supporting a custom **FAT32** file system driver for storage read/write operations.
+- 📡 **Complete Network Stack**: Implemented from scratch:
+  - **L2 / Link Layer**: Ethernet Frame Driver & ARP Protocol Resolution
+  - **L3 / Network Layer**: IPv4 Packet Routing & ICMP Echo (Ping) Implementation
+  - **L4 / Transport Layer**: UDP Socket Management & Stateful TCP Handshake/Data Transfer
+  - **Application Layer**: Auto-IP Configuration via DHCP Client Protocol
+
+```
++-------------------------------------------------------------------------------+
+|                             MYKERNEL ARCHITECTURE                             |
++-------------------------------------------------------------------------------+
+| [App Layer]    DHCP Client / HTTP Server / Custom Shell Apps                  |
+| [Transport]    TCP (Stateful Sockets) | UDP (Datagrams)                      |
+| [Network]      IPv4 Routing | ICMP Echo | ARP Resolution Protocol             |
+| [File System]  Virtual File System (VFS) -> FAT32 Driver                      |
+| [Kernel Core]  Multiboot2 | 64-Bit Paging | Memory Allocator | IPC Scheduler   |
+| [Hardware]     Ethernet NIC Driver | x86_64 CPU Interrupts (IDT/GDT) | Timers    |
++-------------------------------------------------------------------------------+
+```
+
+<br />
+
+<!-- =================================================================================== -->
+<!-- 🪪 SECTION 3: 3D GLASSMORPHISM PROFILE HUD                                          -->
 <!-- =================================================================================== -->
 
 <div align="center">
@@ -108,7 +146,7 @@ I am a **Machine Learning Engineer** and **Software Developer** focused on turni
 <br />
 
 <!-- =================================================================================== -->
-<!-- 🧠 SECTION 3: 3D SKILLS MATRIX & TECH TELEMETRY                                     -->
+<!-- 🧠 SECTION 4: 3D SKILLS MATRIX & TECH TELEMETRY                                     -->
 <!-- =================================================================================== -->
 
 <div align="center">
@@ -118,63 +156,21 @@ I am a **Machine Learning Engineer** and **Software Developer** focused on turni
 
 <br />
 
-### 🛠️ CATEGORIZED TECH STACK & ECOSYSTEM
+### 🛠️ CATEGORIZED TECHNICAL SKILL MATRIX
 
-#### 🐍 Programming Languages
-<p align="left">
-  <img src="https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C" />
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-</p>
-
-#### 🧠 Machine Learning, AI & Data Science
-<p align="left">
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=TensorFlow&logoColor=white" alt="TensorFlow" />
-  <img src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=Keras&logoColor=white" alt="Keras" />
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn" />
-  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" />
-  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain" />
-  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
-  <img src="https://img.shields.io/badge/Matplotlib-ffffff?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="Matplotlib" />
-  <img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" alt="Plotly" />
-  <img src="https://img.shields.io/badge/MLflow-d9ead3?style=for-the-badge&logo=numpy&logoColor=blue" alt="MLflow" />
-</p>
-
-#### ⚡ Web Development & Frameworks
-<p align="left">
-  <img src="https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS" />
-</p>
-
-#### ☁️ Cloud, DevOps & Databases
-<p align="left">
-  <img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="GCP" />
-  <img src="https://img.shields.io/badge/Microsoft_Azure-0072C6?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure" />
-  <img src="https://img.shields.io/badge/Docker-0db7ed?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/Kubernetes-326ce5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" />
-  <img src="https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-2671E5?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-  <img src="https://img.shields.io/badge/MongoDB-4ea94b?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
-  <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white" alt="Render" />
-</p>
+| Category | Core Technologies & Frameworks |
+| :--- | :--- |
+| **Operating Systems & Systems Dev** | C, C++, NASM Assembly, 64-bit x86_64 Kernel Dev, Linux System Programming, Multiboot2, VFS, Memory Paging |
+| **Machine Learning & MLOps** | Python, PyTorch, TensorFlow, Keras, scikit-learn, OpenCV, MLflow, Model Deployment & Pipeline Monitoring |
+| **DevOps & Cloud Infrastructure** | Docker, Kubernetes, CI/CD (GitHub Actions), Linux Administration, Advanced Configuration Management |
+| **Networking & Protocols** | Computer Networks (TCP/IP, UDP, DHCP, ICMP, ARP), Socket Programming, Network Packet Analysis |
+| **Web & Software Engineering** | React.js, FastAPI, Flask, Node.js, JavaScript, HTML5, CSS3, REST APIs |
+| **Distributed Systems & Storage** | Blockchain Architecture, MongoDB, MySQL, Git, GitHub |
 
 <br />
 
 <!-- =================================================================================== -->
-<!-- 📊 SECTION 4: LIVE GITHUB ANALYTICS & 3D CONTRIBUTIONS                               -->
+<!-- 📊 SECTION 5: LIVE GITHUB ANALYTICS & 3D CONTRIBUTIONS                               -->
 <!-- =================================================================================== -->
 
 <div align="center">
@@ -209,7 +205,7 @@ I am a **Machine Learning Engineer** and **Software Developer** focused on turni
 <br />
 
 <!-- =================================================================================== -->
-<!-- 🚀 SECTION 5: 3D PROJECT SHOWCASE GALLERY                                           -->
+<!-- 🚀 SECTION 6: 3D PROJECT SHOWCASE GALLERY                                           -->
 <!-- =================================================================================== -->
 
 <div align="center">
@@ -221,12 +217,12 @@ I am a **Machine Learning Engineer** and **Software Developer** focused on turni
     <tr>
       <td>
         <a href="https://github.com/Amit123103">
-          <img src="assets/svg/project_card_1.svg" alt="Project 1: Gesture Canvas" width="100%" />
+          <img src="assets/svg/project_card_1.svg" alt="Project 1: MyKernel 64-bit OS" width="100%" />
         </a>
       </td>
       <td>
         <a href="https://github.com/Amit123103">
-          <img src="assets/svg/project_card_2.svg" alt="Project 2: Emotion Detection AI" width="100%" />
+          <img src="assets/svg/project_card_2.svg" alt="Project 2: Emotion Detection AI & MLOps" width="100%" />
         </a>
       </td>
     </tr>
@@ -243,7 +239,27 @@ I am a **Machine Learning Engineer** and **Software Developer** focused on turni
 <br />
 
 <!-- =================================================================================== -->
-<!-- 🗺️ SECTION 6: MILESTONES & EVOLUTION TIMELINE                                       -->
+<!-- 🎯 SECTION 7: TARGET OPPORTUNITIES & CAREER OBJECTIVES                              -->
+<!-- =================================================================================== -->
+
+<div align="center">
+  <h2>🎯 TARGET CAREER OPPORTUNITIES</h2>
+</div>
+
+I am actively seeking full-time opportunities and engineering roles where I can contribute to core systems, containerized infrastructure, and AI engineering:
+
+- 💻 **Software Engineer**
+- ⚙️ **Systems Software Engineer**
+- 🐧 **Operating Systems Engineer**
+- 🚀 **DevOps Engineer**
+- 🤖 **MLOps Engineer**
+
+> *Always open to connecting with fellow developers, recruiters, engineering teams, and technology enthusiasts!*
+
+<br />
+
+<!-- =================================================================================== -->
+<!-- 🗺️ SECTION 8: MILESTONES & EVOLUTION TIMELINE                                       -->
 <!-- =================================================================================== -->
 
 <div align="center">
@@ -254,7 +270,7 @@ I am a **Machine Learning Engineer** and **Software Developer** focused on turni
 <br />
 
 <!-- =================================================================================== -->
-<!-- 🏆 SECTION 7: TROPHIES & ACHIEVEMENTS                                                -->
+<!-- 🏆 SECTION 9: TROPHIES & ACHIEVEMENTS                                                -->
 <!-- =================================================================================== -->
 
 <div align="center">
@@ -265,7 +281,7 @@ I am a **Machine Learning Engineer** and **Software Developer** focused on turni
 <br />
 
 <!-- =================================================================================== -->
-<!-- ☕ SECTION 8: DEVELOPER LOUNGE & DYNAMIC WIDGETS                                     -->
+<!-- ☕ SECTION 10: DEVELOPER LOUNGE & DYNAMIC WIDGETS                                    -->
 <!-- =================================================================================== -->
 
 <div align="center">
@@ -324,8 +340,6 @@ To ensure all automated features function seamlessly:
 ---
 
 ### 🎨 3. Color Palette Customization Guide
-
-If you wish to modify the neon cyberpunk color scheme across all SVGs:
 
 | Element | Hex Color Code | Design Token |
 | :--- | :--- | :--- |

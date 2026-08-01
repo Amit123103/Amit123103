@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 340" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 360" width="100%" height="100%">
   <defs>
     <linearGradient id="term-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#050816" stop-opacity="0.98"/>
-      <stop offset="100%" stop-color="#0B1020" stop-opacity="0.95"/>
+      <stop offset="0%" stop-color="#030712" stop-opacity="0.98"/>
+      <stop offset="100%" stop-color="#0B0F19" stop-opacity="0.95"/>
     </linearGradient>
 
     <linearGradient id="term-border" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F5FF" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#00FFA3" stop-opacity="0.8"/>
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.8"/>
     </linearGradient>
 
     <filter id="term-glow" x="-20%" y="-20%" width="140%" height="140%">
@@ -21,65 +21,59 @@
 
   <style>
     @keyframes cursor-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-    @keyframes text-fade { 0% { opacity: 0.2; } 50% { opacity: 1; } 100% { opacity: 0.2; } }
-    .mono { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 13px; }
+    .mono { font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: 13px; }
     .blink { animation: cursor-blink 1s infinite; }
   </style>
 
-  <!-- Main Window Frame -->
-  <rect x="5" y="5" width="940" height="330" rx="12" fill="url(#term-bg)" stroke="url(#term-border)" stroke-width="1.5" filter="url(#term-glow)"/>
+  <!-- Window Frame -->
+  <rect x="5" y="5" width="940" height="350" rx="12" fill="url(#term-bg)" stroke="url(#term-border)" stroke-width="1.5" filter="url(#term-glow)"/>
 
   <!-- Window Header Bar -->
   <rect x="5" y="5" width="940" height="36" rx="12" fill="#111827"/>
-  <!-- Window Controls Buttons -->
   <circle cx="30" cy="23" r="6" fill="#FF5F56"/>
   <circle cx="50" cy="23" r="6" fill="#FFBD2E"/>
   <circle cx="70" cy="23" r="6" fill="#27C93F"/>
 
   <!-- Title Text -->
   <text x="475" y="27" class="mono" font-size="12" font-weight="bold" fill="#7DF9FF" text-anchor="middle">
-    bash - amit@ai-os-node-01: ~/workspace/ai_pipeline
+    bash - amit@mykernel-x86_64: ~/os_kernel/build
   </text>
 
   <!-- Terminal Content Lines -->
   <g class="mono" transform="translate(30, 70)">
     <!-- Line 1 -->
-    <text x="0" y="0" fill="#00FFA3" font-weight="bold">amit@ai-os-node-01:~$</text>
-    <text x="180" y="0" fill="#ffffff"> ./init_ai_kernel.sh --mode=production --target=ml_vision</text>
+    <text x="0" y="0" fill="#10B981" font-weight="bold">amit@mykernel:~$</text>
+    <text x="145" y="0" fill="#ffffff"> ./boot_mykernel.sh --arch=x86_64 --multiboot2 --vfs=fat32</text>
 
     <!-- Line 2 -->
-    <text x="0" y="25" fill="#7DF9FF">[INFO]</text>
-    <text x="65" y="25" fill="#ffffff"> Loading Neural Architecture: ResNet + Transformer Backbones...</text>
+    <text x="0" y="25" fill="#06B6D4">[KERNEL]</text>
+    <text x="75" y="25" fill="#ffffff"> Initializing 64-bit Long Mode | NASM Assembly + C Kernel Core</text>
 
     <!-- Line 3 -->
-    <text x="0" y="50" fill="#7DF9FF">[INFO]</text>
-    <text x="65" y="50" fill="#ffffff"> CUDA Device 0: NVIDIA RTX Tensor Core initialized (VRAM 100% Ready)</text>
+    <text x="0" y="50" fill="#06B6D4">[MMU]</text>
+    <text x="75" y="50" fill="#ffffff"> Paging Enabled: Virtual Memory, Physical Allocator &amp; Kernel Heap Ready</text>
 
     <!-- Line 4 -->
-    <text x="0" y="75" fill="#00FFA3">[SUCCESS]</text>
-    <text x="95" y="75" fill="#00FFA3"> Gesture-Based Canvas &amp; Emotion Recognition Models Loaded!</text>
+    <text x="0" y="75" fill="#06B6D4">[VFS/IPC]</text>
+    <text x="85" y="75" fill="#ffffff"> Mounted FAT32 Virtual File System | IPC Channels &amp; Scheduler Active</text>
 
     <!-- Line 5 -->
-    <text x="0" y="100" fill="#6A5CFF">[METRICS]</text>
-    <text x="95" y="100" fill="#ffffff"> Epoch 50/50 | Loss: 0.0014 | Accuracy: 99.82% | Inference: 2.1ms</text>
+    <text x="0" y="100" fill="#10B981">[NETSTACK]</text>
+    <text x="95" y="100" fill="#10B981" font-weight="bold"> Ethernet, ARP, IPv4, ICMP, UDP, TCP &amp; DHCP stack bound to port 80</text>
 
     <!-- Line 6 -->
-    <text x="0" y="125" fill="#00FFA3">amit@ai-os-node-01:~$</text>
-    <text x="180" y="125" fill="#ffffff"> python3 -m portfolio.deploy --host=github --status=active</text>
+    <text x="0" y="125" fill="#4F46E5">[MLOPS/DEVOPS]</text>
+    <text x="130" y="125" fill="#ffffff"> Docker + K8s cluster sync: Containerized AI model pipelines active</text>
 
     <!-- Line 7 -->
-    <text x="0" y="150" fill="#00F5FF">[DEPLOY]</text>
-    <text x="80" y="150" fill="#ffffff"> Syncing repositories, 3D showcases, and live analytics telemetry...</text>
-
-    <!-- Line 8 -->
-    <text x="0" y="175" fill="#00FFA3">[READY]</text>
-    <text x="70" y="175" fill="#00FFA3" font-weight="bold"> System operating at peak performance. Welcome to Amit Akhil's Space!</text>
+    <text x="0" y="150" fill="#10B981">[SUCCESS]</text>
+    <text x="95" y="150" fill="#06B6D4"> MyKernel 64-bit OS running seamlessly from low-level to cloud!</text>
 
     <!-- Prompt Line -->
-    <g transform="translate(0, 205)">
-      <text x="0" y="0" fill="#00FFA3" font-weight="bold">amit@ai-os-node-01:~$</text>
-      <text x="180" y="0" fill="#ffffff"> execute_next_idea.py</text>
-      <rect class="blink" x="350" y="-12" width="9" height="15" fill="#00F5FF"/>
+    <g transform="translate(0, 185)">
+      <text x="0" y="0" fill="#10B981" font-weight="bold">amit@mykernel:~$</text>
+      <text x="145" y="0" fill="#ffffff"> deploy_next_systems_pipeline.py</text>
+      <rect class="blink" x="420" y="-12" width="9" height="15" fill="#06B6D4"/>
     </g>
   </g>
 </svg>

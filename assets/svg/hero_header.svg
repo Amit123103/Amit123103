@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="100%" height="100%">
   <defs>
-    <!-- Agency Luxury Background Gradients (Space Black to Midnight Indigo) -->
+    <!-- Background Gradients -->
     <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#030712"/>
       <stop offset="40%" stop-color="#0B0F19"/>
       <stop offset="100%" stop-color="#111827"/>
     </linearGradient>
 
-    <!-- Glowing Electric Indigo to Cyan Accent Mesh -->
+    <!-- Glowing Indigo to Cyan Accent Mesh -->
     <linearGradient id="indigo-cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#4F46E5"/>
       <stop offset="50%" stop-color="#06B6D4"/>
@@ -26,7 +26,7 @@
       <stop offset="100%" stop-color="#10B981" stop-opacity="0.7"/>
     </linearGradient>
 
-    <!-- Gaussian Blur Filters for Specular Lighting -->
+    <!-- Gaussian Blur Filters -->
     <filter id="hyper-glow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="12" result="blur1"/>
       <feGaussianBlur stdDeviation="6" result="blur2"/>
@@ -45,7 +45,7 @@
       </feMerge>
     </filter>
 
-    <!-- Perspective Grid Pattern -->
+    <!-- Grid Pattern -->
     <pattern id="grid-pattern" width="50" height="50" patternUnits="userSpaceOnUse">
       <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#06B6D4" stroke-opacity="0.07" stroke-width="1"/>
     </pattern>
@@ -73,14 +73,10 @@
 
   <!-- Background Base -->
   <rect width="1200" height="460" rx="20" fill="url(#hero-bg)"/>
-
-  <!-- Grid Perspective -->
   <rect width="1200" height="460" rx="20" fill="url(#grid-pattern)"/>
-
-  <!-- Radial Aurora Core Glow -->
   <circle cx="600" cy="230" r="380" fill="url(#aurora-core)"/>
 
-  <!-- Meteors / Light Beams -->
+  <!-- Meteors -->
   <g opacity="0.65">
     <line class="meteor-a" x1="1050" y1="30" x2="1200" y2="-120" stroke="url(#indigo-cyan-glow)" stroke-width="2" stroke-linecap="round"/>
     <line class="meteor-b" x1="780" y1="15" x2="930" y2="-135" stroke="#10B981" stroke-width="1.8" stroke-linecap="round"/>
@@ -101,20 +97,20 @@
   <!-- Top Cyberpunk OS Status Header -->
   <g class="font-mono" font-size="12" fill="#9CA3AF">
     <circle cx="65" cy="68" r="5" fill="#10B981" filter="url(#subtle-blur)"/>
-    <text x="80" y="72" fill="#10B981" font-weight="700">SYSTEM ONLINE</text>
-    <text x="220" y="72" opacity="0.4">|</text>
-    <text x="240" y="72" fill="#F9FAFB" opacity="0.9">VIRTUAL AI OS :: v5.0.0 (LUXURY EDITION)</text>
-    <text x="940" y="72" fill="#06B6D4" opacity="0.95" text-anchor="end">REGION: ASIA-SOUTH [IN]</text>
-    <text x="1130" y="72" fill="#4F46E5" font-weight="700" text-anchor="end">NODE :: SECURE_TLS_V1.3</text>
+    <text x="80" y="72" fill="#10B981" font-weight="700">MYKERNEL v1.0 ONLINE</text>
+    <text x="240" y="72" opacity="0.4">|</text>
+    <text x="260" y="72" fill="#F9FAFB" opacity="0.9">ARCH :: 64-BIT x86_64 MULTIBOOT2</text>
+    <text x="940" y="72" fill="#06B6D4" opacity="0.95" text-anchor="end">FINAL YEAR CSE [IN]</text>
+    <text x="1130" y="72" fill="#4F46E5" font-weight="700" text-anchor="end">KERNEL -&gt; CLOUD</text>
     <line x1="55" y1="88" x2="1145" y2="88" stroke="#06B6D4" stroke-opacity="0.18" stroke-dasharray="8 4"/>
   </g>
 
   <!-- Hero Main Title & Tagline -->
   <g text-anchor="middle">
     <!-- Role Badge Pill -->
-    <rect x="400" y="115" width="400" height="36" rx="18" fill="#111827" fill-opacity="0.9" stroke="#06B6D4" stroke-opacity="0.6"/>
+    <rect x="370" y="115" width="460" height="36" rx="18" fill="#111827" fill-opacity="0.9" stroke="#06B6D4" stroke-opacity="0.6"/>
     <text x="600" y="138" class="font-mono" font-size="13" fill="#10B981" font-weight="700" letter-spacing="2">
-      ⚡ AI &amp; FULL-STACK SOFTWARE ARCHITECT
+      ⚡ CREATOR OF MYKERNEL (64-BIT x86_64 OS)
     </text>
 
     <!-- Main Title: AMIT AKHIL -->
@@ -125,36 +121,30 @@
     <!-- Animated Typing Tagline -->
     <g class="font-mono" font-size="18" fill="#F9FAFB">
       <text x="600" y="282" opacity="0.95">
-        &gt; Engineering Intelligent AI Systems &amp; Next-Gen Interactive Web Platforms<tspan class="cursor-glow" fill="#10B981">_</tspan>
+        &gt; Building systems from the kernel to the cloud.<tspan class="cursor-glow" fill="#10B981">_</tspan>
       </text>
     </g>
 
     <!-- Feature Pills -->
     <g class="font-mono" font-size="12" transform="translate(0, 335)">
       <!-- Pill 1 -->
-      <g transform="translate(330, 0)">
-        <rect x="0" y="0" width="170" height="36" rx="18" fill="#111827" fill-opacity="0.9" stroke="#06B6D4" stroke-opacity="0.6"/>
-        <text x="85" y="22" fill="#06B6D4" font-weight="700">🧠 Machine Learning</text>
+      <g transform="translate(310, 0)">
+        <rect x="0" y="0" width="180" height="36" rx="18" fill="#111827" fill-opacity="0.9" stroke="#06B6D4" stroke-opacity="0.6"/>
+        <text x="90" y="22" fill="#06B6D4" font-weight="700">⚙️ OS &amp; Kernel Dev</text>
       </g>
       <!-- Pill 2 -->
-      <g transform="translate(515, 0)">
-        <rect x="0" y="0" width="170" height="36" rx="18" fill="#111827" fill-opacity="0.9" stroke="#4F46E5" stroke-opacity="0.6"/>
-        <text x="85" y="22" fill="#4F46E5" font-weight="700">⚡ Computer Vision</text>
+      <g transform="translate(510, 0)">
+        <rect x="0" y="0" width="180" height="36" rx="18" fill="#111827" fill-opacity="0.9" stroke="#4F46E5" stroke-opacity="0.6"/>
+        <text x="90" y="22" fill="#4F46E5" font-weight="700">🚀 MLOps &amp; DevOps</text>
       </g>
       <!-- Pill 3 -->
-      <g transform="translate(700, 0)">
-        <rect x="0" y="0" width="170" height="36" rx="18" fill="#111827" fill-opacity="0.9" stroke="#10B981" stroke-opacity="0.6"/>
-        <text x="85" y="22" fill="#10B981" font-weight="700">🚀 Cloud Architecture</text>
+      <g transform="translate(710, 0)">
+        <rect x="0" y="0" width="180" height="36" rx="18" fill="#111827" fill-opacity="0.9" stroke="#10B981" stroke-opacity="0.6"/>
+        <text x="90" y="22" fill="#10B981" font-weight="700">🔗 Blockchain &amp; Cloud</text>
       </g>
     </g>
   </g>
 
   <!-- CRT Scanline Overlay -->
   <rect width="1200" height="460" rx="20" fill="url(#scanline-pattern)" pointer-events="none"/>
-
-  <!-- Corner Accents -->
-  <path d="M 45 410 L 45 420 L 55 420" stroke="#06B6D4" stroke-width="2" fill="none"/>
-  <path d="M 1155 410 L 1155 420 L 1145 420" stroke="#06B6D4" stroke-width="2" fill="none"/>
-  <path d="M 45 55 L 45 45 L 55 45" stroke="#06B6D4" stroke-width="2" fill="none"/>
-  <path d="M 1155 55 L 1155 45 L 1145 45" stroke="#06B6D4" stroke-width="2" fill="none"/>
 </svg>
