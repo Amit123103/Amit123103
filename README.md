@@ -1,20 +1,21 @@
 <!-- =================================================================================== -->
-<!-- ⚡ VIRTUAL 3D AI OPERATING SYSTEM - GITHUB PROFILE README                            -->
+<!-- ⚡ QUANTUM 3D VIRTUAL AI OPERATING SYSTEM - GITHUB PROFILE README                    -->
 <!-- Architecture Designed for Amit Akhil (@Amit123103)                                   -->
-<!-- Headline: Final Year CSE Student | Creator of MyKernel (64-bit x86_64 OS)             -->
-<!-- Tagline: "Building systems from the kernel to the cloud."                            -->
+<!-- Headline: Final Year CSE Student | Creator of MyKernel (64-Bit x86_64 OS)             -->
+<!-- Motto: "Building systems from the kernel to the cloud."                              -->
+<!-- Design Engine: Quantum Holographic v6.0 | Obsidian Black | Emerald & Violet Glow     -->
 <!-- =================================================================================== -->
 
 <div align="center">
-  <!-- 3D CYBERPUNK HERO HEADER BANNER SVG -->
-  <img src="assets/svg/hero_header.svg" alt="Amit Akhil 3D Virtual AI OS Hero Banner" width="100%" />
+  <!-- 3D QUANTUM HERO HEADER SVG -->
+  <img src="assets/svg/hero_header.svg" alt="Amit Akhil 3D Quantum Virtual AI OS Hero Banner" width="100%" />
 </div>
 
 <br />
 
 <!-- PROFESSIONAL PROFILE PORTRAIT INTEGRATION -->
 <div align="center">
-  <img src="assets/images/profile.png" width="220" style="border-radius: 50%; border: 3px solid #06B6D4; box-shadow: 0 0 25px #06B6D4;" alt="Amit Akhil Professional Portrait" />
+  <img src="assets/images/profile.png" width="220" style="border-radius: 50%; border: 3px solid #00FF9D; box-shadow: 0 0 30px #00FF9D;" alt="Amit Akhil Professional Portrait" />
 </div>
 
 <br />
@@ -50,7 +51,7 @@
     <img src="https://img.shields.io/badge/EMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
   <a href="https://github.com/Amit123103">
-    <img src="https://img.shields.io/badge/PORTFOLIO-06B6D4?style=for-the-badge&logo=firefox&logoColor=black" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/PORTFOLIO-00FF9D?style=for-the-badge&logo=firefox&logoColor=black" alt="Portfolio" />
   </a>
 </div>
 
@@ -289,20 +290,20 @@ I am actively seeking full-time opportunities and engineering roles where I can 
 </div>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Consolas&size=16&duration=3000&pause=1000&color=10B981&center=true&vCenter=true&width=700&lines=Quote%3A+%22The+best+way+to+predict+the+future+is+to+invent+it.%22;Quote%3A+%22First%2C+solve+the+problem.+Then%2C+write+the+code.%22;Quote%3A+%22Talk+is+cheap.+Show+me+the+code.%22" alt="Dev Quotes" />
+  <img src="https://readme-typing-svg.demolab.com?font=Consolas&size=16&duration=3000&pause=1000&color=00FF9D&center=true&vCenter=true&width=700&lines=Quote%3A+%22The+best+way+to+predict+the+future+is+to+invent+it.%22;Quote%3A+%22First%2C+solve+the+problem.+Then%2C+write+the+code.%22;Quote%3A+%22Talk+is+cheap.+Show+me+the+code.%22" alt="Dev Quotes" />
 </p>
 
 <br />
 
 <!-- VISITOR COUNTER & FOOTER -->
 <div align="center">
-  <hr stroke="#06B6D4" />
+  <hr stroke="#00FF9D" />
   <p>
     <a href="https://visitcount.itsvg.in">
       <img src="https://visitcount.itsvg.in/api?id=Amit123103&icon=0&color=0" alt="Visitor Counter" />
     </a>
   </p>
-  <p><i>⚡ Engineered with passion by <a href="https://github.com/Amit123103">Amit Akhil</a> | Powered by Virtual 3D AI OS Architecture</i></p>
+  <p><i>⚡ Engineered with passion by <a href="https://github.com/Amit123103">Amit Akhil</a> | Powered by Quantum 3D Virtual AI OS Architecture v6.0</i></p>
 </div>
 
 <br />
@@ -314,7 +315,7 @@ I am actively seeking full-time opportunities and engineering roles where I can 
 
 ## 📘 COMPREHENSIVE DOCUMENTATION & CUSTOMIZATION GUIDE
 
-Welcome to the complete manual for maintaining and deploying this Agency-Grade Virtual 3D AI OS GitHub Profile README.
+Welcome to the complete manual for maintaining and deploying this Quantum 3D Virtual AI OS GitHub Profile README.
 
 ### 🏗️ 1. Architecture Overview
 This README is built using a hybrid architecture of:
@@ -339,16 +340,16 @@ To ensure all automated features function seamlessly:
 
 ---
 
-### 🎨 3. Color Palette Customization Guide
+### 🎨 3. Color Palette Customization Guide (v6.0 Quantum Tokens)
 
 | Element | Hex Color Code | Design Token |
 | :--- | :--- | :--- |
-| **Primary Cyan Glow** | `#06B6D4` | Neon Cyan Accent |
-| **Deep Indigo Glow** | `#4F46E5` | Electric Indigo |
-| **Aurora Emerald** | `#10B981` | System Status LED / Success |
-| **Crystal White** | `#F9FAFB` | Primary High-Contrast Text |
-| **Space Black** | `#030712` | Background Canvas |
-| **Midnight Navy** | `#0B0F19` | Secondary Glass Layer |
+| **Cyber Emerald** | `#00FF9D` | Primary Status & Accent |
+| **Neon Cyan Glow** | `#00E5FF` | Secondary Glow |
+| **Plasma Violet** | `#9D00FF` | Electric Accent |
+| **Solar Gold** | `#FFD700` | Highlight Token |
+| **Obsidian Black** | `#0A0D14` | Canvas Base |
+| **Midnight Navy** | `#0F1424` | Secondary Glass Layer |
 
 ---
 
@@ -360,4 +361,4 @@ To ensure all automated features function seamlessly:
 
 ---
 
-<!-- End of Virtual 3D AI OS README.md -->
+<!-- End of Quantum 3D Virtual AI OS README.md -->

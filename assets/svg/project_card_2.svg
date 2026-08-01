@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="100%" height="100%">
   <defs>
     <linearGradient id="card-bg-2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B1020" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#050816" stop-opacity="0.98"/>
+      <stop offset="0%" stop-color="#0F1424" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0A0D14" stop-opacity="0.98"/>
     </linearGradient>
 
-    <linearGradient id="purple-green-2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#6A5CFF"/>
-      <stop offset="100%" stop-color="#00FFA3"/>
+    <linearGradient id="violet-cyan-2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9D00FF"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
     </linearGradient>
 
     <filter id="glow-2" x="-20%" y="-20%" width="140%" height="140%">
@@ -20,52 +20,47 @@
   </defs>
 
   <style>
-    .mono { font-family: 'Consolas', 'Fira Code', monospace; }
-    .sans { font-family: 'Segoe UI', Roboto, sans-serif; }
+    .mono { font-family: 'SF Mono', 'Fira Code', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
   </style>
 
-  <!-- Outer Glass Frame -->
-  <rect x="5" y="5" width="590" height="310" rx="16" fill="url(#card-bg-2)" stroke="#6A5CFF" stroke-opacity="0.5" stroke-width="1.5" filter="url(#glow-2)"/>
+  <rect x="5" y="5" width="590" height="310" rx="16" fill="url(#card-bg-2)" stroke="#9D00FF" stroke-opacity="0.6" stroke-width="1.5" filter="url(#glow-2)"/>
 
-  <!-- Card Top Banner -->
-  <rect x="5" y="5" width="590" height="40" rx="16" fill="#111827"/>
-  <text x="25" y="30" class="mono" font-size="12" font-weight="bold" fill="#6A5CFF">&gt; PROJECT // 02</text>
-  <rect x="460" y="15" width="115" height="22" rx="11" fill="#050816" stroke="#6A5CFF" stroke-opacity="0.4"/>
-  <text x="517" y="30" class="mono" font-size="10" fill="#6A5CFF" text-anchor="middle">DEEP LEARNING &amp; WEB</text>
+  <rect x="5" y="5" width="590" height="40" rx="16" fill="#161B33"/>
+  <text x="25" y="30" class="mono" font-size="12" font-weight="bold" fill="#9D00FF">&gt; PROJECT // 02</text>
+  <rect x="440" y="15" width="135" height="22" rx="11" fill="#0A0D14" stroke="#9D00FF" stroke-opacity="0.5"/>
+  <text x="507" y="30" class="mono" font-size="10" fill="#9D00FF" text-anchor="middle">MLOPS &amp; PIPELINES</text>
 
-  <!-- Title & Description -->
   <g transform="translate(25, 75)">
-    <text x="0" y="0" class="sans" font-size="22" font-weight="900" fill="#ffffff">🎭 Emotion Detection &amp; AI Analytics</text>
+    <text x="0" y="0" class="sans" font-size="22" font-weight="900" fill="#ffffff">🚀 MLOps &amp; Automated AI Pipeline</text>
     
-    <text x="0" y="30" class="sans" font-size="13" fill="#7DF9FF" opacity="0.9">
-      Facial expression recognition engine powering real-time emotion telemetry
+    <text x="0" y="30" class="sans" font-size="13" fill="#F8FAFC" opacity="0.95">
+      End-to-end model deployment &amp; monitoring pipeline built with Docker,
     </text>
-    <text x="0" y="50" class="sans" font-size="13" fill="#7DF9FF" opacity="0.9">
-      integrated into an interactive full-stack dashboard built with React &amp; FastAPI.
+    <text x="0" y="50" class="sans" font-size="13" fill="#F8FAFC" opacity="0.95">
+      Kubernetes, Python, FastAPI, and GitHub Actions CI/CD workflows.
     </text>
 
-    <!-- Tech Badges -->
     <g transform="translate(0, 80)">
-      <rect x="0" y="0" width="80" height="24" rx="6" fill="#111827" stroke="#6A5CFF" stroke-opacity="0.3"/>
-      <text x="40" y="16" class="mono" font-size="11" fill="#6A5CFF" text-anchor="middle">React.js</text>
+      <rect x="0" y="0" width="75" height="24" rx="6" fill="#161B33" stroke="#9D00FF" stroke-opacity="0.4"/>
+      <text x="37" y="16" class="mono" font-size="11" fill="#9D00FF" text-anchor="middle">Python</text>
 
-      <rect x="90" y="0" width="85" height="24" rx="6" fill="#111827" stroke="#00F5FF" stroke-opacity="0.3"/>
-      <text x="132" y="16" class="mono" font-size="11" fill="#00F5FF" text-anchor="middle">FastAPI</text>
+      <rect x="85" y="0" width="75" height="24" rx="6" fill="#161B33" stroke="#00E5FF" stroke-opacity="0.4"/>
+      <text x="122" y="16" class="mono" font-size="11" fill="#00E5FF" text-anchor="middle">Docker</text>
 
-      <rect x="185" y="0" width="95" height="24" rx="6" fill="#111827" stroke="#00FFA3" stroke-opacity="0.3"/>
-      <text x="232" y="16" class="mono" font-size="11" fill="#00FFA3" text-anchor="middle">TensorFlow</text>
+      <rect x="170" y="0" width="95" height="24" rx="6" fill="#161B33" stroke="#00FF9D" stroke-opacity="0.4"/>
+      <text x="217" y="16" class="mono" font-size="11" fill="#00FF9D" text-anchor="middle">Kubernetes</text>
 
-      <rect x="290" y="0" width="80" height="24" rx="6" fill="#111827" stroke="#8A2BE2" stroke-opacity="0.3"/>
-      <text x="330" y="16" class="mono" font-size="11" fill="#8A2BE2" text-anchor="middle">Chart.js</text>
+      <rect x="275" y="0" width="75" height="24" rx="6" fill="#161B33" stroke="#FFD700" stroke-opacity="0.4"/>
+      <text x="312" y="16" class="mono" font-size="11" fill="#FFD700" text-anchor="middle">FastAPI</text>
     </g>
 
-    <!-- CTA Button Links -->
     <g transform="translate(0, 140)">
-      <rect x="0" y="0" width="160" height="38" rx="8" fill="url(#purple-green-2)" filter="url(#glow-2)"/>
+      <rect x="0" y="0" width="160" height="38" rx="8" fill="url(#violet-cyan-2)" filter="url(#glow-2)"/>
       <text x="80" y="24" class="sans" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">⚡ VIEW SOURCE</text>
 
-      <rect x="180" y="0" width="160" height="38" rx="8" fill="#111827" stroke="#00F5FF" stroke-width="1"/>
-      <text x="260" y="24" class="sans" font-size="13" font-weight="bold" fill="#00F5FF" text-anchor="middle">🚀 EXPLORE APP</text>
+      <rect x="180" y="0" width="160" height="38" rx="8" fill="#161B33" stroke="#00E5FF" stroke-width="1"/>
+      <text x="260" y="24" class="sans" font-size="13" font-weight="bold" fill="#00E5FF" text-anchor="middle">🚀 LIVE PIPELINE</text>
     </g>
   </g>
 </svg>

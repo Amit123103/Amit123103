@@ -1,35 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="100%">
   <defs>
-    <!-- Background Gradients -->
+    <!-- Background Gradients (Deep Obsidian to Midnight Plasma) -->
     <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#030712"/>
-      <stop offset="40%" stop-color="#0B0F19"/>
-      <stop offset="100%" stop-color="#111827"/>
+      <stop offset="0%" stop-color="#0A0D14"/>
+      <stop offset="50%" stop-color="#0F1424"/>
+      <stop offset="100%" stop-color="#161B33"/>
     </linearGradient>
 
-    <!-- Glowing Indigo to Cyan Accent Mesh -->
-    <linearGradient id="indigo-cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4F46E5"/>
-      <stop offset="50%" stop-color="#06B6D4"/>
-      <stop offset="100%" stop-color="#10B981"/>
+    <!-- Holographic Emerald & Violet Glow -->
+    <linearGradient id="holo-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FF9D"/>
+      <stop offset="40%" stop-color="#00E5FF"/>
+      <stop offset="80%" stop-color="#9D00FF"/>
+      <stop offset="100%" stop-color="#FFD700"/>
     </linearGradient>
 
     <radialGradient id="aurora-core" cx="50%" cy="45%" r="55%">
-      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.35"/>
-      <stop offset="50%" stop-color="#4F46E5" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#00FF9D" stop-opacity="0.35"/>
+      <stop offset="40%" stop-color="#9D00FF" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0A0D14" stop-opacity="0"/>
     </radialGradient>
 
-    <linearGradient id="glass-border-luxury" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#4F46E5" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#10B981" stop-opacity="0.7"/>
+    <linearGradient id="glass-border-quantum" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00FF9D" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#9D00FF" stop-opacity="0.8"/>
     </linearGradient>
 
-    <!-- Gaussian Blur Filters -->
+    <!-- Filters -->
     <filter id="hyper-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="12" result="blur1"/>
-      <feGaussianBlur stdDeviation="6" result="blur2"/>
+      <feGaussianBlur stdDeviation="14" result="blur1"/>
+      <feGaussianBlur stdDeviation="7" result="blur2"/>
       <feMerge>
         <feMergeNode in="blur1"/>
         <feMergeNode in="blur2"/>
@@ -46,105 +47,106 @@
     </filter>
 
     <!-- Grid Pattern -->
-    <pattern id="grid-pattern" width="50" height="50" patternUnits="userSpaceOnUse">
-      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#06B6D4" stroke-opacity="0.07" stroke-width="1"/>
+    <pattern id="grid-pattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#00E5FF" stroke-opacity="0.08" stroke-width="1"/>
     </pattern>
 
-    <!-- Fine Scanlines -->
+    <!-- CRT Scanlines -->
     <pattern id="scanline-pattern" width="100" height="4" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-opacity="0.15" stroke-width="1"/>
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-opacity="0.18" stroke-width="1"/>
     </pattern>
   </defs>
 
   <style>
+    @keyframes cube-spin {
+      0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+      100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+    }
     @keyframes ring-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    @keyframes pulse-core { 0%, 100% { transform: scale(0.98); opacity: 0.7; } 50% { transform: scale(1.03); opacity: 1; } }
-    @keyframes star-meteor { 0% { transform: translate(0, 0); opacity: 0; } 30% { opacity: 1; } 100% { transform: translate(-320px, 320px); opacity: 0; } }
+    @keyframes pulse-core { 0%, 100% { transform: scale(0.97); opacity: 0.75; } 50% { transform: scale(1.04); opacity: 1; } }
+    @keyframes meteor-slide { 0% { transform: translate(0, 0); opacity: 0; } 30% { opacity: 1; } 100% { transform: translate(-340px, 340px); opacity: 0; } }
     @keyframes blink-cursor { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-    .ring-rotate { transform-origin: 600px 230px; animation: ring-spin 30s linear infinite; }
-    .pulse-layer { transform-origin: 600px 230px; animation: pulse-core 6s ease-in-out infinite; }
-    .meteor-a { animation: star-meteor 5s linear infinite; animation-delay: 0.2s; }
-    .meteor-b { animation: star-meteor 7s linear infinite; animation-delay: 2.5s; }
+    .ring-rotate { transform-origin: 600px 240px; animation: ring-spin 25s linear infinite; }
+    .pulse-layer { transform-origin: 600px 240px; animation: pulse-core 6s ease-in-out infinite; }
+    .meteor-a { animation: meteor-slide 4.5s linear infinite; animation-delay: 0.1s; }
+    .meteor-b { animation: meteor-slide 6.5s linear infinite; animation-delay: 2.2s; }
     .cursor-glow { animation: blink-cursor 1s infinite; }
     .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif; }
     .font-mono { font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; }
   </style>
 
-  <!-- Background Base -->
-  <rect width="1200" height="460" rx="20" fill="url(#hero-bg)"/>
-  <rect width="1200" height="460" rx="20" fill="url(#grid-pattern)"/>
-  <circle cx="600" cy="230" r="380" fill="url(#aurora-core)"/>
+  <!-- Base Canvas -->
+  <rect width="1200" height="480" rx="20" fill="url(#hero-bg)"/>
+  <rect width="1200" height="480" rx="20" fill="url(#grid-pattern)"/>
+  <circle cx="600" cy="240" r="400" fill="url(#aurora-core)"/>
 
   <!-- Meteors -->
-  <g opacity="0.65">
-    <line class="meteor-a" x1="1050" y1="30" x2="1200" y2="-120" stroke="url(#indigo-cyan-glow)" stroke-width="2" stroke-linecap="round"/>
-    <line class="meteor-b" x1="780" y1="15" x2="930" y2="-135" stroke="#10B981" stroke-width="1.8" stroke-linecap="round"/>
+  <g opacity="0.7">
+    <line class="meteor-a" x1="1080" y1="30" x2="1230" y2="-120" stroke="url(#holo-glow)" stroke-width="2.5" stroke-linecap="round"/>
+    <line class="meteor-b" x1="800" y1="15" x2="950" y2="-135" stroke="#00FF9D" stroke-width="2" stroke-linecap="round"/>
   </g>
 
   <!-- Animated Glowing Hologram Rings -->
   <g class="pulse-layer">
-    <circle cx="600" cy="230" r="190" fill="none" stroke="url(#indigo-cyan-glow)" stroke-width="1.5" stroke-opacity="0.35" filter="url(#subtle-blur)"/>
+    <circle cx="600" cy="240" r="200" fill="none" stroke="url(#holo-glow)" stroke-width="1.5" stroke-opacity="0.4" filter="url(#subtle-blur)"/>
   </g>
   <g class="ring-rotate">
-    <circle cx="600" cy="230" r="210" fill="none" stroke="#06B6D4" stroke-width="1" stroke-dasharray="25 12 6 12" stroke-opacity="0.5" filter="url(#subtle-blur)"/>
-    <circle cx="600" cy="230" r="155" fill="none" stroke="#4F46E5" stroke-width="1.5" stroke-dasharray="45 18 12 18" stroke-opacity="0.6"/>
+    <circle cx="600" cy="240" r="225" fill="none" stroke="#00FF9D" stroke-width="1.2" stroke-dasharray="30 15 8 15" stroke-opacity="0.6" filter="url(#subtle-blur)"/>
+    <circle cx="600" cy="240" r="170" fill="none" stroke="#9D00FF" stroke-width="1.8" stroke-dasharray="50 20 15 20" stroke-opacity="0.7"/>
   </g>
 
-  <!-- Liquid Glass Panel Frame -->
-  <rect x="35" y="35" width="1130" height="390" rx="18" fill="#0B0F19" fill-opacity="0.5" stroke="url(#glass-border-luxury)" stroke-width="1.5" filter="url(#subtle-blur)"/>
+  <!-- Glass Panel Container -->
+  <rect x="35" y="35" width="1130" height="410" rx="18" fill="#0F1424" fill-opacity="0.55" stroke="url(#glass-border-quantum)" stroke-width="1.5" filter="url(#subtle-blur)"/>
 
-  <!-- Top Cyberpunk OS Status Header -->
-  <g class="font-mono" font-size="12" fill="#9CA3AF">
-    <circle cx="65" cy="68" r="5" fill="#10B981" filter="url(#subtle-blur)"/>
-    <text x="80" y="72" fill="#10B981" font-weight="700">MYKERNEL v1.0 ONLINE</text>
-    <text x="240" y="72" opacity="0.4">|</text>
-    <text x="260" y="72" fill="#F9FAFB" opacity="0.9">ARCH :: 64-BIT x86_64 MULTIBOOT2</text>
-    <text x="940" y="72" fill="#06B6D4" opacity="0.95" text-anchor="end">FINAL YEAR CSE [IN]</text>
-    <text x="1130" y="72" fill="#4F46E5" font-weight="700" text-anchor="end">KERNEL -&gt; CLOUD</text>
-    <line x1="55" y1="88" x2="1145" y2="88" stroke="#06B6D4" stroke-opacity="0.18" stroke-dasharray="8 4"/>
+  <!-- Top Status Bar -->
+  <g class="font-mono" font-size="12" fill="#94A3B8">
+    <circle cx="65" cy="70" r="5" fill="#00FF9D" filter="url(#subtle-blur)"/>
+    <text x="80" y="74" fill="#00FF9D" font-weight="700">QUANTUM 3D ENGINE v6.0</text>
+    <text x="260" y="74" opacity="0.4">|</text>
+    <text x="280" y="74" fill="#F8FAFC" opacity="0.9">MYKERNEL x86_64 MULTIBOOT2 ACTIVE</text>
+    <text x="940" y="74" fill="#00E5FF" opacity="0.95" text-anchor="end">FINAL YEAR CSE [IN]</text>
+    <text x="1130" y="74" fill="#9D00FF" font-weight="700" text-anchor="end">KERNEL -&gt; CLOUD</text>
+    <line x1="55" y1="90" x2="1145" y2="90" stroke="#00FF9D" stroke-opacity="0.2" stroke-dasharray="8 4"/>
   </g>
 
-  <!-- Hero Main Title & Tagline -->
+  <!-- Hero Titles & Subtitle -->
   <g text-anchor="middle">
-    <!-- Role Badge Pill -->
-    <rect x="370" y="115" width="460" height="36" rx="18" fill="#111827" fill-opacity="0.9" stroke="#06B6D4" stroke-opacity="0.6"/>
-    <text x="600" y="138" class="font-mono" font-size="13" fill="#10B981" font-weight="700" letter-spacing="2">
+    <!-- Subtitle Badge Pill -->
+    <rect x="350" y="118" width="500" height="38" rx="19" fill="#161B33" fill-opacity="0.9" stroke="#00FF9D" stroke-opacity="0.7"/>
+    <text x="600" y="142" class="font-mono" font-size="13" fill="#00FF9D" font-weight="700" letter-spacing="2">
       ⚡ CREATOR OF MYKERNEL (64-BIT x86_64 OS)
     </text>
 
-    <!-- Main Title: AMIT AKHIL -->
-    <text x="600" y="230" class="font-sans" font-size="72" font-weight="900" fill="url(#indigo-cyan-glow)" filter="url(#hyper-glow)" letter-spacing="4">
+    <!-- Glowing Main Name: AMIT AKHIL -->
+    <text x="600" y="240" class="font-sans" font-size="76" font-weight="900" fill="url(#holo-glow)" filter="url(#hyper-glow)" letter-spacing="4">
       AMIT AKHIL
     </text>
 
-    <!-- Animated Typing Tagline -->
-    <g class="font-mono" font-size="18" fill="#F9FAFB">
-      <text x="600" y="282" opacity="0.95">
-        &gt; Building systems from the kernel to the cloud.<tspan class="cursor-glow" fill="#10B981">_</tspan>
+    <!-- Typing Animated Tagline -->
+    <g class="font-mono" font-size="19" fill="#F8FAFC">
+      <text x="600" y="295" opacity="0.95">
+        &gt; Building systems from the kernel to the cloud.<tspan class="cursor-glow" fill="#00FF9D">_</tspan>
       </text>
     </g>
 
     <!-- Feature Pills -->
-    <g class="font-mono" font-size="12" transform="translate(0, 335)">
-      <!-- Pill 1 -->
-      <g transform="translate(310, 0)">
-        <rect x="0" y="0" width="180" height="36" rx="18" fill="#111827" fill-opacity="0.9" stroke="#06B6D4" stroke-opacity="0.6"/>
-        <text x="90" y="22" fill="#06B6D4" font-weight="700">⚙️ OS &amp; Kernel Dev</text>
+    <g class="font-mono" font-size="12" transform="translate(0, 350)">
+      <g transform="translate(300, 0)">
+        <rect x="0" y="0" width="190" height="38" rx="19" fill="#161B33" fill-opacity="0.9" stroke="#00FF9D" stroke-opacity="0.6"/>
+        <text x="95" y="23" fill="#00FF9D" font-weight="700">⚙️ OS &amp; Kernel Dev</text>
       </g>
-      <!-- Pill 2 -->
-      <g transform="translate(510, 0)">
-        <rect x="0" y="0" width="180" height="36" rx="18" fill="#111827" fill-opacity="0.9" stroke="#4F46E5" stroke-opacity="0.6"/>
-        <text x="90" y="22" fill="#4F46E5" font-weight="700">🚀 MLOps &amp; DevOps</text>
+      <g transform="translate(505, 0)">
+        <rect x="0" y="0" width="190" height="38" rx="19" fill="#161B33" fill-opacity="0.9" stroke="#00E5FF" stroke-opacity="0.6"/>
+        <text x="95" y="23" fill="#00E5FF" font-weight="700">🚀 MLOps &amp; DevOps</text>
       </g>
-      <!-- Pill 3 -->
       <g transform="translate(710, 0)">
-        <rect x="0" y="0" width="180" height="36" rx="18" fill="#111827" fill-opacity="0.9" stroke="#10B981" stroke-opacity="0.6"/>
-        <text x="90" y="22" fill="#10B981" font-weight="700">🔗 Blockchain &amp; Cloud</text>
+        <rect x="0" y="0" width="190" height="38" rx="19" fill="#161B33" fill-opacity="0.9" stroke="#9D00FF" stroke-opacity="0.6"/>
+        <text x="95" y="23" fill="#9D00FF" font-weight="700">🔗 Blockchain &amp; Cloud</text>
       </g>
     </g>
   </g>
 
-  <!-- CRT Scanline Overlay -->
-  <rect width="1200" height="460" rx="20" fill="url(#scanline-pattern)" pointer-events="none"/>
+  <!-- CRT Scanlines -->
+  <rect width="1200" height="480" rx="20" fill="url(#scanline-pattern)" pointer-events="none"/>
 </svg>

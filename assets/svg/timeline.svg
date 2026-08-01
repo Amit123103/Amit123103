@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 480" width="100%" height="100%">
   <defs>
     <linearGradient id="time-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B1020" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#050816" stop-opacity="0.95"/>
+      <stop offset="0%" stop-color="#0F1424" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0A0D14" stop-opacity="0.98"/>
     </linearGradient>
 
     <linearGradient id="timeline-line" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00F5FF"/>
-      <stop offset="50%" stop-color="#6A5CFF"/>
-      <stop offset="100%" stop-color="#00FFA3"/>
+      <stop offset="0%" stop-color="#00FF9D"/>
+      <stop offset="50%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#9D00FF"/>
     </linearGradient>
 
     <filter id="node-glow" x="-50%" y="-50%" width="200%" height="200%">
@@ -21,68 +21,65 @@
   </defs>
 
   <style>
-    .mono { font-family: 'Consolas', 'Fira Code', monospace; }
-    .sans { font-family: 'Segoe UI', Roboto, sans-serif; }
+    .mono { font-family: 'SF Mono', 'Fira Code', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
   </style>
 
-  <!-- Background Card Frame -->
-  <rect width="950" height="480" rx="16" fill="url(#time-bg)" stroke="#6A5CFF" stroke-opacity="0.3" stroke-width="1.5"/>
+  <rect width="950" height="480" rx="16" fill="url(#time-bg)" stroke="#00FF9D" stroke-opacity="0.3" stroke-width="1.5"/>
 
-  <!-- Title Section -->
   <g transform="translate(40, 40)">
-    <text x="0" y="0" class="mono" font-size="18" font-weight="bold" fill="#6A5CFF">&gt; MILESTONES &amp; EVOLUTION TIMELINE</text>
-    <text x="870" y="0" class="mono" font-size="12" fill="#00FFA3" text-anchor="end">STATUS: ACTIVE LOG</text>
-    <line x1="0" y1="15" x2="870" y2="15" stroke="#6A5CFF" stroke-opacity="0.2"/>
+    <text x="0" y="0" class="mono" font-size="18" font-weight="bold" fill="#00FF9D">&gt; EVOLUTION &amp; MILESTONE ROADMAP</text>
+    <text x="870" y="0" class="mono" font-size="12" fill="#00E5FF" text-anchor="end">STATUS: ACTIVE</text>
+    <line x1="0" y1="15" x2="870" y2="15" stroke="#00FF9D" stroke-opacity="0.2"/>
   </g>
 
-  <!-- Central Vertical Line -->
   <line x1="475" y1="90" x2="475" y2="430" stroke="url(#timeline-line)" stroke-width="3" filter="url(#node-glow)"/>
 
-  <!-- Node 1: Present / AI & ML Engineering (Right Side) -->
+  <!-- Node 1 -->
   <g transform="translate(475, 110)">
-    <circle cx="0" cy="0" r="10" fill="#00F5FF" filter="url(#node-glow)"/>
+    <circle cx="0" cy="0" r="10" fill="#00FF9D" filter="url(#node-glow)"/>
     <circle cx="0" cy="0" r="4" fill="#ffffff"/>
     
     <g transform="translate(30, -20)">
-      <rect width="380" height="70" rx="10" fill="#111827" fill-opacity="0.9" stroke="#00F5FF" stroke-opacity="0.5"/>
-      <text x="15" y="25" class="mono" font-size="11" fill="#00F5FF" font-weight="bold">2026 - PRESENT</text>
-      <text x="15" y="48" class="sans" font-size="14" font-weight="bold" fill="#ffffff">Advanced AI, Computer Vision &amp; Full-Stack</text>
+      <rect width="390" height="70" rx="10" fill="#161B33" fill-opacity="0.9" stroke="#00FF9D" stroke-opacity="0.5"/>
+      <text x="15" y="25" class="mono" font-size="11" fill="#00FF9D" font-weight="bold">2026 - PRESENT</text>
+      <text x="15" y="48" class="sans" font-size="14" font-weight="bold" fill="#ffffff">MyKernel 64-Bit OS &amp; MLOps Deployment</text>
     </g>
   </g>
 
-  <!-- Node 2: Open Source & Gesture Canvas (Left Side) -->
+  <!-- Node 2 -->
   <g transform="translate(475, 200)">
-    <circle cx="0" cy="0" r="10" fill="#6A5CFF" filter="url(#node-glow)"/>
+    <circle cx="0" cy="0" r="10" fill="#00E5FF" filter="url(#node-glow)"/>
     <circle cx="0" cy="0" r="4" fill="#ffffff"/>
 
-    <g transform="translate(-410, -20)">
-      <rect width="380" height="70" rx="10" fill="#111827" fill-opacity="0.9" stroke="#6A5CFF" stroke-opacity="0.5"/>
-      <text x="365" y="25" class="mono" font-size="11" fill="#6A5CFF" font-weight="bold" text-anchor="end">2025</text>
-      <text x="365" y="48" class="sans" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="end">Gesture Air-Canvas &amp; Emotion AI</text>
+    <g transform="translate(-420, -20)">
+      <rect width="390" height="70" rx="10" fill="#161B33" fill-opacity="0.9" stroke="#00E5FF" stroke-opacity="0.5"/>
+      <text x="375" y="25" class="mono" font-size="11" fill="#00E5FF" font-weight="bold" text-anchor="end">2025</text>
+      <text x="375" y="48" class="sans" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="end">FAT32 VFS &amp; TCP/IP Stack Implementation</text>
     </g>
   </g>
 
-  <!-- Node 3: Machine Learning & Core CS (Right Side) -->
+  <!-- Node 3 -->
   <g transform="translate(475, 290)">
-    <circle cx="0" cy="0" r="10" fill="#00FFA3" filter="url(#node-glow)"/>
+    <circle cx="0" cy="0" r="10" fill="#9D00FF" filter="url(#node-glow)"/>
     <circle cx="0" cy="0" r="4" fill="#ffffff"/>
 
     <g transform="translate(30, -20)">
-      <rect width="380" height="70" rx="10" fill="#111827" fill-opacity="0.9" stroke="#00FFA3" stroke-opacity="0.5"/>
-      <text x="15" y="25" class="mono" font-size="11" fill="#00FFA3" font-weight="bold">2024</text>
-      <text x="15" y="48" class="sans" font-size="14" font-weight="bold" fill="#ffffff">Deep Learning, PyTorch &amp; Full-Stack React</text>
+      <rect width="390" height="70" rx="10" fill="#161B33" fill-opacity="0.9" stroke="#9D00FF" stroke-opacity="0.5"/>
+      <text x="15" y="25" class="mono" font-size="11" fill="#9D00FF" font-weight="bold">2024</text>
+      <text x="15" y="48" class="sans" font-size="14" font-weight="bold" fill="#ffffff">Machine Learning, PyTorch &amp; Docker Orchestration</text>
     </g>
   </g>
 
-  <!-- Node 4: Computer Science Foundations (Left Side) -->
+  <!-- Node 4 -->
   <g transform="translate(475, 380)">
-    <circle cx="0" cy="0" r="10" fill="#8A2BE2" filter="url(#node-glow)"/>
+    <circle cx="0" cy="0" r="10" fill="#FFD700" filter="url(#node-glow)"/>
     <circle cx="0" cy="0" r="4" fill="#ffffff"/>
 
-    <g transform="translate(-410, -20)">
-      <rect width="380" height="70" rx="10" fill="#111827" fill-opacity="0.9" stroke="#8A2BE2" stroke-opacity="0.5"/>
-      <text x="365" y="25" class="mono" font-size="11" fill="#8A2BE2" font-weight="bold" text-anchor="end">2023 &amp; PRIOR</text>
-      <text x="365" y="48" class="sans" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="end">Algorithms, C++, Python &amp; Systems CS</text>
+    <g transform="translate(-420, -20)">
+      <rect width="390" height="70" rx="10" fill="#161B33" fill-opacity="0.9" stroke="#FFD700" stroke-opacity="0.5"/>
+      <text x="375" y="25" class="mono" font-size="11" fill="#FFD700" font-weight="bold" text-anchor="end">2023 &amp; PRIOR</text>
+      <text x="375" y="48" class="sans" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="end">Computer Science Engineering &amp; C/NASM Foundations</text>
     </g>
   </g>
 </svg>

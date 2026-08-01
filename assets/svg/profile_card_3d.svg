@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="100%" height="100%">
   <defs>
     <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B1020" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#050816" stop-opacity="0.98"/>
+      <stop offset="0%" stop-color="#0F1424" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0A0D14" stop-opacity="0.98"/>
     </linearGradient>
 
-    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F5FF"/>
+    <linearGradient id="neon-emerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FF9D"/>
       <stop offset="100%" stop-color="#00E5FF"/>
     </linearGradient>
 
-    <linearGradient id="neon-purple" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6A5CFF"/>
-      <stop offset="100%" stop-color="#8A2BE2"/>
+    <linearGradient id="neon-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9D00FF"/>
+      <stop offset="100%" stop-color="#FFD700"/>
     </linearGradient>
 
     <linearGradient id="border-glow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00F5FF" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#6A5CFF" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#00FFA3" stop-opacity="0.9"/>
+      <stop offset="0%" stop-color="#00FF9D" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#9D00FF" stop-opacity="0.9"/>
     </linearGradient>
 
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
@@ -35,88 +35,74 @@
   </defs>
 
   <style>
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(1.3); }
-    }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.3); } }
     .status-dot { transform-origin: 45px 45px; animation: pulse-dot 2s infinite ease-in-out; }
-    .mono { font-family: 'Consolas', 'Fira Code', monospace; }
-    .sans { font-family: 'Segoe UI', Roboto, sans-serif; }
+    .mono { font-family: 'SF Mono', 'Fira Code', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
   </style>
 
   <!-- Outer Glass Frame -->
   <rect x="10" y="10" width="880" height="340" rx="20" fill="url(#card-bg)" stroke="url(#border-glow)" stroke-width="2" filter="url(#glow)"/>
-
-  <!-- Top Glass Highlight Line -->
   <path d="M 30 12 L 870 12" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1"/>
 
-  <!-- Left HUD Column - Avatar & Core Info -->
+  <!-- Left HUD Column -->
   <g transform="translate(40, 40)">
-    <!-- Avatar Glass Circle Border -->
-    <circle cx="60" cy="60" r="55" fill="#111827" stroke="url(#neon-cyan)" stroke-width="3" filter="url(#glow)"/>
+    <!-- Double Glowing Rings around Profile Photo -->
+    <circle cx="60" cy="60" r="56" fill="#161B33" stroke="url(#neon-emerald)" stroke-width="3" filter="url(#glow)"/>
     <image href="https://raw.githubusercontent.com/Amit123103/Amit123103/main/assets/images/profile.png" x="10" y="10" height="100" width="100" clip-path="url(#avatar-clip)" preserveAspectRatio="xMidYMid slice"/>
 
-    <!-- Name & Handle -->
-    <text x="135" y="45" class="sans" font-size="26" font-weight="900" fill="#ffffff">Amit Akhil</text>
-    <text x="135" y="70" class="mono" font-size="14" fill="#00F5FF">@Amit123103</text>
+    <!-- Name & Details -->
+    <text x="135" y="45" class="sans" font-size="26" font-weight="900" fill="#F8FAFC">Amit Akhil</text>
+    <text x="135" y="70" class="mono" font-size="14" fill="#00FF9D">@Amit123103</text>
     
     <!-- Status Badge -->
     <g transform="translate(135, 85)">
-      <rect x="0" y="0" width="170" height="26" rx="13" fill="#111827" stroke="#00FFA3" stroke-opacity="0.6"/>
-      <circle class="status-dot" cx="15" cy="13" r="4" fill="#00FFA3" filter="url(#glow)"/>
-      <text x="28" y="17" class="mono" font-size="11" fill="#00FFA3" font-weight="bold">AVAILABLE FOR AI/ML</text>
+      <rect x="0" y="0" width="190" height="26" rx="13" fill="#161B33" stroke="#00FF9D" stroke-opacity="0.6"/>
+      <circle class="status-dot" cx="15" cy="13" r="4" fill="#00FF9D" filter="url(#glow)"/>
+      <text x="28" y="17" class="mono" font-size="11" fill="#00FF9D" font-weight="700">AVAILABLE FOR OS / MLOPS</text>
     </g>
   </g>
 
-  <!-- Divider -->
-  <line x1="390" y1="40" x2="390" y2="320" stroke="#00F5FF" stroke-opacity="0.2" stroke-dasharray="6 4"/>
+  <line x1="390" y1="40" x2="390" y2="320" stroke="#00FF9D" stroke-opacity="0.2" stroke-dasharray="6 4"/>
 
-  <!-- Right HUD Column - 3D Stats Dashboard -->
+  <!-- Right HUD Column -->
   <g transform="translate(420, 40)">
-    <text x="0" y="25" class="mono" font-size="14" font-weight="bold" fill="#7DF9FF" letter-spacing="1.5">
-      &gt; OPERATIONAL METRICS &amp; TELEMETRY
+    <text x="0" y="25" class="mono" font-size="14" font-weight="bold" fill="#00E5FF" letter-spacing="1.5">
+      &gt; OPERATIONAL TELEMETRY &amp; METRICS
     </text>
 
     <!-- Stat Grid -->
-    <!-- Stat 1: Role -->
     <g transform="translate(0, 45)">
-      <rect x="0" y="0" width="200" height="70" rx="10" fill="#111827" fill-opacity="0.8" stroke="#00F5FF" stroke-opacity="0.3"/>
-      <text x="15" y="25" class="mono" font-size="11" fill="#00F5FF" opacity="0.8">PRIMARY CORE</text>
-      <text x="15" y="52" class="sans" font-size="15" font-weight="bold" fill="#ffffff">ML &amp; Systems Eng</text>
+      <rect x="0" y="0" width="200" height="70" rx="10" fill="#161B33" fill-opacity="0.8" stroke="#00FF9D" stroke-opacity="0.3"/>
+      <text x="15" y="25" class="mono" font-size="11" fill="#00FF9D" opacity="0.8">PRIMARY CORE</text>
+      <text x="15" y="52" class="sans" font-size="15" font-weight="bold" fill="#ffffff">OS Kernel &amp; MLOps</text>
     </g>
 
-    <!-- Stat 2: Experience -->
     <g transform="translate(220, 45)">
-      <rect x="0" y="0" width="200" height="70" rx="10" fill="#111827" fill-opacity="0.8" stroke="#6A5CFF" stroke-opacity="0.3"/>
-      <text x="15" y="25" class="mono" font-size="11" fill="#6A5CFF" opacity="0.8">LOCATION</text>
-      <text x="15" y="52" class="sans" font-size="15" font-weight="bold" fill="#ffffff">India 🇮🇳</text>
+      <rect x="0" y="0" width="200" height="70" rx="10" fill="#161B33" fill-opacity="0.8" stroke="#9D00FF" stroke-opacity="0.3"/>
+      <text x="15" y="25" class="mono" font-size="11" fill="#9D00FF" opacity="0.8">DEGREE</text>
+      <text x="15" y="52" class="sans" font-size="15" font-weight="bold" fill="#ffffff">Final Year CSE 🎓</text>
     </g>
 
-    <!-- Stat 3: Focus -->
     <g transform="translate(0, 130)">
-      <rect x="0" y="0" width="200" height="70" rx="10" fill="#111827" fill-opacity="0.8" stroke="#00FFA3" stroke-opacity="0.3"/>
-      <text x="15" y="25" class="mono" font-size="11" fill="#00FFA3" opacity="0.8">SPECIALIZATION</text>
-      <text x="15" y="52" class="sans" font-size="15" font-weight="bold" fill="#ffffff">Vision &amp; Full-Stack</text>
+      <rect x="0" y="0" width="200" height="70" rx="10" fill="#161B33" fill-opacity="0.8" stroke="#00E5FF" stroke-opacity="0.3"/>
+      <text x="15" y="25" class="mono" font-size="11" fill="#00E5FF" opacity="0.8">FLAGSHIP BUILD</text>
+      <text x="15" y="52" class="sans" font-size="15" font-weight="bold" fill="#ffffff">MyKernel 64-Bit OS</text>
     </g>
 
-    <!-- Stat 4: Commits & Code -->
     <g transform="translate(220, 130)">
-      <rect x="0" y="0" width="200" height="70" rx="10" fill="#111827" fill-opacity="0.8" stroke="#8A2BE2" stroke-opacity="0.3"/>
-      <text x="15" y="25" class="mono" font-size="11" fill="#8A2BE2" opacity="0.8">PUBLIC REPOS</text>
-      <text x="15" y="52" class="sans" font-size="16" font-weight="bold" fill="#00F5FF">Active Creator</text>
+      <rect x="0" y="0" width="200" height="70" rx="10" fill="#161B33" fill-opacity="0.8" stroke="#FFD700" stroke-opacity="0.3"/>
+      <text x="15" y="25" class="mono" font-size="11" fill="#FFD700" opacity="0.8">INFRASTRUCTURE</text>
+      <text x="15" y="52" class="sans" font-size="15" font-weight="bold" fill="#00FF9D">Docker / K8s / Linux</text>
     </g>
 
-    <!-- Social Action HUD Buttons -->
+    <!-- Social HUD Buttons -->
     <g transform="translate(0, 225)">
-      <rect x="0" y="0" width="420" height="40" rx="8" fill="#050816" stroke="url(#neon-cyan)" stroke-width="1"/>
-      <text x="20" y="25" class="mono" font-size="12" fill="#00F5FF">&gt; LINKEDIN</text>
-      <text x="130" y="25" class="mono" font-size="12" fill="#00FFA3">&gt; INSTAGRAM</text>
-      <text x="260" y="25" class="mono" font-size="12" fill="#6A5CFF">&gt; DISCORD</text>
-      <text x="360" y="25" class="mono" font-size="12" fill="#8A2BE2">&gt; EMAIL</text>
+      <rect x="0" y="0" width="420" height="40" rx="8" fill="#0A0D14" stroke="url(#neon-emerald)" stroke-width="1"/>
+      <text x="20" y="25" class="mono" font-size="12" fill="#00FF9D">&gt; LINKEDIN</text>
+      <text x="130" y="25" class="mono" font-size="12" fill="#00E5FF">&gt; INSTAGRAM</text>
+      <text x="260" y="25" class="mono" font-size="12" fill="#9D00FF">&gt; DISCORD</text>
+      <text x="360" y="25" class="mono" font-size="12" fill="#FFD700">&gt; EMAIL</text>
     </g>
   </g>
-
-  <!-- Bottom Left Corner Glow Accent -->
-  <circle cx="20" cy="340" r="3" fill="#00F5FF" filter="url(#glow)"/>
-  <circle cx="880" cy="340" r="3" fill="#00FFA3" filter="url(#glow)"/>
 </svg>

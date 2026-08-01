@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="100%" height="100%">
   <defs>
     <linearGradient id="card-bg-1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B0F19" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#030712" stop-opacity="0.98"/>
+      <stop offset="0%" stop-color="#0F1424" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0A0D14" stop-opacity="0.98"/>
     </linearGradient>
 
-    <linearGradient id="cyan-indigo-1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#06B6D4"/>
-      <stop offset="100%" stop-color="#4F46E5"/>
+    <linearGradient id="emerald-cyan-1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FF9D"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
     </linearGradient>
 
     <filter id="glow-1" x="-20%" y="-20%" width="140%" height="140%">
@@ -24,48 +24,43 @@
     .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
   </style>
 
-  <!-- Outer Glass Frame -->
-  <rect x="5" y="5" width="590" height="310" rx="16" fill="url(#card-bg-1)" stroke="#06B6D4" stroke-opacity="0.6" stroke-width="1.5" filter="url(#glow-1)"/>
+  <rect x="5" y="5" width="590" height="310" rx="16" fill="url(#card-bg-1)" stroke="#00FF9D" stroke-opacity="0.6" stroke-width="1.5" filter="url(#glow-1)"/>
 
-  <!-- Card Top Banner -->
-  <rect x="5" y="5" width="590" height="40" rx="16" fill="#111827"/>
-  <text x="25" y="30" class="mono" font-size="12" font-weight="bold" fill="#10B981">&gt; FLAGSHIP PROJECT // 01</text>
-  <rect x="440" y="15" width="135" height="22" rx="11" fill="#030712" stroke="#06B6D4" stroke-opacity="0.5"/>
-  <text x="507" y="30" class="mono" font-size="10" fill="#06B6D4" text-anchor="middle">64-BIT OS KERNEL</text>
+  <rect x="5" y="5" width="590" height="40" rx="16" fill="#161B33"/>
+  <text x="25" y="30" class="mono" font-size="12" font-weight="bold" fill="#00FF9D">&gt; FLAGSHIP PROJECT // 01</text>
+  <rect x="440" y="15" width="135" height="22" rx="11" fill="#0A0D14" stroke="#00FF9D" stroke-opacity="0.5"/>
+  <text x="507" y="30" class="mono" font-size="10" fill="#00FF9D" text-anchor="middle">64-BIT OS KERNEL</text>
 
-  <!-- Title & Description -->
   <g transform="translate(25, 75)">
     <text x="0" y="0" class="sans" font-size="22" font-weight="900" fill="#ffffff">⚙️ MyKernel: 64-Bit x86_64 OS Kernel</text>
     
-    <text x="0" y="30" class="sans" font-size="13" fill="#7DF9FF" opacity="0.95">
+    <text x="0" y="30" class="sans" font-size="13" fill="#F8FAFC" opacity="0.95">
       Modular 64-bit OS kernel built from scratch featuring Multiboot2,
     </text>
-    <text x="0" y="50" class="sans" font-size="13" fill="#7DF9FF" opacity="0.95">
+    <text x="0" y="50" class="sans" font-size="13" fill="#F8FAFC" opacity="0.95">
       Virtual Memory, FAT32 VFS, IPC, TCP/IP, UDP &amp; DHCP Network Stack.
     </text>
 
-    <!-- Tech Badges -->
     <g transform="translate(0, 80)">
-      <rect x="0" y="0" width="45" height="24" rx="6" fill="#111827" stroke="#06B6D4" stroke-opacity="0.4"/>
-      <text x="22" y="16" class="mono" font-size="11" fill="#06B6D4" text-anchor="middle">C</text>
+      <rect x="0" y="0" width="45" height="24" rx="6" fill="#161B33" stroke="#00FF9D" stroke-opacity="0.4"/>
+      <text x="22" y="16" class="mono" font-size="11" fill="#00FF9D" text-anchor="middle">C</text>
 
-      <rect x="55" y="0" width="115" height="24" rx="6" fill="#111827" stroke="#4F46E5" stroke-opacity="0.4"/>
-      <text x="112" y="16" class="mono" font-size="11" fill="#4F46E5" text-anchor="middle">NASM Assembly</text>
+      <rect x="55" y="0" width="115" height="24" rx="6" fill="#161B33" stroke="#00E5FF" stroke-opacity="0.4"/>
+      <text x="112" y="16" class="mono" font-size="11" fill="#00E5FF" text-anchor="middle">NASM Assembly</text>
 
-      <rect x="180" y="0" width="80" height="24" rx="6" fill="#111827" stroke="#10B981" stroke-opacity="0.4"/>
-      <text x="220" y="16" class="mono" font-size="11" fill="#10B981" text-anchor="middle">x86_64</text>
+      <rect x="180" y="0" width="80" height="24" rx="6" fill="#161B33" stroke="#9D00FF" stroke-opacity="0.4"/>
+      <text x="220" y="16" class="mono" font-size="11" fill="#9D00FF" text-anchor="middle">x86_64</text>
 
-      <rect x="270" y="0" width="105" height="24" rx="6" fill="#111827" stroke="#8B5CF6" stroke-opacity="0.4"/>
-      <text x="322" y="16" class="mono" font-size="11" fill="#8B5CF6" text-anchor="middle">TCP/IP Stack</text>
+      <rect x="270" y="0" width="105" height="24" rx="6" fill="#161B33" stroke="#FFD700" stroke-opacity="0.4"/>
+      <text x="322" y="16" class="mono" font-size="11" fill="#FFD700" text-anchor="middle">TCP/IP Stack</text>
     </g>
 
-    <!-- CTA Button Links -->
     <g transform="translate(0, 140)">
-      <rect x="0" y="0" width="160" height="38" rx="8" fill="url(#cyan-indigo-1)" filter="url(#glow-1)"/>
-      <text x="80" y="24" class="sans" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">⚡ VIEW KERNEL</text>
+      <rect x="0" y="0" width="160" height="38" rx="8" fill="url(#emerald-cyan-1)" filter="url(#glow-1)"/>
+      <text x="80" y="24" class="sans" font-size="13" font-weight="bold" fill="#0A0D14" text-anchor="middle">⚡ VIEW KERNEL</text>
 
-      <rect x="180" y="0" width="160" height="38" rx="8" fill="#111827" stroke="#10B981" stroke-width="1"/>
-      <text x="260" y="24" class="sans" font-size="13" font-weight="bold" fill="#10B981" text-anchor="middle">📖 ARCH SPECS</text>
+      <rect x="180" y="0" width="160" height="38" rx="8" fill="#161B33" stroke="#00FF9D" stroke-width="1"/>
+      <text x="260" y="24" class="sans" font-size="13" font-weight="bold" fill="#00FF9D" text-anchor="middle">📖 ARCH SPECS</text>
     </g>
   </g>
 </svg>
