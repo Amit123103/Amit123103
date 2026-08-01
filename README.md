@@ -1,19 +1,20 @@
 <!-- =================================================================================== -->
-<!-- ⚡ FUTURISTIC 3D AI OPERATING SYSTEM - GITHUB PROFILE README                         -->
+<!-- ⚡ VIRTUAL 3D AI OPERATING SYSTEM - GITHUB PROFILE README                            -->
 <!-- Architecture Designed for Amit Akhil (@Amit123103)                                   -->
-<!-- Theme: Glassmorphism | Cyberpunk | Dark Mode | Neon Cyan, Purple & Green Glow        -->
+<!-- Theme: Luxury Glassmorphism | Midnight Graphite | Cyan, Indigo & Emerald Glow        -->
+<!-- Design System: Inspired by Apple, OpenAI, Vercel, Linear, Tesla & Framer             -->
 <!-- =================================================================================== -->
 
 <div align="center">
   <!-- 3D CYBERPUNK HERO HEADER BANNER SVG -->
-  <img src="assets/svg/hero_header.svg" alt="Amit Akhil 3D AI OS Hero Banner" width="100%" />
+  <img src="assets/svg/hero_header.svg" alt="Amit Akhil 3D Virtual AI OS Hero Banner" width="100%" />
 </div>
 
 <br />
 
-<!-- PROFESSIONAL PROFILE IMAGE DISPLAY -->
+<!-- PROFESSIONAL PROFILE PORTRAIT INTEGRATION -->
 <div align="center">
-  <img src="assets/images/profile.png" width="220" style="border-radius: 50%; border: 3px solid #00F5FF; box-shadow: 0 0 20px #00F5FF;" alt="Amit Akhil Professional Profile Photo" />
+  <img src="assets/images/profile.png" width="220" style="border-radius: 50%; border: 3px solid #06B6D4; box-shadow: 0 0 25px #06B6D4;" alt="Amit Akhil Professional Portrait" />
 </div>
 
 <br />
@@ -49,7 +50,7 @@
     <img src="https://img.shields.io/badge/EMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
   <a href="https://github.com/Amit123103">
-    <img src="https://img.shields.io/badge/PORTFOLIO-00F5FF?style=for-the-badge&logo=firefox&logoColor=black" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/PORTFOLIO-06B6D4?style=for-the-badge&logo=firefox&logoColor=black" alt="Portfolio" />
   </a>
 </div>
 
@@ -81,12 +82,12 @@
 > CORE ROLE        : Machine Learning Engineer & Software Developer
 > FOCUS DOMAINS    : Computer Vision, Deep Learning, Full-Stack Web & Automation
 > LOCATION         : India [IN]
-> STATUS           : Building Next-Gen Interactive AI & Web Applications
+> STATUS           : Engineering Next-Gen Interactive AI & Web Applications
 > CORE PHILOSOPHY  : "Learning by building is the fastest vector to mastery."
 ---------------------------------------------------------------------------------------
 ```
 
-I am a passionate **Machine Learning Engineer** and **Software Developer** focused on turning complex algorithms into intuitive, real-world interactive systems. I work at the convergence of artificial intelligence, computer vision, and scalable full-stack web applications.
+I am a **Machine Learning Engineer** and **Software Developer** focused on turning complex algorithms into intuitive, real-world interactive systems. I work at the convergence of artificial intelligence, computer vision, and scalable full-stack web applications.
 
 - 🤖 **Deep Learning & Vision**: Designing real-time gesture-controlled systems, object detection pipelines, and facial emotion analysis engines.
 - ⚡ **Full-Stack Development**: Engineering high-performance web platforms using React, Vite, FastAPI, Flask, and Node.js.
@@ -272,20 +273,20 @@ I am a passionate **Machine Learning Engineer** and **Software Developer** focus
 </div>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Consolas&size=16&duration=3000&pause=1000&color=00FFA3&center=true&vCenter=true&width=700&lines=Quote%3A+%22The+best+way+to+predict+the+future+is+to+invent+it.%22;Quote%3A+%22First%2C+solve+the+problem.+Then%2C+write+the+code.%22;Quote%3A+%22Talk+is+cheap.+Show+me+the+code.%22" alt="Dev Quotes" />
+  <img src="https://readme-typing-svg.demolab.com?font=Consolas&size=16&duration=3000&pause=1000&color=10B981&center=true&vCenter=true&width=700&lines=Quote%3A+%22The+best+way+to+predict+the+future+is+to+invent+it.%22;Quote%3A+%22First%2C+solve+the+problem.+Then%2C+write+the+code.%22;Quote%3A+%22Talk+is+cheap.+Show+me+the+code.%22" alt="Dev Quotes" />
 </p>
 
 <br />
 
 <!-- VISITOR COUNTER & FOOTER -->
 <div align="center">
-  <hr stroke="#00F5FF" />
+  <hr stroke="#06B6D4" />
   <p>
     <a href="https://visitcount.itsvg.in">
       <img src="https://visitcount.itsvg.in/api?id=Amit123103&icon=0&color=0" alt="Visitor Counter" />
     </a>
   </p>
-  <p><i>⚡ Engineered with passion by <a href="https://github.com/Amit123103">Amit Akhil</a> | Powered by 3D Cyberpunk AI OS Architecture</i></p>
+  <p><i>⚡ Engineered with passion by <a href="https://github.com/Amit123103">Amit Akhil</a> | Powered by Virtual 3D AI OS Architecture</i></p>
 </div>
 
 <br />
@@ -297,7 +298,7 @@ I am a passionate **Machine Learning Engineer** and **Software Developer** focus
 
 ## 📘 COMPREHENSIVE DOCUMENTATION & CUSTOMIZATION GUIDE
 
-Welcome to the complete manual for maintaining and deploying this 3D Cyberpunk AI OS GitHub Profile README.
+Welcome to the complete manual for maintaining and deploying this Agency-Grade Virtual 3D AI OS GitHub Profile README.
 
 ### 🏗️ 1. Architecture Overview
 This README is built using a hybrid architecture of:
@@ -326,15 +327,14 @@ To ensure all automated features function seamlessly:
 
 If you wish to modify the neon cyberpunk color scheme across all SVGs:
 
-| Element | Hex Color Code | CSS Variable / Token |
+| Element | Hex Color Code | Design Token |
 | :--- | :--- | :--- |
-| **Primary Cyan Glow** | `#00F5FF` | Neon Cyan Accent |
-| **Deep Purple Glow** | `#6A5CFF` | Cyber Purple Accent |
-| **Electric Violet** | `#8A2BE2` | Neon Violet Highlight |
-| **Neon Green** | `#00FFA3` | System Status LED / Success |
-| **Background Dark** | `#050816` | Main Glass Background |
-| **Card Container** | `#0B1020` | Secondary Glass Layer |
-| **Border Shimmer** | `#111827` | Inner Panel Fill |
+| **Primary Cyan Glow** | `#06B6D4` | Neon Cyan Accent |
+| **Deep Indigo Glow** | `#4F46E5` | Electric Indigo |
+| **Aurora Emerald** | `#10B981` | System Status LED / Success |
+| **Crystal White** | `#F9FAFB` | Primary High-Contrast Text |
+| **Space Black** | `#030712` | Background Canvas |
+| **Midnight Navy** | `#0B0F19` | Secondary Glass Layer |
 
 ---
 
@@ -346,4 +346,4 @@ If you wish to modify the neon cyberpunk color scheme across all SVGs:
 
 ---
 
-<!-- End of 3D Cyberpunk AI OS README.md -->
+<!-- End of Virtual 3D AI OS README.md -->
