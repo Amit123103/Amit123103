@@ -1,3 +1,19 @@
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Amit%20Akhil&fontAlign=50&fontAlignY=40&color=0:0f0c29,50:302b63,100:24243e&fontColor=ffffff&animation=twinkling&desc=Machine%20Learning%20%7C%20Software%20Engineering%20%7C%20Creative%20Builder&descAlign=50&descAlignY=65" />
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&size=28&duration=2600&pause=800&color=7CF7FF&center=true&vCenter=true&width=900&lines=Welcome+to+my+interactive+GitHub+space!;Building+AI+and+full-stack+projects;Always+learning+%F0%9F%9A%80+Always+building+%F0%9F%94%A5" alt="Typing animation" />
+</p>
+
+<p align="center">
+  <img src="https://avatars.githubusercontent.com/Amit123103?size=420" width="230" alt="Amit profile image" />
+</p>
+
+<p align="center">
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2hkdTBxODUwMHEzOW84Y3V2NXVlMHV6OG53ZHRvd2dqN2tncjEwNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l0HlNaQ6gWfllcjDO/giphy.gif" width="340" alt="3D animation effect" />
+</p>
+
 # 💫 About Me:
 I’m a passionate Machine Learning and Software Engineering enthusiast who loves turning ideas into real-world, interactive applications. I enjoy working at the intersection of AI, computer vision, and full-stack development, where logic meets creativity.<br><br>I have hands-on experience building projects using Python, JavaScript, React.js, CSS, and modern Machine Learning techniques. My work focuses on solving practical problems—whether it’s real-time hand gesture–based drawing systems, smart portfolios, emotion detection, or AI-powered tools.<br><br>I’m deeply curious about how intelligent systems work and constantly explore new technologies like LLMs, computer vision, data analysis, and automation. I believe learning by building is the fastest way to grow, so I actively develop projects, experiment with ideas, and share my work on GitHub.<br><br>Beyond coding, I value continuous learning, problem-solving, and innovation. My goal is to become a skilled Machine Learning Engineer and contribute to impactful tech solutions that make life easier and smarter.<br><br>🚀 Always learning. Always building. Always improving.
 
