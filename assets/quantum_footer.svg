@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 180" width="100%" height="100%">
+    <defs>
+        <style>
+            text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; fill: #FFFFFF; }
+        </style>
+        <linearGradient id="footer-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#050811" />
+            <stop offset="50%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#050811" />
+        </linearGradient>
+    </defs>
+    
+    <rect width="100%" height="100%" fill="url(#footer-bg)" rx="14" stroke="rgba(0, 245, 255, 0.2)" />
+    
+    <text x="600" y="60" font-size="18" font-weight="700" text-anchor="middle" fill="#00F5FF" letter-spacing="2">"Building the future of AI &amp; Cloud Infrastructure, one commit at a time."</text>
+    
+    <circle cx="560" cy="110" r="4" fill="#00FF87" />
+    <text x="572" y="114" font-size="13" fill="#94A3B8" font-weight="600">SYSTEM STATUS: ONLINE</text>
+    
+    <text x="600" y="150" font-size="12" fill="#64748B" text-anchor="middle">© 2026 AMIT KUMAR • DESIGNED WITH QUANTUM NEXUS ARCHITECTURE</text>
+</svg>
