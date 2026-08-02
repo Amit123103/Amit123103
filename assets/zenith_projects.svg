@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="100%" height="100%">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap');
+            text { font-family: 'Inter', sans-serif; fill: #FFF; }
+            .card { fill: rgba(20,20,30,0.4); stroke: rgba(255,255,255,0.1); stroke-width: 1; rx: 12; }
+            .tag { fill: rgba(0,245,255,0.1); stroke: #00F5FF; stroke-width: 1; rx: 10; }
+            .btn { fill: #00F5FF; rx: 6; }
+            .float { animation: hoverLift 6s ease-in-out infinite alternate; }
+            @keyframes hoverLift { 0% { transform: translateY(0); } 100% { transform: translateY(-10px); } }
+        </style>
+        <filter id="shadow"><feGaussianBlur stdDeviation="10" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+    </defs>
+    
+    <text x="600" y="40" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="2">FEATURED PROJECTS</text>
+    <rect x="580" y="55" width="40" height="2" fill="#00F5FF" />
+
+    <g transform="translate(100, 120)" class="float" style="animation-delay: 0.25s;">
+        <!-- Card background with fake shadow -->
+        <rect x="10" y="20" width="320" height="300" fill="rgba(0,0,0,0.5)" filter="url(#shadow)" rx="12" />
+        <rect x="0" y="0" width="340" height="320" class="card" />
+        
+        <!-- Image placeholder -->
+        <rect x="15" y="15" width="310" height="140" fill="rgba(255,255,255,0.05)" rx="8" />
+        <path d="M15,155 L325,155" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+        
+        <text x="20" y="185" font-size="18" font-weight="700">AI Vision System</text>
+        <text x="20" y="210" font-size="14" fill="#A0A0A0">Advanced real-time object detection and tracking built on PyTorch.</text>
+        
+        <!-- Tech Stack Tags -->
+        <rect x="20" y="240" width="76" height="24" class="tag" />
+        <text x="58.0" y="256" font-size="11" font-weight="600" fill="#00F5FF" text-anchor="middle">PyTorch</text>
+        
+        <rect x="106" y="240" width="68" height="24" class="tag" />
+        <text x="140.0" y="256" font-size="11" font-weight="600" fill="#00F5FF" text-anchor="middle">OpenCV</text>
+        
+        <!-- Action Buttons -->
+        <rect x="20" y="280" width="100" height="28" class="btn" />
+        <text x="70" y="299" font-size="12" font-weight="700" fill="#000" text-anchor="middle">View Code</text>
+        
+        <rect x="130" y="280" width="100" height="28" fill="rgba(255,255,255,0.1)" stroke="#FFF" stroke-width="1" rx="6" />
+        <text x="180" y="299" font-size="12" font-weight="700" fill="#FFF" text-anchor="middle">Live Demo</text>
+    </g>
+
+    <g transform="translate(480, 120)" class="float" style="animation-delay: 1.2s;">
+        <!-- Card background with fake shadow -->
+        <rect x="10" y="20" width="320" height="300" fill="rgba(0,0,0,0.5)" filter="url(#shadow)" rx="12" />
+        <rect x="0" y="0" width="340" height="320" class="card" />
+        
+        <!-- Image placeholder -->
+        <rect x="15" y="15" width="310" height="140" fill="rgba(255,255,255,0.05)" rx="8" />
+        <path d="M15,155 L325,155" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+        
+        <text x="20" y="185" font-size="18" font-weight="700">Quantum RAG Pipeline</text>
+        <text x="20" y="210" font-size="14" fill="#A0A0A0">A production-grade GenAI retrieval system with LLMs.</text>
+        
+        <!-- Tech Stack Tags -->
+        <rect x="20" y="240" width="92" height="24" class="tag" />
+        <text x="66.0" y="256" font-size="11" font-weight="600" fill="#00F5FF" text-anchor="middle">LangChain</text>
+        
+        <rect x="122" y="240" width="76" height="24" class="tag" />
+        <text x="160.0" y="256" font-size="11" font-weight="600" fill="#00F5FF" text-anchor="middle">FastAPI</text>
+        
+        <!-- Action Buttons -->
+        <rect x="20" y="280" width="100" height="28" class="btn" />
+        <text x="70" y="299" font-size="12" font-weight="700" fill="#000" text-anchor="middle">View Code</text>
+        
+        <rect x="130" y="280" width="100" height="28" fill="rgba(255,255,255,0.1)" stroke="#FFF" stroke-width="1" rx="6" />
+        <text x="180" y="299" font-size="12" font-weight="700" fill="#FFF" text-anchor="middle">Live Demo</text>
+    </g>
+
+    <g transform="translate(860, 120)" class="float" style="animation-delay: 2.15s;">
+        <!-- Card background with fake shadow -->
+        <rect x="10" y="20" width="320" height="300" fill="rgba(0,0,0,0.5)" filter="url(#shadow)" rx="12" />
+        <rect x="0" y="0" width="340" height="320" class="card" />
+        
+        <!-- Image placeholder -->
+        <rect x="15" y="15" width="310" height="140" fill="rgba(255,255,255,0.05)" rx="8" />
+        <path d="M15,155 L325,155" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+        
+        <text x="20" y="185" font-size="18" font-weight="700">Cloud Native MLOps</text>
+        <text x="20" y="210" font-size="14" fill="#A0A0A0">Automated deployment pipeline for machine learning models.</text>
+        
+        <!-- Tech Stack Tags -->
+        <rect x="20" y="240" width="44" height="24" class="tag" />
+        <text x="42.0" y="256" font-size="11" font-weight="600" fill="#00F5FF" text-anchor="middle">AWS</text>
+        
+        <rect x="74" y="240" width="68" height="24" class="tag" />
+        <text x="108.0" y="256" font-size="11" font-weight="600" fill="#00F5FF" text-anchor="middle">Docker</text>
+        
+        <!-- Action Buttons -->
+        <rect x="20" y="280" width="100" height="28" class="btn" />
+        <text x="70" y="299" font-size="12" font-weight="700" fill="#000" text-anchor="middle">View Code</text>
+        
+        <rect x="130" y="280" width="100" height="28" fill="rgba(255,255,255,0.1)" stroke="#FFF" stroke-width="1" rx="6" />
+        <text x="180" y="299" font-size="12" font-weight="700" fill="#FFF" text-anchor="middle">Live Demo</text>
+    </g>
+</svg>
