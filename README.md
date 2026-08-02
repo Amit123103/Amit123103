@@ -2,28 +2,28 @@
 
 <!-- Zenith Core Hero Section -->
 <picture>
-  <img src="assets/zenith_hero.svg?v=2" alt="Amit Kumar - AI Engineer & Cloud Architect" width="100%">
+  <img src="assets/zenith_hero.svg?v=3" alt="Amit Kumar - AI Engineer & Cloud Architect" width="100%">
 </picture>
 
 <br><br>
 
 <!-- Zenith About / Data Grid -->
 <picture>
-  <img src="assets/zenith_about.svg?v=2" alt="Personal Details & Focus" width="100%">
+  <img src="assets/zenith_about.svg?v=3" alt="Personal Details & Focus" width="100%">
 </picture>
 
 <br><br>
 
 <!-- Zenith Skill Capsules -->
 <picture>
-  <img src="assets/zenith_skills.svg?v=2" alt="Technical Expertise Matrix" width="100%">
+  <img src="assets/zenith_skills.svg?v=3" alt="Technical Expertise Matrix" width="100%">
 </picture>
 
 <br><br>
 
 <!-- Zenith Project Cards -->
 <picture>
-  <img src="assets/zenith_projects.svg?v=2" alt="Featured Projects" width="100%">
+  <img src="assets/zenith_projects.svg?v=3" alt="Featured Projects" width="100%">
 </picture>
 
 <br><br>
@@ -77,7 +77,7 @@
 
 <!-- Zenith Memory Carousel Footer -->
 <picture>
-  <img src="assets/zenith_footer.svg?v=2" alt="Memory Carousel" width="100%">
+  <img src="assets/zenith_footer.svg?v=3" alt="Memory Carousel" width="100%">
 </picture>
 
 </div>

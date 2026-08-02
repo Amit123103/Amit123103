@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="100%" height="100%">
     <defs>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700');
             text { font-family: 'Inter', sans-serif; fill: #FFF; }
             .card { fill: rgba(20,20,30,0.4); stroke: rgba(255,255,255,0.1); stroke-width: 1; rx: 12; }
             .tag { fill: rgba(0,245,255,0.1); stroke: #00F5FF; stroke-width: 1; rx: 10; }
