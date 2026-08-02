@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="100%" height="100%">
+    <defs>
+        <linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.15)" />
+            <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+        </linearGradient>
+        <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00F5FF" />
+            <stop offset="100%" stop-color="#6366F1" />
+        </linearGradient>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap');
+            text { font-family: 'Inter', sans-serif; }
+            .float { animation: float 6s ease-in-out infinite; }
+            .float-delayed { animation: float 6s ease-in-out 3s infinite; }
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+                100% { transform: translateY(0px); }
+            }
+        </style>
+    </defs>
+    <!-- Background is transparent to blend with GitHub Dark mode -->
+    
+    <!-- About Me Panel (Left) -->
+    <g transform="translate(50, 50)" class="float">
+        <rect x="0" y="0" width="530" height="400" rx="20" fill="url(#glass)" stroke="url(#border-grad)" stroke-width="2" />
+        <text x="40" y="60" fill="#00F5FF" font-size="28" font-weight="600">About Me</text>
+        <rect x="40" y="80" width="100" height="3" fill="#6366F1" />
+        
+        <text x="40" y="140" fill="#fff" font-size="16">
+            <tspan x="40" dy="0">• Final Year CSE Student bridging theory &amp; production</tspan>
+            <tspan x="40" dy="35">• Architecting advanced Machine Learning solutions</tspan>
+            <tspan x="40" dy="35">• Cloud-native MLOps and scalable deployments</tspan>
+            <tspan x="40" dy="35">• Open Source Contributor &amp; Tech Enthusiast</tspan>
+            <tspan x="40" dy="35">• Passionate about the intersection of VR and AI</tspan>
+        </text>
+    </g>
+
+    <!-- Current Focus (Right) -->
+    <g transform="translate(620, 50)" class="float-delayed">
+        <rect x="0" y="0" width="530" height="400" rx="20" fill="url(#glass)" stroke="url(#border-grad)" stroke-width="2" />
+        <text x="40" y="60" fill="#00D4FF" font-size="28" font-weight="600">Current Focus</text>
+        <rect x="40" y="80" width="100" height="3" fill="#0EA5E9" />
+        
+        <g transform="translate(40, 130)">
+            <rect x="0" y="0" width="200" height="60" rx="8" fill="rgba(79, 70, 229, 0.2)" stroke="rgba(79, 70, 229, 0.5)"/>
+            <text x="100" y="36" fill="#fff" text-anchor="middle" font-size="16">LLMs &amp; GenAI</text>
+            
+            <rect x="230" y="0" width="200" height="60" rx="8" fill="rgba(0, 245, 255, 0.2)" stroke="rgba(0, 245, 255, 0.5)"/>
+            <text x="330" y="36" fill="#fff" text-anchor="middle" font-size="16">RAG Pipelines</text>
+
+            <rect x="0" y="80" width="200" height="60" rx="8" fill="rgba(14, 165, 233, 0.2)" stroke="rgba(14, 165, 233, 0.5)"/>
+            <text x="100" y="116" fill="#fff" text-anchor="middle" font-size="16">Deep Learning</text>
+
+            <rect x="230" y="80" width="200" height="60" rx="8" fill="rgba(99, 102, 241, 0.2)" stroke="rgba(99, 102, 241, 0.5)"/>
+            <text x="330" y="116" fill="#fff" text-anchor="middle" font-size="16">Real-World Apps</text>
+        </g>
+    </g>
+</svg>

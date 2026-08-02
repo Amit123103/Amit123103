@@ -1,0 +1,543 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+    <defs>
+        <!-- Gradients -->
+        <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#000000" />
+            <stop offset="50%" stop-color="#0a0a2a" />
+            <stop offset="100%" stop-color="#000000" />
+        </linearGradient>
+        <linearGradient id="neon-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00F5FF" />
+            <stop offset="100%" stop-color="#4F46E5" />
+        </linearGradient>
+        <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00D4FF" />
+            <stop offset="100%" stop-color="#0EA5E9" />
+        </linearGradient>
+        <linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.1)" />
+            <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+        </linearGradient>
+        
+        <!-- Glow Filter -->
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="20" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glass-blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
+        </filter>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap');
+            
+            text {
+                font-family: 'Inter', sans-serif;
+            }
+            
+            .star {
+                animation: twinkle 3s infinite alternate;
+            }
+            .star:nth-child(even) {
+                animation-duration: 5s;
+                animation-delay: 2s;
+            }
+            
+            @keyframes twinkle {
+                0% { opacity: 0.2; transform: scale(0.8); }
+                100% { opacity: 1; transform: scale(1.2); }
+            }
+            
+            .orbit-outer {
+                transform-origin: 600.0px 400.0px;
+                animation: spin-outer 60s linear infinite;
+            }
+            
+            .orbit-outer-reverse {
+                transform-origin: center;
+                animation: spin-outer-reverse 60s linear infinite;
+            }
+            
+            .orbit-inner {
+                transform-origin: 600.0px 400.0px;
+                animation: spin-inner 40s linear infinite reverse;
+            }
+            
+            .orbit-inner-reverse {
+                transform-origin: center;
+                animation: spin-inner-reverse 40s linear infinite reverse;
+            }
+            
+            @keyframes spin-outer {
+                100% { transform: rotate(360deg); }
+            }
+            
+            @keyframes spin-outer-reverse {
+                100% { transform: rotate(-360deg); }
+            }
+            
+            @keyframes spin-inner {
+                100% { transform: rotate(-360deg); }
+            }
+            
+            @keyframes spin-inner-reverse {
+                100% { transform: rotate(360deg); }
+            }
+            
+            .typing-text {
+                font-size: 42px;
+                font-weight: 900;
+                fill: url(#neon-blue);
+                letter-spacing: 2px;
+                animation: typing 4s steps(40, end) infinite, blink .75s step-end infinite;
+                white-space: nowrap;
+                overflow: hidden;
+                border-right: 3px solid #00F5FF;
+            }
+            
+            .subtitle {
+                font-size: 20px;
+                fill: #a0a0a0;
+                font-weight: 400;
+                animation: fade-up 2s ease-out;
+            }
+            
+            .profile-pulse {
+                animation: pulse 4s infinite alternate;
+            }
+            
+            @keyframes pulse {
+                0% { filter: drop-shadow(0 0 10px #00F5FF); transform: scale(0.98); }
+                100% { filter: drop-shadow(0 0 30px #4F46E5); transform: scale(1.02); }
+            }
+
+            @keyframes fade-up {
+                0% { opacity: 0; transform: translateY(20px); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
+        </style>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="url(#bg-grad)" />
+    
+    <!-- Stars / Particles -->
+    <g id="stars">
+        <circle cx="228" cy="25" r="1.9831009995196658" fill="#fff" opacity="0.34693511228208573" class="star" />
+        <circle cx="285" cy="754" r="0.704990352343015" fill="#fff" opacity="0.6444006468006056" class="star" />
+        <circle cx="1116" cy="89" r="1.6809850248980793" fill="#fff" opacity="0.21906960768907016" class="star" />
+        <circle cx="191" cy="223" r="0.9653217867814792" fill="#fff" opacity="0.5612112374299882" class="star" />
+        <circle cx="1149" cy="203" r="1.932039225844807" fill="#fff" opacity="0.6207949841541416" class="star" />
+        <circle cx="859" cy="225" r="1.3984180925677072" fill="#fff" opacity="0.36691442493839765" class="star" />
+        <circle cx="13" cy="777" r="2.111638503665616" fill="#fff" opacity="0.6188836369929362" class="star" />
+        <circle cx="696" cy="284" r="0.8109589996235631" fill="#fff" opacity="0.7743278433240688" class="star" />
+        <circle cx="689" cy="104" r="0.6854916867602958" fill="#fff" opacity="0.2580298261000784" class="star" />
+        <circle cx="704" cy="618" r="1.0290417344440261" fill="#fff" opacity="0.22607026575385833" class="star" />
+        <circle cx="940" cy="549" r="0.7496523257064187" fill="#fff" opacity="0.753377223216896" class="star" />
+        <circle cx="161" cy="565" r="1.0863565628141858" fill="#fff" opacity="0.5771838796966661" class="star" />
+        <circle cx="740" cy="591" r="0.8845771805133198" fill="#fff" opacity="0.24173308929424459" class="star" />
+        <circle cx="466" cy="791" r="1.0787759272042143" fill="#fff" opacity="0.24787518615417653" class="star" />
+        <circle cx="476" cy="103" r="1.2602524500783323" fill="#fff" opacity="0.47204618142106136" class="star" />
+        <circle cx="747" cy="166" r="1.2403619342337653" fill="#fff" opacity="0.32570421846289266" class="star" />
+        <circle cx="546" cy="718" r="2.373309175424988" fill="#fff" opacity="0.5888212311479561" class="star" />
+        <circle cx="350" cy="546" r="1.9582535959006984" fill="#fff" opacity="0.29804149625715703" class="star" />
+        <circle cx="777" cy="276" r="2.4790467012731905" fill="#fff" opacity="0.5839998559124557" class="star" />
+        <circle cx="1140" cy="224" r="1.8692285019797492" fill="#fff" opacity="0.7057111521138859" class="star" />
+        <circle cx="114" cy="234" r="2.1436051880136167" fill="#fff" opacity="0.6830274804627288" class="star" />
+        <circle cx="821" cy="274" r="0.6323772104230945" fill="#fff" opacity="0.747881674511327" class="star" />
+        <circle cx="1161" cy="735" r="1.1293557615969558" fill="#fff" opacity="0.5932631991769282" class="star" />
+        <circle cx="810" cy="658" r="1.4177037051747976" fill="#fff" opacity="0.3589280998988315" class="star" />
+        <circle cx="505" cy="762" r="1.6227362683263016" fill="#fff" opacity="0.3576449651137612" class="star" />
+        <circle cx="1197" cy="438" r="2.295645767204954" fill="#fff" opacity="0.4396403030842384" class="star" />
+        <circle cx="449" cy="141" r="1.519052587352929" fill="#fff" opacity="0.25454564730427637" class="star" />
+        <circle cx="96" cy="112" r="0.8056826386965221" fill="#fff" opacity="0.29598920103347015" class="star" />
+        <circle cx="864" cy="610" r="0.6270554123039143" fill="#fff" opacity="0.4289715719039221" class="star" />
+        <circle cx="958" cy="541" r="1.0028282399636264" fill="#fff" opacity="0.5319355377291726" class="star" />
+        <circle cx="23" cy="696" r="1.9414436387203893" fill="#fff" opacity="0.609026221415945" class="star" />
+        <circle cx="1099" cy="768" r="1.0336503799050856" fill="#fff" opacity="0.5845770791478849" class="star" />
+        <circle cx="228" cy="300" r="1.36953050133821" fill="#fff" opacity="0.47223422379752394" class="star" />
+        <circle cx="539" cy="512" r="2.0239243981041293" fill="#fff" opacity="0.5046090047625952" class="star" />
+        <circle cx="217" cy="640" r="1.0968895828972658" fill="#fff" opacity="0.5833696969196032" class="star" />
+        <circle cx="407" cy="156" r="1.247827705182296" fill="#fff" opacity="0.29692942145189205" class="star" />
+        <circle cx="1086" cy="0" r="1.697889168920458" fill="#fff" opacity="0.4931634248173688" class="star" />
+        <circle cx="229" cy="371" r="2.2574437556463685" fill="#fff" opacity="0.6989993176167077" class="star" />
+        <circle cx="629" cy="245" r="0.6158503329883751" fill="#fff" opacity="0.7268057595224244" class="star" />
+        <circle cx="161" cy="87" r="1.9638151896892555" fill="#fff" opacity="0.6896139520520532" class="star" />
+        <circle cx="1090" cy="784" r="0.7515210230408826" fill="#fff" opacity="0.5958504936484206" class="star" />
+        <circle cx="1125" cy="169" r="1.0301132578801182" fill="#fff" opacity="0.7234598246511545" class="star" />
+        <circle cx="866" cy="216" r="2.357826986004354" fill="#fff" opacity="0.6531591179814833" class="star" />
+        <circle cx="411" cy="730" r="1.12343258260179" fill="#fff" opacity="0.7970896139965369" class="star" />
+        <circle cx="764" cy="448" r="2.299228169285891" fill="#fff" opacity="0.4708916848346779" class="star" />
+        <circle cx="507" cy="230" r="0.6280517926526898" fill="#fff" opacity="0.21262055600423535" class="star" />
+        <circle cx="1134" cy="235" r="1.676880228820702" fill="#fff" opacity="0.20431450339105614" class="star" />
+        <circle cx="120" cy="234" r="0.634800656220615" fill="#fff" opacity="0.2188477748318109" class="star" />
+        <circle cx="676" cy="72" r="1.5283122396171782" fill="#fff" opacity="0.3670863583787282" class="star" />
+        <circle cx="994" cy="219" r="1.5784678627895092" fill="#fff" opacity="0.6340115395285826" class="star" />
+        <circle cx="1169" cy="590" r="1.4453420526235883" fill="#fff" opacity="0.6707716545744521" class="star" />
+        <circle cx="833" cy="194" r="0.6886515929837644" fill="#fff" opacity="0.5953896497087979" class="star" />
+        <circle cx="725" cy="433" r="1.322204552099476" fill="#fff" opacity="0.718302049021762" class="star" />
+        <circle cx="110" cy="689" r="1.8069109765315832" fill="#fff" opacity="0.5877078507769907" class="star" />
+        <circle cx="124" cy="412" r="1.9564271768823653" fill="#fff" opacity="0.6803555065170194" class="star" />
+        <circle cx="223" cy="254" r="0.883180144283308" fill="#fff" opacity="0.5217714523462067" class="star" />
+        <circle cx="287" cy="432" r="0.8669760715744665" fill="#fff" opacity="0.47757684104058046" class="star" />
+        <circle cx="154" cy="453" r="2.1160444894634054" fill="#fff" opacity="0.7135801354810238" class="star" />
+        <circle cx="200" cy="51" r="1.804289787997044" fill="#fff" opacity="0.5243527628601831" class="star" />
+        <circle cx="30" cy="95" r="2.352733966016255" fill="#fff" opacity="0.7092174406485834" class="star" />
+        <circle cx="340" cy="416" r="1.471282250901437" fill="#fff" opacity="0.328248379519509" class="star" />
+        <circle cx="821" cy="60" r="0.8292742428030537" fill="#fff" opacity="0.20129322701085586" class="star" />
+        <circle cx="799" cy="271" r="2.353036147118667" fill="#fff" opacity="0.6710776140764729" class="star" />
+        <circle cx="584" cy="433" r="1.893183007200325" fill="#fff" opacity="0.6383031904492797" class="star" />
+        <circle cx="1138" cy="677" r="1.936816550592652" fill="#fff" opacity="0.2928780951644385" class="star" />
+        <circle cx="607" cy="222" r="2.437418729938318" fill="#fff" opacity="0.5475081744897539" class="star" />
+        <circle cx="1110" cy="62" r="1.9959511207581282" fill="#fff" opacity="0.23429916374448986" class="star" />
+        <circle cx="1196" cy="488" r="1.5057007658390271" fill="#fff" opacity="0.7116319352289713" class="star" />
+        <circle cx="322" cy="58" r="2.4215578065489005" fill="#fff" opacity="0.24806687914435216" class="star" />
+        <circle cx="380" cy="70" r="1.6900702129000553" fill="#fff" opacity="0.6051275321624542" class="star" />
+        <circle cx="481" cy="413" r="0.7397732278942484" fill="#fff" opacity="0.7341723884776625" class="star" />
+        <circle cx="504" cy="592" r="1.6890383070668824" fill="#fff" opacity="0.5716289061992619" class="star" />
+        <circle cx="858" cy="673" r="1.6673445785824494" fill="#fff" opacity="0.5136696293191754" class="star" />
+        <circle cx="534" cy="209" r="1.8394519495396584" fill="#fff" opacity="0.3885103176773457" class="star" />
+        <circle cx="543" cy="405" r="0.7617565642549129" fill="#fff" opacity="0.5873004733025897" class="star" />
+        <circle cx="936" cy="323" r="2.3580366634110286" fill="#fff" opacity="0.761440572466894" class="star" />
+        <circle cx="19" cy="469" r="1.7423185109861856" fill="#fff" opacity="0.5377961873833677" class="star" />
+        <circle cx="204" cy="75" r="1.5752688082032547" fill="#fff" opacity="0.5035308164292593" class="star" />
+        <circle cx="271" cy="357" r="2.261728347372879" fill="#fff" opacity="0.7275621454907257" class="star" />
+        <circle cx="756" cy="291" r="0.8154936647144639" fill="#fff" opacity="0.7002469727838843" class="star" />
+        <circle cx="619" cy="626" r="2.4677066205029643" fill="#fff" opacity="0.6842599659590856" class="star" />
+        <circle cx="1083" cy="8" r="1.8357264074251671" fill="#fff" opacity="0.5327613694938067" class="star" />
+        <circle cx="212" cy="137" r="1.0289318429742553" fill="#fff" opacity="0.7338276242034256" class="star" />
+        <circle cx="1133" cy="159" r="1.0446964246296326" fill="#fff" opacity="0.5628978962181344" class="star" />
+        <circle cx="702" cy="208" r="1.874994257602661" fill="#fff" opacity="0.7117476892351384" class="star" />
+        <circle cx="1035" cy="500" r="1.0022425041397882" fill="#fff" opacity="0.7448954277311433" class="star" />
+        <circle cx="104" cy="94" r="1.7685688946183884" fill="#fff" opacity="0.6976088536233316" class="star" />
+        <circle cx="90" cy="3" r="1.1671130772101763" fill="#fff" opacity="0.2784917964210214" class="star" />
+        <circle cx="536" cy="165" r="1.9824618166958616" fill="#fff" opacity="0.5310082526758348" class="star" />
+        <circle cx="875" cy="574" r="0.5193393992166799" fill="#fff" opacity="0.24514631604426024" class="star" />
+        <circle cx="305" cy="558" r="0.5720562761216612" fill="#fff" opacity="0.4215295907073151" class="star" />
+        <circle cx="1131" cy="151" r="1.3595734257615435" fill="#fff" opacity="0.2250973149013147" class="star" />
+        <circle cx="746" cy="40" r="2.2978492730529494" fill="#fff" opacity="0.3260459230038525" class="star" />
+        <circle cx="511" cy="682" r="0.7055872433435713" fill="#fff" opacity="0.6680697451228657" class="star" />
+        <circle cx="832" cy="635" r="1.9989552222870786" fill="#fff" opacity="0.755458293541734" class="star" />
+        <circle cx="484" cy="166" r="2.4524120658619255" fill="#fff" opacity="0.6864630319642382" class="star" />
+        <circle cx="844" cy="25" r="0.858721326836414" fill="#fff" opacity="0.7546923771449274" class="star" />
+        <circle cx="843" cy="685" r="2.228128056750559" fill="#fff" opacity="0.6864495899446335" class="star" />
+        <circle cx="546" cy="163" r="2.0747490182709423" fill="#fff" opacity="0.26485737584177427" class="star" />
+        <circle cx="79" cy="481" r="0.9448674350913289" fill="#fff" opacity="0.6899519633581574" class="star" />
+        <circle cx="942" cy="358" r="1.1103817346772011" fill="#fff" opacity="0.6772072994917171" class="star" />
+        <circle cx="466" cy="228" r="0.547328869402903" fill="#fff" opacity="0.31587787299662523" class="star" />
+        <circle cx="672" cy="285" r="2.228705884060573" fill="#fff" opacity="0.7801334624290168" class="star" />
+        <circle cx="571" cy="359" r="1.7829634772152554" fill="#fff" opacity="0.43980703061603654" class="star" />
+        <circle cx="1098" cy="339" r="2.3784742806494314" fill="#fff" opacity="0.2692050511108566" class="star" />
+        <circle cx="534" cy="182" r="1.6611794674774156" fill="#fff" opacity="0.7901303437298524" class="star" />
+        <circle cx="78" cy="111" r="1.6931425099754893" fill="#fff" opacity="0.4074122670078802" class="star" />
+        <circle cx="642" cy="446" r="1.7124177066122865" fill="#fff" opacity="0.506853835801687" class="star" />
+        <circle cx="788" cy="590" r="0.8801575490045921" fill="#fff" opacity="0.22663192022793865" class="star" />
+        <circle cx="893" cy="1" r="1.5398406971331708" fill="#fff" opacity="0.6839065218200624" class="star" />
+        <circle cx="403" cy="372" r="1.3625947992499738" fill="#fff" opacity="0.7693246915827887" class="star" />
+        <circle cx="676" cy="638" r="1.1278312901167193" fill="#fff" opacity="0.7088091677038013" class="star" />
+        <circle cx="615" cy="519" r="1.1185693244173065" fill="#fff" opacity="0.44503574517153016" class="star" />
+        <circle cx="824" cy="713" r="1.091310405051894" fill="#fff" opacity="0.27637267943549193" class="star" />
+        <circle cx="861" cy="680" r="2.380727341460366" fill="#fff" opacity="0.6063907671636398" class="star" />
+        <circle cx="356" cy="630" r="1.6382105097316186" fill="#fff" opacity="0.44364510125489776" class="star" />
+        <circle cx="0" cy="311" r="1.0738274337378544" fill="#fff" opacity="0.4579328899939008" class="star" />
+        <circle cx="1187" cy="621" r="1.8094112474061432" fill="#fff" opacity="0.4789929141482086" class="star" />
+        <circle cx="905" cy="691" r="0.9274028019782006" fill="#fff" opacity="0.4839117115455958" class="star" />
+        <circle cx="347" cy="674" r="0.6695910734502435" fill="#fff" opacity="0.50927120594913" class="star" />
+        <circle cx="686" cy="95" r="2.1368469290733287" fill="#fff" opacity="0.6506828825244394" class="star" />
+        <circle cx="635" cy="230" r="2.113125789152532" fill="#fff" opacity="0.2884123773474636" class="star" />
+        <circle cx="94" cy="250" r="2.467872045563703" fill="#fff" opacity="0.5667643838364081" class="star" />
+        <circle cx="149" cy="466" r="1.3288820219954387" fill="#fff" opacity="0.5778592284426283" class="star" />
+        <circle cx="398" cy="735" r="1.8927085009810098" fill="#fff" opacity="0.49662630140626224" class="star" />
+        <circle cx="499" cy="151" r="1.8121160222235682" fill="#fff" opacity="0.20332689088281908" class="star" />
+        <circle cx="218" cy="797" r="1.3502923878854682" fill="#fff" opacity="0.305532009023919" class="star" />
+        <circle cx="1060" cy="475" r="0.6004367702812818" fill="#fff" opacity="0.349518967795983" class="star" />
+        <circle cx="248" cy="467" r="0.7666782111140578" fill="#fff" opacity="0.4787859424989421" class="star" />
+        <circle cx="1087" cy="572" r="1.6909046369388394" fill="#fff" opacity="0.7700237650658937" class="star" />
+        <circle cx="906" cy="627" r="2.130013014663368" fill="#fff" opacity="0.735212177804611" class="star" />
+        <circle cx="873" cy="561" r="1.3918272241534009" fill="#fff" opacity="0.2954947445257996" class="star" />
+        <circle cx="972" cy="460" r="1.0183830969300387" fill="#fff" opacity="0.34834384250579575" class="star" />
+        <circle cx="567" cy="784" r="2.0553496706679435" fill="#fff" opacity="0.49075821024216015" class="star" />
+        <circle cx="489" cy="281" r="1.3797451865298054" fill="#fff" opacity="0.628126917566634" class="star" />
+        <circle cx="480" cy="278" r="1.171695073242628" fill="#fff" opacity="0.7358160996741903" class="star" />
+        <circle cx="165" cy="141" r="0.8016613160261732" fill="#fff" opacity="0.42982117545880294" class="star" />
+        <circle cx="312" cy="723" r="0.9279057542119749" fill="#fff" opacity="0.4489207375389309" class="star" />
+        <circle cx="677" cy="555" r="1.4318486067023013" fill="#fff" opacity="0.23735942635015123" class="star" />
+        <circle cx="860" cy="398" r="2.309676956680354" fill="#fff" opacity="0.5504476485225351" class="star" />
+        <circle cx="40" cy="783" r="1.6513806936201605" fill="#fff" opacity="0.4861878395344142" class="star" />
+        <circle cx="720" cy="305" r="2.0069502501187717" fill="#fff" opacity="0.7120687703414628" class="star" />
+        <circle cx="858" cy="551" r="1.9950313379561015" fill="#fff" opacity="0.5276793858403035" class="star" />
+        <circle cx="451" cy="499" r="0.9388432692428723" fill="#fff" opacity="0.461501585627982" class="star" />
+        <circle cx="59" cy="398" r="1.1722590873967649" fill="#fff" opacity="0.60748513101701" class="star" />
+        <circle cx="828" cy="741" r="0.8300894624070176" fill="#fff" opacity="0.48043408953938616" class="star" />
+        <circle cx="261" cy="637" r="1.5682472590650087" fill="#fff" opacity="0.744157317552061" class="star" />
+        <circle cx="1155" cy="678" r="0.5542040926806249" fill="#fff" opacity="0.5856497888056016" class="star" />
+        <circle cx="277" cy="472" r="0.8634580530268643" fill="#fff" opacity="0.3560937883515829" class="star" />
+        <circle cx="670" cy="216" r="1.4093986500329643" fill="#fff" opacity="0.4025003288443224" class="star" />
+
+    </g>
+
+    <!-- Glowing Grid / Aurora Simulation -->
+    <path d="M0,800 C300,700 600,900 1200,600 L1200,800 L0,800 Z" fill="rgba(79, 70, 229, 0.1)" filter="url(#glow-heavy)" />
+    <path d="M0,700 C400,800 800,500 1200,700 L1200,800 L0,800 Z" fill="rgba(0, 245, 255, 0.1)" filter="url(#glow-heavy)" />
+
+    <!-- Center Profile -->
+    <g transform="translate(600, 450)" class="profile-pulse">
+        <!-- Holographic rings -->
+        <circle cx="0" cy="0" r="105" fill="none" stroke="url(#neon-blue)" stroke-width="2" filter="url(#glow)" />
+        <circle cx="0" cy="0" r="115" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="10 5" />
+        <circle cx="0" cy="0" r="95" fill="#000" />
+        
+        <!-- VR/AI Vector Avatar inside center -->
+        <circle cx="0" cy="-20" r="30" fill="#0EA5E9" opacity="0.8" filter="url(#glow)"/>
+        <path d="M-40,40 Q0,0 40,40 L30,80 L-30,80 Z" fill="#4F46E5" opacity="0.8" filter="url(#glow)"/>
+        <text x="0" y="20" fill="#fff" text-anchor="middle" font-size="12" font-weight="bold">AMIT</text>
+    </g>
+
+    <!-- Inner Orbit (Tech Stack) -->
+    <g class="orbit-inner">
+
+        <g transform="translate(820.0,450.0)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">Python</text>
+            </g>
+        </g>
+
+        <g transform="translate(798.2131509385322,545.4544226058628)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">AI</text>
+            </g>
+        </g>
+
+        <g transform="translate(737.1677564089214,622.0029261429665)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">ML</text>
+            </g>
+        </g>
+
+        <g transform="translate(648.9546054703892,664.4841406800012)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">AWS</text>
+            </g>
+        </g>
+
+        <g transform="translate(551.0453945296108,664.4841406800012)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">Docker</text>
+            </g>
+        </g>
+
+        <g transform="translate(462.8322435910786,622.0029261429665)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">Linux</text>
+            </g>
+        </g>
+
+        <g transform="translate(401.7868490614678,545.4544226058629)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">React</text>
+            </g>
+        </g>
+
+        <g transform="translate(380.0,450.0)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">Next.js</text>
+            </g>
+        </g>
+
+        <g transform="translate(401.7868490614678,354.54557739413724)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">Node</text>
+            </g>
+        </g>
+
+        <g transform="translate(462.8322435910786,277.99707385703346)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">FastAPI</text>
+            </g>
+        </g>
+
+        <g transform="translate(551.0453945296108,235.5158593199988)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">SQL</text>
+            </g>
+        </g>
+
+        <g transform="translate(648.9546054703891,235.5158593199988)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">Git</text>
+            </g>
+        </g>
+
+        <g transform="translate(737.1677564089214,277.99707385703346)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">K8s</text>
+            </g>
+        </g>
+
+        <g transform="translate(798.2131509385322,354.5455773941372)">
+            <g class="orbit-inner-reverse">
+                <circle cx="0" cy="0" r="28" fill="url(#glass)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <text x="0" y="4" fill="#00F5FF" font-size="10" font-weight="bold" text-anchor="middle" filter="url(#glow)">DevOps</text>
+            </g>
+        </g>
+
+    </g>
+
+    <!-- Outer Orbit (Varanasi Cards) -->
+    <g class="orbit-outer" style="transform-style: preserve-3d;">
+
+        <g transform="translate(950.0,450.0)">
+            <g class="orbit-outer-reverse">
+                <!-- 3D Glass Card -->
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="url(#glass)" stroke="url(#neon-cyan)" stroke-width="1.5" filter="url(#glow)" />
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="rgba(0,0,0,0.5)" />
+                <!-- Inner design representing the place -->
+                <circle cx="0" cy="-20" r="30" fill="none" stroke="#4F46E5" stroke-width="2" />
+                <path d="M-15,-10 L0,-30 L15,-10 Z" fill="#00F5FF" opacity="0.6" />
+                <text x="0" y="40" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">Kashi Corridor</text>
+                <text x="0" y="60" fill="#0EA5E9" font-size="8" text-anchor="middle">VARANASI</text>
+            </g>
+        </g>
+
+        <g transform="translate(883.1559480312317,655.7248383023656)">
+            <g class="orbit-outer-reverse">
+                <!-- 3D Glass Card -->
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="url(#glass)" stroke="url(#neon-cyan)" stroke-width="1.5" filter="url(#glow)" />
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="rgba(0,0,0,0.5)" />
+                <!-- Inner design representing the place -->
+                <circle cx="0" cy="-20" r="30" fill="none" stroke="#4F46E5" stroke-width="2" />
+                <path d="M-15,-10 L0,-30 L15,-10 Z" fill="#00F5FF" opacity="0.6" />
+                <text x="0" y="40" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">BHU Campus</text>
+                <text x="0" y="60" fill="#0EA5E9" font-size="8" text-anchor="middle">VARANASI</text>
+            </g>
+        </g>
+
+        <g transform="translate(708.1559480312316,782.8697807033037)">
+            <g class="orbit-outer-reverse">
+                <!-- 3D Glass Card -->
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="url(#glass)" stroke="url(#neon-cyan)" stroke-width="1.5" filter="url(#glow)" />
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="rgba(0,0,0,0.5)" />
+                <!-- Inner design representing the place -->
+                <circle cx="0" cy="-20" r="30" fill="none" stroke="#4F46E5" stroke-width="2" />
+                <path d="M-15,-10 L0,-30 L15,-10 Z" fill="#00F5FF" opacity="0.6" />
+                <text x="0" y="40" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">Aerial BHU</text>
+                <text x="0" y="60" fill="#0EA5E9" font-size="8" text-anchor="middle">VARANASI</text>
+            </g>
+        </g>
+
+        <g transform="translate(491.84405196876844,782.8697807033038)">
+            <g class="orbit-outer-reverse">
+                <!-- 3D Glass Card -->
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="url(#glass)" stroke="url(#neon-cyan)" stroke-width="1.5" filter="url(#glow)" />
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="rgba(0,0,0,0.5)" />
+                <!-- Inner design representing the place -->
+                <circle cx="0" cy="-20" r="30" fill="none" stroke="#4F46E5" stroke-width="2" />
+                <path d="M-15,-10 L0,-30 L15,-10 Z" fill="#00F5FF" opacity="0.6" />
+                <text x="0" y="40" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">Sarnath</text>
+                <text x="0" y="60" fill="#0EA5E9" font-size="8" text-anchor="middle">VARANASI</text>
+            </g>
+        </g>
+
+        <g transform="translate(316.84405196876844,655.7248383023657)">
+            <g class="orbit-outer-reverse">
+                <!-- 3D Glass Card -->
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="url(#glass)" stroke="url(#neon-cyan)" stroke-width="1.5" filter="url(#glow)" />
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="rgba(0,0,0,0.5)" />
+                <!-- Inner design representing the place -->
+                <circle cx="0" cy="-20" r="30" fill="none" stroke="#4F46E5" stroke-width="2" />
+                <path d="M-15,-10 L0,-30 L15,-10 Z" fill="#00F5FF" opacity="0.6" />
+                <text x="0" y="40" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">Buddha</text>
+                <text x="0" y="60" fill="#0EA5E9" font-size="8" text-anchor="middle">VARANASI</text>
+            </g>
+        </g>
+
+        <g transform="translate(250.0,450.00000000000006)">
+            <g class="orbit-outer-reverse">
+                <!-- 3D Glass Card -->
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="url(#glass)" stroke="url(#neon-cyan)" stroke-width="1.5" filter="url(#glow)" />
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="rgba(0,0,0,0.5)" />
+                <!-- Inner design representing the place -->
+                <circle cx="0" cy="-20" r="30" fill="none" stroke="#4F46E5" stroke-width="2" />
+                <path d="M-15,-10 L0,-30 L15,-10 Z" fill="#00F5FF" opacity="0.6" />
+                <text x="0" y="40" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">Vishwanath</text>
+                <text x="0" y="60" fill="#0EA5E9" font-size="8" text-anchor="middle">VARANASI</text>
+            </g>
+        </g>
+
+        <g transform="translate(316.8440519687684,244.27516169763445)">
+            <g class="orbit-outer-reverse">
+                <!-- 3D Glass Card -->
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="url(#glass)" stroke="url(#neon-cyan)" stroke-width="1.5" filter="url(#glow)" />
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="rgba(0,0,0,0.5)" />
+                <!-- Inner design representing the place -->
+                <circle cx="0" cy="-20" r="30" fill="none" stroke="#4F46E5" stroke-width="2" />
+                <path d="M-15,-10 L0,-30 L15,-10 Z" fill="#00F5FF" opacity="0.6" />
+                <text x="0" y="40" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">Ganga Ghats</text>
+                <text x="0" y="60" fill="#0EA5E9" font-size="8" text-anchor="middle">VARANASI</text>
+            </g>
+        </g>
+
+        <g transform="translate(491.8440519687683,117.13021929669628)">
+            <g class="orbit-outer-reverse">
+                <!-- 3D Glass Card -->
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="url(#glass)" stroke="url(#neon-cyan)" stroke-width="1.5" filter="url(#glow)" />
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="rgba(0,0,0,0.5)" />
+                <!-- Inner design representing the place -->
+                <circle cx="0" cy="-20" r="30" fill="none" stroke="#4F46E5" stroke-width="2" />
+                <path d="M-15,-10 L0,-30 L15,-10 Z" fill="#00F5FF" opacity="0.6" />
+                <text x="0" y="40" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">Sunrise Boat</text>
+                <text x="0" y="60" fill="#0EA5E9" font-size="8" text-anchor="middle">VARANASI</text>
+            </g>
+        </g>
+
+        <g transform="translate(708.1559480312316,117.13021929669623)">
+            <g class="orbit-outer-reverse">
+                <!-- 3D Glass Card -->
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="url(#glass)" stroke="url(#neon-cyan)" stroke-width="1.5" filter="url(#glow)" />
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="rgba(0,0,0,0.5)" />
+                <!-- Inner design representing the place -->
+                <circle cx="0" cy="-20" r="30" fill="none" stroke="#4F46E5" stroke-width="2" />
+                <path d="M-15,-10 L0,-30 L15,-10 Z" fill="#00F5FF" opacity="0.6" />
+                <text x="0" y="40" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">Evening Ghat</text>
+                <text x="0" y="60" fill="#0EA5E9" font-size="8" text-anchor="middle">VARANASI</text>
+            </g>
+        </g>
+
+        <g transform="translate(883.1559480312316,244.27516169763433)">
+            <g class="orbit-outer-reverse">
+                <!-- 3D Glass Card -->
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="url(#glass)" stroke="url(#neon-cyan)" stroke-width="1.5" filter="url(#glow)" />
+                <rect x="-60" y="-80" width="120" height="160" rx="10" fill="rgba(0,0,0,0.5)" />
+                <!-- Inner design representing the place -->
+                <circle cx="0" cy="-20" r="30" fill="none" stroke="#4F46E5" stroke-width="2" />
+                <path d="M-15,-10 L0,-30 L15,-10 Z" fill="#00F5FF" opacity="0.6" />
+                <text x="0" y="40" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">Skyline</text>
+                <text x="0" y="60" fill="#0EA5E9" font-size="8" text-anchor="middle">VARANASI</text>
+            </g>
+        </g>
+
+    </g>
+
+    <!-- Top Text Section -->
+    <g transform="translate(600, 100)">
+        <text x="0" y="0" text-anchor="middle" class="typing-text">Hello World, I'm Amit Kumar</text>
+        <text x="0" y="40" text-anchor="middle" class="subtitle">AI Engineer | Machine Learning | Future Builder</text>
+    </g>
+</svg>
