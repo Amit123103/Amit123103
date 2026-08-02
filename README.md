@@ -28,6 +28,13 @@
 
 <br><br>
 
+<!-- System Architecture Blueprint -->
+<picture>
+  <img src="assets/aurora_architecture.svg" alt="Enterprise RAG &amp; Agentic System Architecture" width="100%">
+</picture>
+
+<br><br>
+
 <!-- Engineering Competency Radar -->
 <picture>
   <img src="assets/aurora_radar.svg" alt="Engineering Competency Radar" width="100%">

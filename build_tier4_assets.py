@@ -1,0 +1,73 @@
+import xml.etree.ElementTree as ET
+
+def generate_aurora_architecture():
+    width = 1200
+    height = 280
+    
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="100%">
+    <defs>
+        <style>
+            text {{ font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; fill: #FFFFFF; }}
+            .node {{ fill: rgba(15, 23, 42, 0.85); stroke-width: 1.5; rx: 10; }}
+            .conn-line {{ stroke: rgba(56, 189, 248, 0.4); stroke-width: 2; stroke-dasharray: 6 4; animation: flow 2s linear infinite; }}
+            @keyframes flow {{ 100% {{ stroke-dashoffset: -20; }} }}
+        </style>
+    </defs>
+    
+    <rect width="100%" height="100%" fill="rgba(15, 23, 42, 0.75)" rx="14" stroke="rgba(255, 255, 255, 0.08)" />
+    
+    <!-- Title -->
+    <text x="600" y="38" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="2" fill="#38BDF8">ENTERPRISE RAG &amp; AGENTIC SYSTEM ARCHITECTURE</text>
+    <rect x="580" y="48" width="40" height="2" fill="#818CF8" />
+
+    <!-- Connecting Flow Lines -->
+    <line x1="220" y1="150" x2="380" y2="150" class="conn-line" />
+    <line x1="560" y1="150" x2="720" y2="150" class="conn-line" />
+    <line x1="900" y1="150" x2="1040" y2="150" class="conn-line" />
+
+    <g transform="translate(40, 95)">
+        <!-- Node 1: Client Query -->
+        <g transform="translate(0, 0)">
+            <rect x="0" y="0" width="180" height="110" class="node" stroke="#38BDF8" />
+            <text x="90" y="40" font-size="14" font-weight="700" fill="#38BDF8" text-anchor="middle">🖥️ CLIENT / APP</text>
+            <text x="90" y="68" font-size="12" fill="#94A3B8" text-anchor="middle">React / Next.js</text>
+            <text x="90" y="88" font-size="11" fill="#64748B" text-anchor="middle">User Prompt Query</text>
+        </g>
+
+        <!-- Node 2: FastAPI Gateway -->
+        <g transform="translate(340, 0)">
+            <rect x="0" y="0" width="180" height="110" class="node" stroke="#818CF8" />
+            <text x="90" y="40" font-size="14" font-weight="700" fill="#818CF8" text-anchor="middle">⚡ API GATEWAY</text>
+            <text x="90" y="68" font-size="12" fill="#94A3B8" text-anchor="middle">FastAPI / Node.js</text>
+            <text x="90" y="88" font-size="11" fill="#64748B" text-anchor="middle">Auth &amp; Rate Limit</text>
+        </g>
+
+        <!-- Node 3: Vector DB & RAG -->
+        <g transform="translate(680, 0)">
+            <rect x="0" y="0" width="180" height="110" class="node" stroke="#C084FC" />
+            <text x="90" y="40" font-size="14" font-weight="700" fill="#C084FC" text-anchor="middle">📦 VECTOR DB</text>
+            <text x="90" y="68" font-size="12" fill="#94A3B8" text-anchor="middle">Qdrant / Pinecone</text>
+            <text x="90" y="88" font-size="11" fill="#64748B" text-anchor="middle">Similarity Retrieval</text>
+        </g>
+
+        <!-- Node 4: LLM Model -->
+        <g transform="translate(1000, 0)">
+            <rect x="0" y="0" width="160" height="110" class="node" stroke="#34D399" />
+            <text x="80" y="40" font-size="14" font-weight="700" fill="#34D399" text-anchor="middle">🤖 LLM ENGINE</text>
+            <text x="80" y="68" font-size="12" fill="#94A3B8" text-anchor="middle">PyTorch / Llama 3</text>
+            <text x="80" y="88" font-size="11" fill="#64748B" text-anchor="middle">Streamed Output</text>
+        </g>
+    </g>
+</svg>
+'''
+    with open("assets/aurora_architecture.svg", "w", encoding="utf-8") as f:
+        f.write(svg)
+    print("Generated aurora_architecture.svg")
+
+def validate_svgs():
+    ET.parse("assets/aurora_architecture.svg")
+    print("Tier-4 SVGs pass XML validation!")
+
+if __name__ == "__main__":
+    generate_aurora_architecture()
+    validate_svgs()
