@@ -40,10 +40,8 @@ def generate_hero_svg():
         </filter>
 
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap');
-            
-            text {{
-                font-family: 'Inter', sans-serif;
+text {{
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             }}
             
             .star {{
@@ -243,8 +241,7 @@ def generate_panels_svg():
             <stop offset="100%" stop-color="#6366F1" />
         </linearGradient>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap');
-            text {{ font-family: 'Inter', sans-serif; }}
+text {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }}
             .float {{ animation: float 6s ease-in-out infinite; }}
             .float-delayed {{ animation: float 6s ease-in-out 3s infinite; }}
             @keyframes float {{
@@ -311,8 +308,7 @@ def generate_skills_svg():
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
         </filter>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap');
-            text {{ font-family: 'Inter', sans-serif; }}
+text {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }}
             .fill-anim {{
                 animation: fillBar 2s ease-out forwards;
             }}
@@ -364,8 +360,7 @@ def generate_footer_svg():
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
         </filter>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap');
-            text {{ font-family: 'Inter', sans-serif; }}
+text {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }}
             .water-flow {{
                 animation: flow 10s linear infinite;
             }}

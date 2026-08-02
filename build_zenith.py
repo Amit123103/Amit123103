@@ -16,8 +16,7 @@ def generate_zenith_hero():
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="100%">
     <defs>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700');
-            text {{ font-family: 'Inter', sans-serif; fill: #FFF; }}
+text {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; fill: #FFF; }}
             .glow {{ filter: drop-shadow(0 0 10px rgba(0,245,255,0.6)); }}
             .pulse {{ animation: pulse 4s infinite alternate ease-in-out; transform-origin: center; }}
             @keyframes pulse {{ 0% {{ transform: scale(0.98); opacity: 0.8; }} 100% {{ transform: scale(1.02); opacity: 1; }} }}
@@ -86,8 +85,7 @@ def generate_zenith_about():
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="100%">
     <defs>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600');
-            text {{ font-family: 'Inter', sans-serif; fill: #FFF; }}
+text {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; fill: #FFF; }}
             .card {{ fill: rgba(255,255,255,0.03); stroke: rgba(255,255,255,0.1); stroke-width: 1; transition: all 0.3s; }}
             .card-glow {{ fill: rgba(0, 245, 255, 0.02); stroke: #00F5FF; stroke-width: 1.5; filter: drop-shadow(0 0 10px rgba(0,245,255,0.2)); }}
         </style>
@@ -148,8 +146,7 @@ def generate_zenith_skills():
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="100%">
     <defs>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600');
-            text {{ font-family: 'Inter', sans-serif; fill: #FFF; }}
+text {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; fill: #FFF; }}
             .capsule {{ fill: rgba(255,255,255,0.05); stroke: rgba(255,255,255,0.15); stroke-width: 1; rx: 18; }}
             .capsule-anim {{ animation: float-capsule 4s ease-in-out infinite alternate; }}
             @keyframes float-capsule {{ 0% {{ transform: translateY(0px); stroke: rgba(255,255,255,0.15); }} 100% {{ transform: translateY(-4px); stroke: rgba(0,245,255,0.5); }} }}
@@ -198,8 +195,7 @@ def generate_zenith_projects():
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="100%">
     <defs>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700');
-            text {{ font-family: 'Inter', sans-serif; fill: #FFF; }}
+text {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; fill: #FFF; }}
             .card {{ fill: rgba(20,20,30,0.4); stroke: rgba(255,255,255,0.1); stroke-width: 1; rx: 12; }}
             .tag {{ fill: rgba(0,245,255,0.1); stroke: #00F5FF; stroke-width: 1; rx: 10; }}
             .btn {{ fill: #00F5FF; rx: 6; }}

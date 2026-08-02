@@ -54,8 +54,7 @@ def generate_god_core():
         </clipPath>
 
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
-            text {{ font-family: 'Share Tech Mono', monospace; }}
+text {{ font-family: 'Share Tech Mono', monospace; }}
             
             .spin-fast {{ animation: spin 10s linear infinite; transform-origin: center; }}
             .spin-slow {{ animation: spin 30s linear infinite reverse; transform-origin: center; }}
@@ -196,8 +195,7 @@ def generate_god_hud():
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="100%">
     <defs>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
-            text {{ font-family: 'Share Tech Mono', monospace; }}
+text {{ font-family: 'Share Tech Mono', monospace; }}
             
             .hud-panel {{
                 fill: rgba(2, 6, 23, 0.6);

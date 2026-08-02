@@ -59,9 +59,7 @@ def generate_hero_svg_with_images():
         </clipPath>
 
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap');
-            
-            text {{ font-family: 'Inter', sans-serif; }}
+text {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }}
             
             .star {{ animation: twinkle 3s infinite alternate; }}
             .star:nth-child(even) {{ animation-duration: 5s; animation-delay: 2s; }}

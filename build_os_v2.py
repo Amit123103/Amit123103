@@ -53,8 +53,7 @@ def generate_os_core():
         <clipPath id="panel-clip"><polygon points="30,0 90,0 120,30 120,120 90,150 30,150 0,120 0,30" /></clipPath>
         
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;700&amp;display=swap');
-            text {{ font-family: 'Jura', sans-serif; }}
+text {{ font-family: 'Jura', sans-serif; }}
             .spin-fast {{ animation: spin 8s linear infinite; transform-origin: center; }}
             .spin-slow {{ animation: spin 40s linear infinite reverse; transform-origin: center; }}
             @keyframes spin {{ 100% {{ transform: rotate(360deg); }} }}
@@ -167,8 +166,7 @@ def generate_os_cmd():
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="100%">
     <defs>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;700&amp;display=swap');
-            text {{ font-family: 'Jura', sans-serif; fill: #FFF; }}
+text {{ font-family: 'Jura', sans-serif; fill: #FFF; }}
             .highlight {{ fill: #00F5FF; font-weight: bold; filter: drop-shadow(0 0 4px #00F5FF); }}
             .panel {{ fill: rgba(5, 10, 25, 0.7); stroke: #4F46E5; stroke-width: 2; }}
             
@@ -239,8 +237,7 @@ def generate_os_neural():
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="100%">
     <defs>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&amp;display=swap');
-            text {{ font-family: 'Jura', sans-serif; fill: #FFF; font-weight: bold; font-size: 12px; }}
+text {{ font-family: 'Jura', sans-serif; fill: #FFF; font-weight: bold; font-size: 12px; }}
             .hex {{ fill: rgba(0, 245, 255, 0.05); stroke: #00F5FF; stroke-width: 2; transition: all 0.3s; }}
             
             .breathe {{ animation: coreBreathe 3s ease-in-out infinite alternate; }}
@@ -312,8 +309,7 @@ def generate_os_matrix():
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="100%">
     <defs>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&amp;display=swap');
-            text {{ font-family: 'Jura', sans-serif; fill: #FFF; }}
+text {{ font-family: 'Jura', sans-serif; fill: #FFF; }}
             .cube-face-top {{ fill: rgba(0, 245, 255, 0.2); stroke: #00F5FF; stroke-width: 1.5; }}
             .cube-face-left {{ fill: rgba(79, 70, 229, 0.3); stroke: #00F5FF; stroke-width: 1.5; }}
             .cube-face-right {{ fill: rgba(2, 6, 23, 0.8); stroke: #00F5FF; stroke-width: 1.5; }}
@@ -377,8 +373,7 @@ def generate_os_social():
             <stop offset="100%" stop-color="rgba(0,0,0,0)" />
         </radialGradient>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&amp;display=swap');
-            text {{ font-family: 'Jura', sans-serif; fill: #FFF; font-weight: bold; font-size: 14px; text-anchor: middle; }}
+text {{ font-family: 'Jura', sans-serif; fill: #FFF; font-weight: bold; font-size: 14px; text-anchor: middle; }}
             .float {{ animation: floatP 4s ease-in-out infinite alternate; }}
             @keyframes floatP {{ 0% {{ transform: translateY(-5px); }} 100% {{ transform: translateY(5px); }} }}
         </style>
