@@ -21,6 +21,13 @@
 
 <br><br>
 
+<!-- Core Technology & Infrastructure Ecosystem -->
+<picture>
+  <img src="assets/aurora_tech_badges.svg" alt="Core Technology &amp; Infrastructure Ecosystem" width="100%">
+</picture>
+
+<br><br>
+
 <!-- Core Focus & Capabilities -->
 <picture>
   <img src="assets/aurora_about.svg" alt="Core Focus &amp; Capabilities" width="100%">
