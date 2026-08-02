@@ -145,11 +145,13 @@
 
 <br><br>
 
-<!-- Animated Mascots -->
+<!-- Animated Mascots & 3D Octocat Figurine -->
 <div align="center">
-  <img src="assets/animated_owl.gif" alt="Animated Party Owl" width="180" />
+  <img src="assets/animated_owl.gif" alt="Animated Party Owl" width="160" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="assets/3d_octocat.gif" alt="Realistic 3D Octocat" width="180" />
+  <img src="assets/octocat_3d_figure.png" alt="3D Octocat Figurine" width="180" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/3d_octocat.gif" alt="Realistic 3D Octocat" width="160" />
 </div>
 
 <br><br>
