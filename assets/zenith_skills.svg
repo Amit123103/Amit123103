@@ -11,7 +11,7 @@
     
     <text x="600" y="40" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="2">TECHNICAL EXPERTISE</text>
     <rect x="580" y="55" width="40" height="2" fill="#00F5FF" />
-<text x="100" y="100" font-size="16" font-weight="600" fill="#00F5FF">AI & ML</text><line x1="100" y1="110" x2="1100" y2="110" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+<text x="100" y="100" font-size="16" font-weight="600" fill="#00F5FF">AI &amp; ML</text><line x1="100" y1="110" x2="1100" y2="110" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
             <g transform="translate(100, 130)">
                 <g class="capsule-anim" style="animation-delay: 0.0s;">
                     <rect x="0" y="0" width="94" height="36" class="capsule" />

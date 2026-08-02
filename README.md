@@ -2,42 +2,43 @@
 
 <!-- Zenith Core Hero Section -->
 <picture>
-  <img src="assets/zenith_hero.svg" alt="Amit Kumar - AI Engineer & Cloud Architect" width="100%">
+  <img src="assets/zenith_hero.svg?v=2" alt="Amit Kumar - AI Engineer & Cloud Architect" width="100%">
 </picture>
 
 <br><br>
 
 <!-- Zenith About / Data Grid -->
 <picture>
-  <img src="assets/zenith_about.svg" alt="Personal Details & Focus" width="100%">
+  <img src="assets/zenith_about.svg?v=2" alt="Personal Details & Focus" width="100%">
 </picture>
 
 <br><br>
 
 <!-- Zenith Skill Capsules -->
 <picture>
-  <img src="assets/zenith_skills.svg" alt="Technical Expertise Matrix" width="100%">
+  <img src="assets/zenith_skills.svg?v=2" alt="Technical Expertise Matrix" width="100%">
 </picture>
 
 <br><br>
 
 <!-- Zenith Project Cards -->
 <picture>
-  <img src="assets/zenith_projects.svg" alt="Featured Projects" width="100%">
+  <img src="assets/zenith_projects.svg?v=2" alt="Featured Projects" width="100%">
 </picture>
 
 <br><br>
 
 <!-- Perfectly Aligned GitHub Dashboard -->
-<div align="center" style="display: flex; justify-content: center; gap: 10px;">
-  <img src="https://github-readme-stats.vercel.app/api?username=Amit123103&show_icons=true&theme=react&hide_border=true&bg_color=020408&title_color=00F5FF&icon_color=4F46E5&text_color=FFFFFF" alt="GitHub Stats Console" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Amit123103&theme=react&hide_border=true&background=020408&ring=00F5FF&fire=4F46E5&currStreakNum=FFFFFF" alt="GitHub Streak Tracker" width="48%" />
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Amit123103&amp;show_icons=true&amp;theme=react&amp;hide_border=true&amp;bg_color=020408&amp;title_color=00F5FF&amp;icon_color=4F46E5&amp;text_color=FFFFFF" alt="GitHub Stats Console" width="48%" />
+  &nbsp;&nbsp;
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Amit123103&amp;theme=react&amp;hide_border=true&amp;background=020408&amp;ring=00F5FF&amp;fire=4F46E5&amp;currStreakNum=FFFFFF" alt="GitHub Streak Tracker" width="48%" />
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Amit123103&theme=radical&no-frame=true&no-bg=true&margin-w=15" alt="Achievement Crystals" width="100%" />
+  <img src="https://github-profile-trophy.vercel.app/?username=Amit123103&amp;theme=radical&amp;no-frame=true&amp;no-bg=true&amp;margin-w=15" alt="Achievement Crystals" width="100%" />
 </div>
 
 <br><br>
@@ -54,18 +55,21 @@
 <br><br>
 
 <!-- Social Galaxy -->
-<div align="center" style="display: flex; justify-content: center; gap: 20px;">
+<div align="center">
   <a href="https://linkedin.com/in/amit123103">
-    <img src="https://img.shields.io/badge/LinkedIn-020408?style=for-the-badge&logo=linkedin&logoColor=00F5FF" alt="LinkedIn">
+    <img src="https://img.shields.io/badge/LinkedIn-020408?style=for-the-badge&amp;logo=linkedin&amp;logoColor=00F5FF" alt="LinkedIn">
   </a>
+  &nbsp;&nbsp;
   <a href="https://github.com/Amit123103">
-    <img src="https://img.shields.io/badge/GitHub-020408?style=for-the-badge&logo=github&logoColor=00F5FF" alt="GitHub">
+    <img src="https://img.shields.io/badge/GitHub-020408?style=for-the-badge&amp;logo=github&amp;logoColor=00F5FF" alt="GitHub">
   </a>
+  &nbsp;&nbsp;
   <a href="mailto:amit@example.com">
-    <img src="https://img.shields.io/badge/Email-020408?style=for-the-badge&logo=gmail&logoColor=00F5FF" alt="Email">
+    <img src="https://img.shields.io/badge/Email-020408?style=for-the-badge&amp;logo=gmail&amp;logoColor=00F5FF" alt="Email">
   </a>
+  &nbsp;&nbsp;
   <a href="https://twitter.com/amit123103">
-    <img src="https://img.shields.io/badge/Twitter-020408?style=for-the-badge&logo=twitter&logoColor=00F5FF" alt="Twitter">
+    <img src="https://img.shields.io/badge/Twitter-020408?style=for-the-badge&amp;logo=twitter&amp;logoColor=00F5FF" alt="Twitter">
   </a>
 </div>
 
@@ -73,7 +77,7 @@
 
 <!-- Zenith Memory Carousel Footer -->
 <picture>
-  <img src="assets/zenith_footer.svg" alt="Memory Carousel" width="100%">
+  <img src="assets/zenith_footer.svg?v=2" alt="Memory Carousel" width="100%">
 </picture>
 
 </div>

@@ -140,7 +140,7 @@ def generate_zenith_skills():
     height = 550
     
     categories = [
-        ("AI & ML", ["Python", "TensorFlow", "PyTorch", "OpenCV", "Machine Learning", "Deep Learning", "LLMs", "RAG", "LangChain", "OpenAI"]),
+        ("AI &amp; ML", ["Python", "TensorFlow", "PyTorch", "OpenCV", "Machine Learning", "Deep Learning", "LLMs", "RAG", "LangChain", "OpenAI"]),
         ("Backend & Web", ["FastAPI", "Node.js", "REST APIs", "React", "Next.js", "HTML", "CSS", "JavaScript"]),
         ("Cloud & Core", ["AWS", "Docker", "Linux", "DevOps", "GitHub Actions", "C++", "Java", "C", "MySQL", "SQLite"])
     ]
