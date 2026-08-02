@@ -7,6 +7,13 @@
 
 <br><br>
 
+<!-- Interactive Console Terminal -->
+<picture>
+  <img src="assets/aurora_terminal.svg" alt="Quantum Terminal Console" width="100%">
+</picture>
+
+<br><br>
+
 <!-- Core Focus & Capabilities -->
 <picture>
   <img src="assets/aurora_about.svg" alt="Core Focus &amp; Capabilities" width="100%">
@@ -29,6 +36,13 @@
 </div>
 
 <br>
+
+<!-- Core Proficiency & Skill Breakdown -->
+<picture>
+  <img src="assets/aurora_languages.svg" alt="Core Proficiency &amp; Skill Breakdown" width="100%">
+</picture>
+
+<br><br>
 
 <!-- Technical Expertise Matrix -->
 <picture>
