@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+    <defs>
+        <style>
+            text { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; fill: #FFFFFF; }
+            .pill { fill: rgba(30, 41, 59, 0.6); stroke: rgba(255, 255, 255, 0.1); stroke-width: 1; rx: 16; }
+        </style>
+    </defs>
+    
+    <text x="600" y="38" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="2" fill="#38BDF8">TECHNICAL EXPERTISE MATRIX</text>
+    <rect x="580" y="48" width="40" height="2" fill="#38BDF8" />
+
+        <text x="80" y="85" font-size="14" font-weight="700" fill="#818CF8" letter-spacing="1.5">AI &amp; DEEP LEARNING</text>
+        <line x1="80" y1="95" x2="1120" y2="95" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+
+            <g transform="translate(80, 111)">
+                <rect x="0" y="0" width="90" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="52.5" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">Python</text>
+            </g>
+
+            <g transform="translate(182, 111)">
+                <rect x="0" y="0" width="99" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="57.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">PyTorch</text>
+            </g>
+
+            <g transform="translate(293, 111)">
+                <rect x="0" y="0" width="126" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="70.5" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">TensorFlow</text>
+            </g>
+
+            <g transform="translate(431, 111)">
+                <rect x="0" y="0" width="90" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="52.5" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">OpenCV</text>
+            </g>
+
+            <g transform="translate(533, 111)">
+                <rect x="0" y="0" width="117" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="66.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">LangChain</text>
+            </g>
+
+            <g transform="translate(662, 111)">
+                <rect x="0" y="0" width="72" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="43.5" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">LLMs</text>
+            </g>
+
+            <g transform="translate(746, 111)">
+                <rect x="0" y="0" width="135" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="75.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">RAG Systems</text>
+            </g>
+
+            <g transform="translate(893, 111)">
+                <rect x="0" y="0" width="90" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="52.5" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">OpenAI</text>
+            </g>
+
+            <g transform="translate(80, 153)">
+                <rect x="0" y="0" width="126" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="70.5" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">Vector DBs</text>
+            </g>
+
+        <text x="80" y="213" font-size="14" font-weight="700" fill="#818CF8" letter-spacing="1.5">CLOUD &amp; DEVOPS</text>
+        <line x1="80" y1="223" x2="1120" y2="223" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+
+            <g transform="translate(80, 239)">
+                <rect x="0" y="0" width="63" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="39.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">AWS</text>
+            </g>
+
+            <g transform="translate(155, 239)">
+                <rect x="0" y="0" width="90" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="52.5" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">Docker</text>
+            </g>
+
+            <g transform="translate(257, 239)">
+                <rect x="0" y="0" width="126" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="70.5" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">Kubernetes</text>
+            </g>
+
+            <g transform="translate(395, 239)">
+                <rect x="0" y="0" width="81" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="48.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">CI/CD</text>
+            </g>
+
+            <g transform="translate(488, 239)">
+                <rect x="0" y="0" width="117" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="66.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">Terraform</text>
+            </g>
+
+            <g transform="translate(617, 239)">
+                <rect x="0" y="0" width="81" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="48.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">Linux</text>
+            </g>
+
+            <g transform="translate(710, 239)">
+                <rect x="0" y="0" width="81" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="48.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">Nginx</text>
+            </g>
+
+            <g transform="translate(803, 239)">
+                <rect x="0" y="0" width="126" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="70.5" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">PostgreSQL</text>
+            </g>
+
+            <g transform="translate(941, 239)">
+                <rect x="0" y="0" width="81" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="48.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">Redis</text>
+            </g>
+
+        <text x="80" y="299" font-size="14" font-weight="700" fill="#818CF8" letter-spacing="1.5">FULL-STACK &amp; WEB</text>
+        <line x1="80" y1="309" x2="1120" y2="309" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+
+            <g transform="translate(80, 325)">
+                <rect x="0" y="0" width="99" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="57.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">FastAPI</text>
+            </g>
+
+            <g transform="translate(191, 325)">
+                <rect x="0" y="0" width="99" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="57.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">Node.js</text>
+            </g>
+
+            <g transform="translate(302, 325)">
+                <rect x="0" y="0" width="81" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="48.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">React</text>
+            </g>
+
+            <g transform="translate(395, 325)">
+                <rect x="0" y="0" width="126" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="70.5" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">TypeScript</text>
+            </g>
+
+            <g transform="translate(533, 325)">
+                <rect x="0" y="0" width="99" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="57.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">Next.js</text>
+            </g>
+
+            <g transform="translate(644, 325)">
+                <rect x="0" y="0" width="99" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="57.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">GraphQL</text>
+            </g>
+
+            <g transform="translate(755, 325)">
+                <rect x="0" y="0" width="117" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="66.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">REST APIs</text>
+            </g>
+
+            <g transform="translate(884, 325)">
+                <rect x="0" y="0" width="135" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="75.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">TailwindCSS</text>
+            </g>
+
+            <g transform="translate(1031, 325)">
+                <rect x="0" y="0" width="63" height="32" class="pill" />
+                <circle cx="15" cy="16" r="3" fill="#38BDF8" />
+                <text x="39.0" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">Git</text>
+            </g>
+</svg>

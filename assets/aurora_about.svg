@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" height="100%">
+    <defs>
+        <style>
+            text { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; fill: #FFFFFF; }
+            .card { fill: rgba(15, 23, 42, 0.7); stroke: rgba(255, 255, 255, 0.08); stroke-width: 1; rx: 12; }
+        </style>
+        
+        <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="rgba(30, 41, 59, 0.5)" />
+            <stop offset="100%" stop-color="rgba(15, 23, 42, 0.8)" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Title -->
+    <text x="600" y="38" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="2" fill="#38BDF8">CORE FOCUS &amp; CAPABILITIES</text>
+    <rect x="580" y="48" width="40" height="2" fill="#818CF8" />
+    
+    <!-- 3 Clean Cards -->
+    <!-- Card 1 -->
+    <g transform="translate(60, 80)">
+        <rect x="0" y="0" width="340" height="165" fill="url(#card-grad)" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1" rx="12" />
+        <rect x="0" y="0" width="340" height="3" fill="#38BDF8" rx="1.5" />
+        <text x="24" y="36" font-size="15" font-weight="700" fill="#38BDF8">🤖 AI &amp; LLM Engineering</text>
+        <text x="24" y="68" font-size="13" fill="#94A3B8">• Agentic Workflows &amp; Multi-Agent Systems</text>
+        <text x="24" y="94" font-size="13" fill="#94A3B8">• Production RAG &amp; Vector Databases</text>
+        <text x="24" y="120" font-size="13" fill="#94A3B8">• Fine-Tuning Open Source Models</text>
+    </g>
+    
+    <!-- Card 2 -->
+    <g transform="translate(430, 80)">
+        <rect x="0" y="0" width="340" height="165" fill="url(#card-grad)" stroke="rgba(129, 140, 248, 0.25)" stroke-width="1" rx="12" />
+        <rect x="0" y="0" width="340" height="3" fill="#818CF8" rx="1.5" />
+        <text x="24" y="36" font-size="15" font-weight="700" fill="#818CF8">☁️ Cloud &amp; Infrastructure</text>
+        <text x="24" y="68" font-size="13" fill="#94A3B8">• High-Scale AWS / GCP Architecture</text>
+        <text x="24" y="94" font-size="13" fill="#94A3B8">• Docker &amp; Kubernetes Orchestration</text>
+        <text x="24" y="120" font-size="13" fill="#94A3B8">• Automated CI/CD &amp; MLOps Pipelines</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(800, 80)">
+        <rect x="0" y="0" width="340" height="165" fill="url(#card-grad)" stroke="rgba(192, 132, 252, 0.25)" stroke-width="1" rx="12" />
+        <rect x="0" y="0" width="340" height="3" fill="#C084FC" rx="1.5" />
+        <text x="24" y="36" font-size="15" font-weight="700" fill="#C084FC">⚡ Full-Stack &amp; Performance</text>
+        <text x="24" y="68" font-size="13" fill="#94A3B8">• FastAPI &amp; Node.js High-Throughput APIs</text>
+        <text x="24" y="94" font-size="13" fill="#94A3B8">• React &amp; Next.js Modern Interfaces</text>
+        <text x="24" y="120" font-size="13" fill="#94A3B8">• PostgreSQL &amp; Redis Caching Layers</text>
+    </g>
+</svg>
