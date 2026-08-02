@@ -2,28 +2,28 @@
 
 <!-- Zenith Core Hero Section -->
 <picture>
-  <img src="assets/zenith_hero.svg?v=3" alt="Amit Kumar - AI Engineer & Cloud Architect" width="100%">
+  <img src="assets/zenith_hero.svg" alt="Amit Kumar - AI Engineer & Cloud Architect" width="100%">
 </picture>
 
 <br><br>
 
 <!-- Zenith About / Data Grid -->
 <picture>
-  <img src="assets/zenith_about.svg?v=3" alt="Personal Details & Focus" width="100%">
+  <img src="assets/zenith_about.svg" alt="Personal Details & Focus" width="100%">
 </picture>
 
 <br><br>
 
 <!-- Zenith Skill Capsules -->
 <picture>
-  <img src="assets/zenith_skills.svg?v=3" alt="Technical Expertise Matrix" width="100%">
+  <img src="assets/zenith_skills.svg" alt="Technical Expertise Matrix" width="100%">
 </picture>
 
 <br><br>
 
 <!-- Zenith Project Cards -->
 <picture>
-  <img src="assets/zenith_projects.svg?v=3" alt="Featured Projects" width="100%">
+  <img src="assets/zenith_projects.svg" alt="Featured Projects" width="100%">
 </picture>
 
 <br><br>
@@ -57,7 +57,7 @@
 <!-- 3D Contribution Calendar -->
 <div align="center">
   <picture>
-    <img alt="3D Contribution Graph" src="https://raw.githubusercontent.com/Amit123103/Amit123103/main/profile-3d-contrib/profile-green-animate.svg" width="100%">
+    <img alt="3D Contribution Graph" src="profile-3d-contrib/profile-green-animate.svg" width="100%">
   </picture>
 </div>
 
@@ -95,7 +95,7 @@
 
 <!-- Zenith Memory Carousel Footer -->
 <picture>
-  <img src="assets/zenith_footer.svg?v=3" alt="Memory Carousel" width="100%">
+  <img src="assets/zenith_footer.svg" alt="Memory Carousel" width="100%">
 </picture>
 
 </div>
