@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 180" width="100%" height="100%">
+    <defs>
+        <style>
+            text { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; fill: #FFFFFF; }
+            .badge-box { fill: rgba(15, 23, 42, 0.8); stroke-width: 1; rx: 12; }
+        </style>
+    </defs>
+    
+    <rect width="100%" height="100%" fill="rgba(15, 23, 42, 0.7)" rx="14" stroke="rgba(255, 255, 255, 0.08)" />
+    
+    <text x="600" y="38" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="2" fill="#38BDF8">ENGINEERING CERTIFICATIONS &amp; HONORS</text>
+    <rect x="580" y="48" width="40" height="2" fill="#818CF8" />
+
+    <g transform="translate(60, 80)">
+
+        <g transform="translate(0, 0)">
+            <rect x="0" y="0" width="240" height="65" class="badge-box" stroke="#38BDF8" opacity="0.9" />
+            <text x="120" y="28" font-size="18" text-anchor="middle">☁️</text>
+            <text x="120" y="48" font-size="12" font-weight="800" fill="#38BDF8" text-anchor="middle" letter-spacing="1">AWS ARCHITECT</text>
+        </g>
+
+        <g transform="translate(280, 0)">
+            <rect x="0" y="0" width="240" height="65" class="badge-box" stroke="#818CF8" opacity="0.9" />
+            <text x="120" y="28" font-size="18" text-anchor="middle">🔥</text>
+            <text x="120" y="48" font-size="12" font-weight="800" fill="#818CF8" text-anchor="middle" letter-spacing="1">PYTORCH SPECIALIST</text>
+        </g>
+
+        <g transform="translate(560, 0)">
+            <rect x="0" y="0" width="240" height="65" class="badge-box" stroke="#C084FC" opacity="0.9" />
+            <text x="120" y="28" font-size="18" text-anchor="middle">🐳</text>
+            <text x="120" y="48" font-size="12" font-weight="800" fill="#C084FC" text-anchor="middle" letter-spacing="1">DOCKER &amp; K8S EXPERT</text>
+        </g>
+
+        <g transform="translate(840, 0)">
+            <rect x="0" y="0" width="240" height="65" class="badge-box" stroke="#34D399" opacity="0.9" />
+            <text x="120" y="28" font-size="18" text-anchor="middle">🏆</text>
+            <text x="120" y="48" font-size="12" font-weight="800" fill="#34D399" text-anchor="middle" letter-spacing="1">TOP 5% CONTRIBUTOR</text>
+        </g>
+
+    </g>
+</svg>

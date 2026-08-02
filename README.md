@@ -14,6 +14,13 @@
 
 <br><br>
 
+<!-- Engineering Certifications & Honors -->
+<picture>
+  <img src="assets/aurora_badges.svg" alt="Engineering Certifications &amp; Honors" width="100%">
+</picture>
+
+<br><br>
+
 <!-- Core Focus & Capabilities -->
 <picture>
   <img src="assets/aurora_about.svg" alt="Core Focus &amp; Capabilities" width="100%">
@@ -24,6 +31,13 @@
 <!-- Engineering Competency Radar -->
 <picture>
   <img src="assets/aurora_radar.svg" alt="Engineering Competency Radar" width="100%">
+</picture>
+
+<br><br>
+
+<!-- Daily Engineering Routine -->
+<picture>
+  <img src="assets/aurora_routine.svg" alt="Daily Engineering Routine" width="100%">
 </picture>
 
 <br><br>
