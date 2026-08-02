@@ -54,6 +54,24 @@
 
 <br><br>
 
+<!-- 3D Contribution Calendar -->
+<div align="center">
+  <picture>
+    <img alt="3D Contribution Graph" src="https://raw.githubusercontent.com/Amit123103/Amit123103/main/profile-3d-contrib/profile-green-animate.svg" width="100%">
+  </picture>
+</div>
+
+<br><br>
+
+<!-- Animated Mascots -->
+<div align="center">
+  <img src="assets/animated_owl.gif" alt="Animated Party Owl" width="200" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/3d_octocat.gif" alt="Realistic 3D Octocat" width="200" />
+</div>
+
+<br><br>
+
 <!-- Social Galaxy -->
 <div align="center">
   <a href="https://linkedin.com/in/amit123103">
