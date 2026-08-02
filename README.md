@@ -2,17 +2,33 @@
 
 <!-- Quantum Core Hero Section -->
 <picture>
-  <img src="assets/quantum_hero.svg" alt="Amit Kumar - AI Engineer &amp; Cloud Architect" width="100%">
+  <img src="assets/quantum_hero.svg" alt="Amit Kumar - Senior AI Engineer &amp; Cloud Architect" width="100%">
 </picture>
 
 <br><br>
 
-<!-- Quantum System Telemetry & Focus -->
+<!-- Quantum System Telemetry & About Me -->
 <picture>
-  <img src="assets/quantum_about.svg" alt="System Telemetry &amp; Focus" width="100%">
+  <img src="assets/quantum_about.svg" alt="About Me &amp; System Telemetry" width="100%">
 </picture>
 
 <br><br>
+
+<!-- Detailed Markdown Biography & Overview -->
+<div align="left">
+
+### 🌌 About Me
+
+> **Senior AI Engineer & Cloud Architect** with a passion for designing production-grade AI systems, intelligent agentic workflows, and high-performance cloud infrastructure.
+
+- 🔭 **Currently Working On**: Agentic RAG Pipelines, Fine-tuning Open-Source LLMs (Llama 3, Mistral), and Distributed Cloud Microservices.
+- ⚡ **Core Strengths**: Deep Learning, Vector Search Optimization, High-Availability Cloud Architecture, Full-Stack Engineering.
+- 📍 **Location**: India 🇮🇳 (UTC+5:30)
+- 💬 **Ask Me About**: PyTorch, LangChain, FastAPI, Docker, Kubernetes, AWS, System Architecture.
+
+</div>
+
+<br>
 
 <!-- Quantum Technical Expertise Matrix -->
 <picture>
@@ -30,9 +46,9 @@
 
 <!-- Perfectly Aligned GitHub Dashboard -->
 <div align="center">
-  <img src="https://github-readme-stats.anuraghazra1.vercel.app/api?username=Amit123103&amp;show_icons=true&amp;theme=dark&amp;hide_border=true&amp;bg_color=050811&amp;title_color=00F5FF&amp;icon_color=FF007F&amp;text_color=FFFFFF" alt="GitHub Stats Console" width="48%" />
+  <img src="https://github-readme-stats.anuraghazra1.vercel.app/api?username=Amit123103&amp;show_icons=true&amp;theme=dark&amp;hide_border=true&amp;bg_color=050811&amp;title_color=00F5FF&amp;icon_color=FFD700&amp;text_color=FFFFFF" alt="GitHub Stats Console" width="48%" />
   &nbsp;&nbsp;
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Amit123103&amp;theme=dark&amp;hide_border=true&amp;background=050811&amp;ring=00F5FF&amp;fire=FF007F&amp;currStreakNum=FFFFFF" alt="GitHub Streak Tracker" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Amit123103&amp;theme=dark&amp;hide_border=true&amp;background=050811&amp;ring=00F5FF&amp;fire=FFD700&amp;currStreakNum=FFFFFF" alt="GitHub Streak Tracker" width="48%" />
 </div>
 
 <br>
@@ -79,7 +95,7 @@
   </a>
   &nbsp;&nbsp;
   <a href="https://github.com/Amit123103">
-    <img src="https://img.shields.io/badge/GitHub-050811?style=for-the-badge&amp;logo=github&amp;logoColor=FF007F" alt="GitHub">
+    <img src="https://img.shields.io/badge/GitHub-050811?style=for-the-badge&amp;logo=github&amp;logoColor=FFD700" alt="GitHub">
   </a>
   &nbsp;&nbsp;
   <a href="mailto:amit@example.com">
