@@ -7,6 +7,23 @@
 
 <br><br>
 
+<!-- Animated Emoji Greeting Header -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" alt="Waving Hand" width="48" height="48" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" alt="Robot" width="48" height="48" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="48" height="48" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" alt="Laptop" width="48" height="48" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" alt="Fire" width="48" height="48" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Sparkles.png" alt="Sparkles" width="48" height="48" />
+</div>
+
+<br><br>
+
 <!-- Interactive Console Terminal -->
 <picture>
   <img src="assets/aurora_terminal.svg" alt="Quantum Terminal Console" width="100%">
@@ -59,7 +76,7 @@
 <!-- Detailed Biography & Overview -->
 <div align="left">
 
-### 🌌 About Me
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Milky%20Way.png" alt="Milky Way" width="32" height="32" /> About Me
 
 > **Senior AI Engineer & Cloud Architect** specializing in building high-performance AI systems, agentic LLM workflows, and resilient cloud microservices.
 
