@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
+            text { font-family: 'Share Tech Mono', monospace; }
+            
+            .hud-panel {
+                fill: rgba(2, 6, 23, 0.6);
+                stroke: #00F5FF;
+                stroke-width: 1.5;
+            }
+            .scan-line {
+                animation: scan 4s linear infinite;
+                fill: rgba(0, 245, 255, 0.2);
+            }
+            @keyframes scan {
+                0% { transform: translateY(-20px); opacity: 0; }
+                10% { opacity: 1; }
+                90% { opacity: 1; }
+                100% { transform: translateY(400px); opacity: 0; }
+            }
+            
+            .glow-text { fill: #00F5FF; filter: drop-shadow(0 0 5px #00F5FF); }
+            
+            .energy-bar-fill {
+                animation: charge 3s ease-out forwards;
+            }
+            @keyframes charge { 0% { width: 0; } }
+            
+            .hex-module {
+                animation: floatHex 6s ease-in-out infinite;
+            }
+            @keyframes floatHex {
+                0% { transform: translateY(0); }
+                50% { transform: translateY(-10px); }
+                100% { transform: translateY(0); }
+            }
+        </style>
+        
+        <filter id="hud-glow">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <linearGradient id="plasma" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#4F46E5" />
+            <stop offset="50%" stop-color="#00F5FF" />
+            <stop offset="100%" stop-color="#FFFFFF" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Left Panel: Digital HUD About -->
+    <g transform="translate(50, 50)">
+        <polygon points="0,20 20,0 500,0 500,400 480,420 0,420" class="hud-panel" filter="url(#hud-glow)" />
+        <rect x="5" y="5" width="490" height="410" fill="none" stroke="rgba(255,255,255,0.1)" stroke-dasharray="4 4" />
+        
+        <rect x="0" y="0" width="500" height="20" class="scan-line" />
+        
+        <text x="30" y="50" class="glow-text" font-size="24">> TERMINAL_01 // ABOUT</text>
+        <text x="30" y="90" fill="#FFF" font-size="16">> IDENT: FINAL YEAR CSE STUDENT</text>
+        <text x="30" y="130" fill="#FFF" font-size="16">> ROLE: AI &amp; ML ARCHITECT</text>
+        <text x="30" y="170" fill="#FFF" font-size="16">> SECTOR: CLOUD NATIVE MLOPS</text>
+        <text x="30" y="210" fill="#FFF" font-size="16">> DIRECTIVE: BUILD THE FUTURE</text>
+        <text x="30" y="250" fill="#FFF" font-size="16">> STATUS: ONLINE &amp; READY</text>
+        
+        <!-- Corner decorations -->
+        <path d="M-5,15 L-5,-5 L15,-5" fill="none" stroke="#00F5FF" stroke-width="3" />
+        <path d="M485,-5 L505,-5 L505,15" fill="none" stroke="#00F5FF" stroke-width="3" />
+        <path d="M-5,405 L-5,425 L15,425" fill="none" stroke="#00F5FF" stroke-width="3" />
+        <path d="M485,425 L505,425 L505,405" fill="none" stroke="#00F5FF" stroke-width="3" />
+    </g>
+    
+    <!-- Right Panel: AI Modules (Skills) -->
+    <g transform="translate(620, 50)">
+        <polygon points="0,0 480,0 500,20 500,420 20,420 0,400" class="hud-panel" filter="url(#hud-glow)" />
+        <text x="30" y="50" class="glow-text" font-size="24">> NEURAL_NETWORK // CAPABILITIES</text>
+        
+        <g transform="translate(30, 90)">
+
+            <text x="0" y="15" fill="#FFF" font-size="14">PYTHON</text>
+            <text x="440" y="15" fill="#00F5FF" font-size="14" text-anchor="end">95%</text>
+            <rect x="0" y="25" width="440" height="8" fill="rgba(255,255,255,0.1)" />
+            <rect x="0" y="25" width="418.00000000000006" height="8" fill="url(#plasma)" class="energy-bar-fill" filter="url(#hud-glow)" />
+
+            <text x="0" y="75" fill="#FFF" font-size="14">MACHINE LEARNING</text>
+            <text x="440" y="75" fill="#00F5FF" font-size="14" text-anchor="end">90%</text>
+            <rect x="0" y="85" width="440" height="8" fill="rgba(255,255,255,0.1)" />
+            <rect x="0" y="85" width="396.00000000000006" height="8" fill="url(#plasma)" class="energy-bar-fill" filter="url(#hud-glow)" />
+
+            <text x="0" y="135" fill="#FFF" font-size="14">AWS CLOUD</text>
+            <text x="440" y="135" fill="#00F5FF" font-size="14" text-anchor="end">85%</text>
+            <rect x="0" y="145" width="440" height="8" fill="rgba(255,255,255,0.1)" />
+            <rect x="0" y="145" width="374.00000000000006" height="8" fill="url(#plasma)" class="energy-bar-fill" filter="url(#hud-glow)" />
+
+            <text x="0" y="195" fill="#FFF" font-size="14">DOCKER</text>
+            <text x="440" y="195" fill="#00F5FF" font-size="14" text-anchor="end">80%</text>
+            <rect x="0" y="205" width="440" height="8" fill="rgba(255,255,255,0.1)" />
+            <rect x="0" y="205" width="352.0" height="8" fill="url(#plasma)" class="energy-bar-fill" filter="url(#hud-glow)" />
+
+            <text x="0" y="255" fill="#FFF" font-size="14">REACT</text>
+            <text x="440" y="255" fill="#00F5FF" font-size="14" text-anchor="end">75%</text>
+            <rect x="0" y="265" width="440" height="8" fill="rgba(255,255,255,0.1)" />
+            <rect x="0" y="265" width="330.0" height="8" fill="url(#plasma)" class="energy-bar-fill" filter="url(#hud-glow)" />
+
+        </g>
+    </g>
+</svg>
