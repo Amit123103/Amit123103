@@ -19,7 +19,7 @@ def generate_zenith_hero():
             @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap');
             text {{ font-family: 'Inter', sans-serif; fill: #FFF; }}
             .glow {{ filter: drop-shadow(0 0 10px rgba(0,245,255,0.6)); }}
-            .pulse {{ animation: pulse 4s infinite alternate ease-in-out; }}
+            .pulse {{ animation: pulse 4s infinite alternate ease-in-out; transform-origin: center; }}
             @keyframes pulse {{ 0% {{ transform: scale(0.98); opacity: 0.8; }} 100% {{ transform: scale(1.02); opacity: 1; }} }}
             
             .typing-container {{ animation: fadeUp 2s ease-out forwards; }}
@@ -43,31 +43,35 @@ def generate_zenith_hero():
     <rect width="100%" height="100%" fill="url(#bg)" />
     
     <!-- Central Axis Alignment -->
-    <g transform="translate(600, 200)" class="pulse">
-        <!-- Rings -->
-        <circle cx="0" cy="0" r="100" fill="none" stroke="rgba(0,245,255,0.1)" stroke-width="1" class="ring" style="--speed:20s; --dir:normal;" stroke-dasharray="10 5" />
-        <circle cx="0" cy="0" r="115" fill="none" stroke="rgba(79,70,229,0.3)" stroke-width="2" class="ring" style="--speed:30s; --dir:reverse;" stroke-dasharray="30 20 10 5" />
-        <circle cx="0" cy="0" r="130" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" class="ring" style="--speed:40s; --dir:normal;" />
-        
-        <!-- Core -->
-        <circle cx="0" cy="0" r="80" fill="#000" stroke="#00F5FF" stroke-width="2" filter="url(#neon)" />
-        <circle cx="0" cy="0" r="60" fill="url(#core-glow)" opacity="0.8" />
-        <text x="0" y="8" font-size="24" font-weight="700" text-anchor="middle" fill="#000">AMIT</text>
+    <g transform="translate(600, 200)">
+        <g class="pulse">
+            <!-- Rings -->
+            <circle cx="0" cy="0" r="100" fill="none" stroke="rgba(0,245,255,0.1)" stroke-width="1" class="ring" style="--speed:20s; --dir:normal;" stroke-dasharray="10 5" />
+            <circle cx="0" cy="0" r="115" fill="none" stroke="rgba(79,70,229,0.3)" stroke-width="2" class="ring" style="--speed:30s; --dir:reverse;" stroke-dasharray="30 20 10 5" />
+            <circle cx="0" cy="0" r="130" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" class="ring" style="--speed:40s; --dir:normal;" />
+            
+            <!-- Core -->
+            <circle cx="0" cy="0" r="80" fill="#000" stroke="#00F5FF" stroke-width="2" filter="url(#neon)" />
+            <circle cx="0" cy="0" r="60" fill="url(#core-glow)" opacity="0.8" />
+            <text x="0" y="8" font-size="24" font-weight="700" text-anchor="middle" fill="#000">AMIT</text>
+        </g>
     </g>
     
     <!-- Typography perfectly aligned -->
-    <g transform="translate(600, 360)" class="typing-container">
-        <text x="0" y="0" font-size="32" font-weight="700" text-anchor="middle" letter-spacing="4">AMIT KUMAR</text>
-        <text x="0" y="30" font-size="16" font-weight="400" fill="#00F5FF" text-anchor="middle" letter-spacing="2">AI ENGINEER | CLOUD ARCHITECT | FULL STACK DEVELOPER</text>
-        
-        <!-- Buttons / Badges -->
-        <g transform="translate(-150, 60)">
-            <rect x="0" y="0" width="140" height="30" rx="15" fill="rgba(0,245,255,0.1)" stroke="#00F5FF" stroke-width="1" />
-            <text x="70" y="19" font-size="12" font-weight="600" text-anchor="middle" fill="#00F5FF">AVAILABLE FOR WORK</text>
-        </g>
-        <g transform="translate(10, 60)">
-            <rect x="0" y="0" width="140" height="30" rx="15" fill="rgba(79,70,229,0.1)" stroke="#4F46E5" stroke-width="1" />
-            <text x="70" y="19" font-size="12" font-weight="600" text-anchor="middle" fill="#818CF8">BASED IN INDIA</text>
+    <g transform="translate(600, 360)">
+        <g class="typing-container">
+            <text x="0" y="0" font-size="32" font-weight="700" text-anchor="middle" letter-spacing="4">AMIT KUMAR</text>
+            <text x="0" y="30" font-size="16" font-weight="400" fill="#00F5FF" text-anchor="middle" letter-spacing="2">AI ENGINEER | CLOUD ARCHITECT | FULL STACK DEVELOPER</text>
+            
+            <!-- Buttons / Badges -->
+            <g transform="translate(-150, 60)">
+                <rect x="0" y="0" width="140" height="30" rx="15" fill="rgba(0,245,255,0.1)" stroke="#00F5FF" stroke-width="1" />
+                <text x="70" y="19" font-size="12" font-weight="600" text-anchor="middle" fill="#00F5FF">AVAILABLE FOR WORK</text>
+            </g>
+            <g transform="translate(10, 60)">
+                <rect x="0" y="0" width="140" height="30" rx="15" fill="rgba(79,70,229,0.1)" stroke="#4F46E5" stroke-width="1" />
+                <text x="70" y="19" font-size="12" font-weight="600" text-anchor="middle" fill="#818CF8">BASED IN INDIA</text>
+            </g>
         </g>
     </g>
 </svg>
@@ -148,7 +152,7 @@ def generate_zenith_skills():
             text {{ font-family: 'Inter', sans-serif; fill: #FFF; }}
             .capsule {{ fill: rgba(255,255,255,0.05); stroke: rgba(255,255,255,0.15); stroke-width: 1; rx: 18; }}
             .capsule-anim {{ animation: float-capsule 4s ease-in-out infinite alternate; }}
-            @keyframes float-capsule {{ 0% {{ transform: translateY(0px); }} 100% {{ transform: translateY(-4px); filter: drop-shadow(0 4px 8px rgba(0,245,255,0.2)); stroke: rgba(0,245,255,0.5); }} }}
+            @keyframes float-capsule {{ 0% {{ transform: translateY(0px); filter: drop-shadow(0 0 0 rgba(0,0,0,0)); stroke: rgba(255,255,255,0.15); }} 100% {{ transform: translateY(-4px); filter: drop-shadow(0 4px 8px rgba(0,245,255,0.2)); stroke: rgba(0,245,255,0.5); }} }}
         </style>
     </defs>
     
@@ -173,9 +177,11 @@ def generate_zenith_skills():
             
             delay = (i * 0.1) % 2
             svg += f'''
-            <g transform="translate({x}, {y})" class="capsule-anim" style="animation-delay: {delay}s;">
-                <rect x="0" y="0" width="{w}" height="36" class="capsule" />
-                <text x="{w/2}" y="23" font-size="14" font-weight="500" text-anchor="middle">{skill}</text>
+            <g transform="translate({x}, {y})">
+                <g class="capsule-anim" style="animation-delay: {delay}s;">
+                    <rect x="0" y="0" width="{w}" height="36" class="capsule" />
+                    <text x="{w/2}" y="23" font-size="14" font-weight="500" text-anchor="middle">{skill}</text>
+                </g>
             </g>
 '''
             x += w + 15
@@ -215,31 +221,33 @@ def generate_zenith_projects():
     
     for title, desc, tags, x in projects:
         svg += f'''
-    <g transform="translate({x}, 120)" class="float" style="animation-delay: {x/400}s;">
-        <!-- Card background with fake shadow -->
-        <rect x="10" y="20" width="320" height="300" fill="rgba(0,0,0,0.5)" filter="url(#shadow)" rx="12" />
-        <rect x="0" y="0" width="340" height="320" class="card" />
-        
-        <!-- Image placeholder -->
-        <rect x="15" y="15" width="310" height="140" fill="rgba(255,255,255,0.05)" rx="8" />
-        <path d="M15,155 L325,155" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
-        
-        <text x="20" y="185" font-size="18" font-weight="700">{title}</text>
-        <text x="20" y="210" font-size="14" fill="#A0A0A0">{desc}</text>
-        
-        <!-- Tech Stack Tags -->
-        <rect x="20" y="240" width="{len(tags[0])*8 + 20}" height="24" class="tag" />
-        <text x="{20 + (len(tags[0])*8 + 20)/2}" y="256" font-size="11" font-weight="600" fill="#00F5FF" text-anchor="middle">{tags[0]}</text>
-        
-        <rect x="{20 + len(tags[0])*8 + 30}" y="240" width="{len(tags[1])*8 + 20}" height="24" class="tag" />
-        <text x="{20 + len(tags[0])*8 + 30 + (len(tags[1])*8 + 20)/2}" y="256" font-size="11" font-weight="600" fill="#00F5FF" text-anchor="middle">{tags[1]}</text>
-        
-        <!-- Action Buttons -->
-        <rect x="20" y="280" width="100" height="28" class="btn" />
-        <text x="70" y="299" font-size="12" font-weight="700" fill="#000" text-anchor="middle">View Code</text>
-        
-        <rect x="130" y="280" width="100" height="28" fill="rgba(255,255,255,0.1)" stroke="#FFF" stroke-width="1" rx="6" />
-        <text x="180" y="299" font-size="12" font-weight="700" fill="#FFF" text-anchor="middle">Live Demo</text>
+    <g transform="translate({x}, 120)">
+        <g class="float" style="animation-delay: {x/400}s;">
+            <!-- Card background with fake shadow -->
+            <rect x="10" y="20" width="320" height="300" fill="rgba(0,0,0,0.5)" filter="url(#shadow)" rx="12" />
+            <rect x="0" y="0" width="340" height="320" class="card" />
+            
+            <!-- Image placeholder -->
+            <rect x="15" y="15" width="310" height="140" fill="rgba(255,255,255,0.05)" rx="8" />
+            <path d="M15,155 L325,155" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+            
+            <text x="20" y="185" font-size="18" font-weight="700">{title}</text>
+            <text x="20" y="210" font-size="14" fill="#A0A0A0">{desc}</text>
+            
+            <!-- Tech Stack Tags -->
+            <rect x="20" y="240" width="{len(tags[0])*8 + 20}" height="24" class="tag" />
+            <text x="{20 + (len(tags[0])*8 + 20)/2}" y="256" font-size="11" font-weight="600" fill="#00F5FF" text-anchor="middle">{tags[0]}</text>
+            
+            <rect x="{20 + len(tags[0])*8 + 30}" y="240" width="{len(tags[1])*8 + 20}" height="24" class="tag" />
+            <text x="{20 + len(tags[0])*8 + 30 + (len(tags[1])*8 + 20)/2}" y="256" font-size="11" font-weight="600" fill="#00F5FF" text-anchor="middle">{tags[1]}</text>
+            
+            <!-- Action Buttons -->
+            <rect x="20" y="280" width="100" height="28" class="btn" />
+            <text x="70" y="299" font-size="12" font-weight="700" fill="#000" text-anchor="middle">View Code</text>
+            
+            <rect x="130" y="280" width="100" height="28" fill="rgba(255,255,255,0.1)" stroke="#FFF" stroke-width="1" rx="6" />
+            <text x="180" y="299" font-size="12" font-weight="700" fill="#FFF" text-anchor="middle">Live Demo</text>
+        </g>
     </g>
 '''
 
