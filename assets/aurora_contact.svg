@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%" height="100%">
+    <defs>
+        <style>
+            text { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; fill: #FFFFFF; }
+            .btn-box { fill: rgba(30, 41, 59, 0.7); stroke: rgba(56, 189, 248, 0.3); stroke-width: 1; rx: 10; }
+        </style>
+    </defs>
+    
+    <rect width="100%" height="100%" fill="rgba(15, 23, 42, 0.8)" rx="14" stroke="rgba(255, 255, 255, 0.08)" />
+    
+    <text x="600" y="38" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="2" fill="#38BDF8">LET'S CONNECT &amp; COLLABORATE</text>
+    <rect x="580" y="48" width="40" height="2" fill="#818CF8" />
+
+    <g transform="translate(60, 85)">
+        <!-- Link 1: LinkedIn -->
+        <g transform="translate(0, 0)">
+            <rect x="0" y="0" width="240" height="60" class="btn-box" />
+            <text x="120" y="35" font-size="14" font-weight="700" fill="#38BDF8" text-anchor="middle">💼 LinkedIn Profile →</text>
+        </g>
+
+        <!-- Link 2: GitHub -->
+        <g transform="translate(280, 0)">
+            <rect x="0" y="0" width="240" height="60" class="btn-box" />
+            <text x="120" y="35" font-size="14" font-weight="700" fill="#818CF8" text-anchor="middle">⚡ GitHub Profile →</text>
+        </g>
+
+        <!-- Link 3: Email -->
+        <g transform="translate(560, 0)">
+            <rect x="0" y="0" width="240" height="60" class="btn-box" />
+            <text x="120" y="35" font-size="14" font-weight="700" fill="#34D399" text-anchor="middle">✉️ Direct Email →</text>
+        </g>
+
+        <!-- Link 4: Schedule Meeting -->
+        <g transform="translate(840, 0)">
+            <rect x="0" y="0" width="240" height="60" class="btn-box" fill="rgba(56, 189, 248, 0.15)" stroke="#38BDF8" stroke-width="1.5" />
+            <text x="120" y="35" font-size="14" font-weight="800" fill="#38BDF8" text-anchor="middle">📅 Book 1-on-1 Call →</text>
+        </g>
+    </g>
+</svg>

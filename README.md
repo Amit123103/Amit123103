@@ -21,6 +21,13 @@
 
 <br><br>
 
+<!-- Engineering Competency Radar -->
+<picture>
+  <img src="assets/aurora_radar.svg" alt="Engineering Competency Radar" width="100%">
+</picture>
+
+<br><br>
+
 <!-- Detailed Biography & Overview -->
 <div align="left">
 
@@ -99,6 +106,13 @@
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="assets/3d_octocat.gif" alt="Realistic 3D Octocat" width="180" />
 </div>
+
+<br><br>
+
+<!-- Quick Connect & Collaboration Cards -->
+<picture>
+  <img src="assets/aurora_contact.svg" alt="Let's Connect &amp; Collaborate" width="100%">
+</picture>
 
 <br><br>
 
