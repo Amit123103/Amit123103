@@ -30,15 +30,15 @@
 
 <!-- Perfectly Aligned GitHub Dashboard -->
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Amit123103&amp;show_icons=true&amp;theme=react&amp;hide_border=true&amp;bg_color=020408&amp;title_color=00F5FF&amp;icon_color=4F46E5&amp;text_color=FFFFFF" alt="GitHub Stats Console" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Amit123103&show_icons=true&theme=react&hide_border=true&bg_color=020408&title_color=00F5FF&icon_color=4F46E5&text_color=FFFFFF" alt="GitHub Stats Console" width="48%" />
   &nbsp;&nbsp;
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Amit123103&amp;theme=react&amp;hide_border=true&amp;background=020408&amp;ring=00F5FF&amp;fire=4F46E5&amp;currStreakNum=FFFFFF" alt="GitHub Streak Tracker" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Amit123103&theme=react&hide_border=true&background=020408&ring=00F5FF&fire=4F46E5&currStreakNum=FFFFFF" alt="GitHub Streak Tracker" width="48%" />
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Amit123103&amp;theme=radical&amp;no-frame=true&amp;no-bg=true&amp;margin-w=15" alt="Achievement Crystals" width="100%" />
+  <img src="https://github-profile-trophy.vercel.app/?username=Amit123103&theme=radical&no-frame=true&no-bg=true&margin-w=15" alt="Achievement Crystals" width="100%" />
 </div>
 
 <br><br>
