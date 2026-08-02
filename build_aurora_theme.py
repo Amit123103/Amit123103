@@ -1,22 +1,32 @@
 import os
+import base64
 import xml.etree.ElementTree as ET
 
 def generate_aurora_hero():
     width = 1200
-    height = 340
+    height = 380
     
+    # Check if profile image exists to base64 encode or use relative link
+    profile_img_src = "assets/profile.jpg"
+    if os.path.exists(profile_img_src):
+        with open(profile_img_src, "rb") as img_f:
+            b64_data = base64.b64encode(img_f.read()).decode("utf-8")
+            img_href = f"data:image/jpeg;base64,{b64_data}"
+    else:
+        img_href = profile_img_src
+
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="100%">
     <defs>
         <style>
             text {{ font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; fill: #FFFFFF; }}
-            .glow-cyan {{ filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.6)); }}
-            .glow-indigo {{ filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.6)); }}
+            .glow-cyan {{ filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.7)); }}
+            .glow-avatar {{ filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.4)); }}
             
             .pulse-ring {{ animation: pulse 4s ease-in-out infinite alternate; transform-origin: center; }}
             @keyframes pulse {{ 0% {{ opacity: 0.4; transform: scale(0.98); }} 100% {{ opacity: 0.8; transform: scale(1.02); }} }}
         </style>
         
-        <radialGradient id="aurora-bg" cx="50%" cy="30%" r="80%">
+        <radialGradient id="aurora-bg" cx="50%" cy="30%" r="85%">
             <stop offset="0%" stop-color="#0f172a" />
             <stop offset="50%" stop-color="#090d16" />
             <stop offset="100%" stop-color="#030712" />
@@ -31,49 +41,63 @@ def generate_aurora_hero():
         <pattern id="grid-dots" width="30" height="30" patternUnits="userSpaceOnUse">
             <circle cx="2" cy="2" r="1" fill="rgba(255, 255, 255, 0.05)" />
         </pattern>
+
+        <clipPath id="avatar-clip">
+            <circle cx="600" cy="85" r="48" />
+        </clipPath>
     </defs>
     
-    <!-- Background -->
+    <!-- Base Background Color & Dots -->
     <rect width="100%" height="100%" fill="url(#aurora-bg)" rx="16" />
     <rect width="100%" height="100%" fill="url(#grid-dots)" rx="16" />
-    
+
+    <!-- Subtle Background Photo Layer -->
+    <image href="{img_href}" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" opacity="0.18" />
+    <rect width="100%" height="100%" fill="url(#aurora-bg)" opacity="0.75" rx="16" />
+
     <!-- Ambient Glow Rings in Background -->
     <g class="pulse-ring">
-        <circle cx="600" cy="170" r="140" fill="none" stroke="rgba(56, 189, 248, 0.12)" stroke-width="1" stroke-dasharray="8 6" />
-        <circle cx="600" cy="170" r="190" fill="none" stroke="rgba(129, 140, 248, 0.08)" stroke-width="1" />
+        <circle cx="600" cy="190" r="150" fill="none" stroke="rgba(56, 189, 248, 0.15)" stroke-width="1" stroke-dasharray="8 6" />
+        <circle cx="600" cy="190" r="200" fill="none" stroke="rgba(129, 140, 248, 0.1)" stroke-width="1" />
     </g>
 
-    <!-- Top Status Badge -->
-    <g transform="translate(600, 55)">
-        <rect x="-140" y="0" width="280" height="30" rx="15" fill="rgba(56, 189, 248, 0.08)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
-        <circle cx="-115" cy="15" r="4" fill="#38BDF8" class="glow-cyan" />
-        <text x="5" y="19" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5" fill="#38BDF8">AI ENGINEER &amp; CLOUD ARCHITECT</text>
+    <!-- Circular Profile Photo Avatar Header -->
+    <g class="glow-avatar">
+        <circle cx="600" cy="85" r="52" fill="none" stroke="url(#aurora-grad)" stroke-width="3" />
+        <image href="{img_href}" x="552" y="37" width="96" height="96" clip-path="url(#avatar-clip)" preserveAspectRatio="xMidYMid slice" />
+    </g>
+
+    <!-- Status Pill Badge -->
+    <g transform="translate(600, 155)">
+        <rect x="-140" y="0" width="280" height="28" rx="14" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1" />
+        <circle cx="-115" cy="14" r="4" fill="#38BDF8" class="glow-cyan" />
+        <text x="5" y="18" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1.5" fill="#38BDF8">AI ENGINEER &amp; CLOUD ARCHITECT</text>
     </g>
 
     <!-- Main Title -->
-    <text x="600" y="150" font-size="44" font-weight="900" text-anchor="middle" letter-spacing="4" fill="url(#aurora-grad)">AMIT KUMAR</text>
+    <text x="600" y="225" font-size="42" font-weight="900" text-anchor="middle" letter-spacing="4" fill="url(#aurora-grad)">AMIT KUMAR</text>
 
     <!-- Subtitle -->
-    <text x="600" y="195" font-size="16" font-weight="400" text-anchor="middle" fill="#94A3B8" letter-spacing="0.5">Building Intelligent AI Systems, Agentic Workflows &amp; Scalable Cloud Infrastructure</text>
+    <text x="600" y="262" font-size="15" font-weight="400" text-anchor="middle" fill="#94A3B8" letter-spacing="0.5">Building Intelligent AI Systems, Agentic Workflows &amp; Scalable Cloud Infrastructure</text>
 
     <!-- Bottom Stat Badges (Centered) -->
-    <g transform="translate(600, 260)">
+    <g transform="translate(600, 320)">
         <!-- Badge 1: Location -->
         <g transform="translate(-230, 0)">
-            <rect x="0" y="0" width="140" height="32" rx="16" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+            <rect x="0" y="0" width="140" height="32" rx="16" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
             <text x="70" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#E2E8F0">📍 India (UTC+5:30)</text>
         </g>
         
         <!-- Badge 2: Status -->
         <g transform="translate(-75, 0)">
-            <rect x="0" y="0" width="150" height="32" rx="16" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+            <rect x="0" y="0" width="150" height="32" rx="16" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1" />
             <circle cx="18" cy="16" r="4" fill="#34D399" />
             <text x="82" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#34D399">Available for Hiring</text>
         </g>
 
         <!-- Badge 3: Impact -->
         <g transform="translate(90, 0)">
-            <rect x="0" y="0" width="140" height="32" rx="16" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(192, 132, 252, 0.3)" stroke-width="1" />
+            <rect x="0" y="0" width="140" height="32" rx="16" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(192, 132, 252, 0.35)" stroke-width="1" />
             <text x="70" y="20" font-size="12" font-weight="600" text-anchor="middle" fill="#C084FC">⚡ 2.5k+ Commits</text>
         </g>
     </g>
@@ -81,7 +105,7 @@ def generate_aurora_hero():
 '''
     with open("assets/aurora_hero.svg", "w", encoding="utf-8") as f:
         f.write(svg)
-    print("Generated aurora_hero.svg")
+    print("Generated aurora_hero.svg with photo integration!")
 
 def generate_aurora_about():
     width = 1200
