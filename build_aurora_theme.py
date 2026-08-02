@@ -103,9 +103,12 @@ def generate_aurora_hero():
     </g>
 </svg>
 '''
+    with open("assets/aurora_hero_v2.svg", "w", encoding="utf-8") as f:
+        f.write(svg)
+    # Also overwrite aurora_hero.svg
     with open("assets/aurora_hero.svg", "w", encoding="utf-8") as f:
         f.write(svg)
-    print("Generated aurora_hero.svg with photo integration!")
+    print("Generated aurora_hero_v2.svg with photo integration!")
 
 def generate_aurora_about():
     width = 1200
@@ -297,7 +300,7 @@ def generate_aurora_footer():
     print("Generated aurora_footer.svg")
 
 def validate_all_svgs():
-    files = ["assets/aurora_hero.svg", "assets/aurora_about.svg", "assets/aurora_skills.svg", "assets/aurora_projects.svg", "assets/aurora_footer.svg"]
+    files = ["assets/aurora_hero_v2.svg", "assets/aurora_about.svg", "assets/aurora_skills.svg", "assets/aurora_projects.svg", "assets/aurora_footer.svg"]
     for file in files:
         ET.parse(file)
     print("ALL AURORA SVGs PASS XML VALIDATION PERFECTLY!")

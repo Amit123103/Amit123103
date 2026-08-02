@@ -2,7 +2,7 @@
 
 <!-- Aurora Hero Banner -->
 <picture>
-  <img src="assets/aurora_hero.svg" alt="Amit Kumar - Senior AI Engineer &amp; Cloud Architect" width="100%">
+  <img src="assets/aurora_hero_v2.svg" alt="Amit Kumar - Senior AI Engineer &amp; Cloud Architect" width="100%">
 </picture>
 
 <br><br>
