@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="100%" height="100%">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&amp;display=swap');
+            text { font-family: 'Jura', sans-serif; fill: #FFF; }
+            .cube-face-top { fill: rgba(0, 245, 255, 0.2); stroke: #00F5FF; stroke-width: 1.5; }
+            .cube-face-left { fill: rgba(79, 70, 229, 0.3); stroke: #00F5FF; stroke-width: 1.5; }
+            .cube-face-right { fill: rgba(2, 6, 23, 0.8); stroke: #00F5FF; stroke-width: 1.5; }
+            
+            .float { animation: floatY 6s ease-in-out infinite alternate; }
+            @keyframes floatY { 0% { transform: translateY(-10px); } 100% { transform: translateY(10px); } }
+        </style>
+        <filter id="cube-glow"><feGaussianBlur stdDeviation="3" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+    </defs>
+    
+    <text x="600" y="40" font-size="24" fill="#00F5FF" text-anchor="middle" filter="url(#cube-glow)">3D PROJECT MATRIX</text>
+
+        <g transform="translate(250, 280)" class="float" style="animation-delay: 0.0s;" filter="url(#cube-glow)">
+            <polygon points="0,0 69.2820323027551,-39.99999999999999 0,-79.99999999999999 -69.2820323027551,-39.99999999999999" class="cube-face-top" />
+            <polygon points="0,0 -69.2820323027551,-39.99999999999999 -69.2820323027551,40.00000000000001 0,80" class="cube-face-left" />
+            <polygon points="0,0 69.2820323027551,-39.99999999999999 69.2820323027551,40.00000000000001 0,80" class="cube-face-right" />
+            
+            <!-- Projected Text on the right face -->
+            <g transform="translate(34.64101615137755, 40.0) skewY(30) scale(0.8)">
+                <text x="0" y="0" font-size="14" fill="#00F5FF">AI VISION SYSTEM</text>
+                <text x="0" y="20" font-size="10" fill="#FFF">Python • PyTorch • OpenCV</text>
+                
+                <rect x="0" y="40" width="60" height="15" fill="#4F46E5" />
+                <text x="30" y="51" font-size="9" text-anchor="middle">GITHUB</text>
+                
+                <rect x="70" y="40" width="60" height="15" fill="#00F5FF" />
+                <text x="100" y="51" font-size="9" text-anchor="middle" fill="#000">DEMO</text>
+            </g>
+        </g>
+        
+        <!-- Fake shadow on the floor -->
+        <ellipse cx="250" cy="430" rx="80" ry="26.666666666666668" fill="rgba(0, 245, 255, 0.05)" filter="blur(5px)" />
+
+        <g transform="translate(600, 280)" class="float" style="animation-delay: 1.5s;" filter="url(#cube-glow)">
+            <polygon points="0,0 69.2820323027551,-39.99999999999999 0,-79.99999999999999 -69.2820323027551,-39.99999999999999" class="cube-face-top" />
+            <polygon points="0,0 -69.2820323027551,-39.99999999999999 -69.2820323027551,40.00000000000001 0,80" class="cube-face-left" />
+            <polygon points="0,0 69.2820323027551,-39.99999999999999 69.2820323027551,40.00000000000001 0,80" class="cube-face-right" />
+            
+            <!-- Projected Text on the right face -->
+            <g transform="translate(34.64101615137755, 40.0) skewY(30) scale(0.8)">
+                <text x="0" y="0" font-size="14" fill="#00F5FF">QUANTUM RAG</text>
+                <text x="0" y="20" font-size="10" fill="#FFF">LLMs • LangChain • FastAPI</text>
+                
+                <rect x="0" y="40" width="60" height="15" fill="#4F46E5" />
+                <text x="30" y="51" font-size="9" text-anchor="middle">GITHUB</text>
+                
+                <rect x="70" y="40" width="60" height="15" fill="#00F5FF" />
+                <text x="100" y="51" font-size="9" text-anchor="middle" fill="#000">DEMO</text>
+            </g>
+        </g>
+        
+        <!-- Fake shadow on the floor -->
+        <ellipse cx="600" cy="430" rx="80" ry="26.666666666666668" fill="rgba(0, 245, 255, 0.05)" filter="blur(5px)" />
+
+        <g transform="translate(950, 280)" class="float" style="animation-delay: 3.0s;" filter="url(#cube-glow)">
+            <polygon points="0,0 69.2820323027551,-39.99999999999999 0,-79.99999999999999 -69.2820323027551,-39.99999999999999" class="cube-face-top" />
+            <polygon points="0,0 -69.2820323027551,-39.99999999999999 -69.2820323027551,40.00000000000001 0,80" class="cube-face-left" />
+            <polygon points="0,0 69.2820323027551,-39.99999999999999 69.2820323027551,40.00000000000001 0,80" class="cube-face-right" />
+            
+            <!-- Projected Text on the right face -->
+            <g transform="translate(34.64101615137755, 40.0) skewY(30) scale(0.8)">
+                <text x="0" y="0" font-size="14" fill="#00F5FF">CLOUD PIPELINE</text>
+                <text x="0" y="20" font-size="10" fill="#FFF">AWS • Docker • Kubernetes</text>
+                
+                <rect x="0" y="40" width="60" height="15" fill="#4F46E5" />
+                <text x="30" y="51" font-size="9" text-anchor="middle">GITHUB</text>
+                
+                <rect x="70" y="40" width="60" height="15" fill="#00F5FF" />
+                <text x="100" y="51" font-size="9" text-anchor="middle" fill="#000">DEMO</text>
+            </g>
+        </g>
+        
+        <!-- Fake shadow on the floor -->
+        <ellipse cx="950" cy="430" rx="80" ry="26.666666666666668" fill="rgba(0, 245, 255, 0.05)" filter="blur(5px)" />
+</svg>

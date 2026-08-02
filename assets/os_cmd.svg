@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="100%" height="100%">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;700&amp;display=swap');
+            text { font-family: 'Jura', sans-serif; fill: #FFF; }
+            .highlight { fill: #00F5FF; font-weight: bold; filter: drop-shadow(0 0 4px #00F5FF); }
+            .panel { fill: rgba(5, 10, 25, 0.7); stroke: #4F46E5; stroke-width: 2; }
+            
+            .breathe-panel { animation: panelBreathe 4s infinite alternate; }
+            @keyframes panelBreathe { 0% { stroke: #4F46E5; box-shadow: 0 0 10px #4F46E5; } 100% { stroke: #00F5FF; box-shadow: 0 0 20px #00F5FF; } }
+            
+            .typing {
+                overflow: hidden; white-space: nowrap; border-right: 2px solid #00F5FF;
+                animation: type 3s steps(40, end) infinite alternate;
+            }
+            @keyframes type { 0% { width: 0; } 100% { width: 100%; } }
+        </style>
+        <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+    </defs>
+    
+    <g transform="translate(100, 50)" class="breathe-panel">
+        <!-- Futuristic Window Shape -->
+        <path d="M0,30 L30,0 L1000,0 L1000,370 L970,400 L0,400 Z" class="panel" filter="url(#glow)" />
+        <rect x="0" y="0" width="1000" height="40" fill="rgba(0, 245, 255, 0.1)" />
+        <text x="20" y="25" class="highlight" font-size="16">COMMAND CENTER // AI DASHBOARD</text>
+        
+        <line x1="0" y1="40" x2="1000" y2="40" stroke="#00F5FF" stroke-width="1" />
+        
+        <!-- Grid pattern inside -->
+        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect width="20" height="20" fill="none" stroke="rgba(255,255,255,0.05)" />
+        </pattern>
+        <path d="M0,40 L1000,40 L1000,370 L970,400 L0,400 Z" fill="url(#grid)" />
+        
+        <!-- Status Information -->
+        <g transform="translate(40, 90)">
+            <text x="0" y="0" font-size="18" class="highlight">SYSTEM STATUS:</text>
+            <text x="200" y="0" font-size="18">OPTIMAL [■■■■■■■■■□]</text>
+            
+            <text x="0" y="50" font-size="18" class="highlight">AI CORE:</text>
+            <text x="200" y="50" font-size="18">AMIT KUMAR v2.0</text>
+            
+            <text x="0" y="100" font-size="18" class="highlight">PROFILE ANALYSIS:</text>
+            <text x="200" y="100" font-size="18">AI ENGINEER | ML ARCHITECT</text>
+            
+            <text x="0" y="150" font-size="18" class="highlight">CURRENT MISSION:</text>
+            <text x="200" y="150" font-size="18">BUILDING INTELLIGENT REAL-WORLD SYSTEMS</text>
+            
+            <text x="0" y="200" font-size="18" class="highlight">LEARNING MODE:</text>
+            <text x="200" y="200" font-size="18">ENABLED (CONTINUOUS)</text>
+            
+            <text x="0" y="250" font-size="18" class="highlight">ONLINE STATUS:</text>
+            <text x="200" y="250" font-size="18" fill="#10B981">> ACTIVE_SYNC_WITH_GITHUB</text>
+        </g>
+        
+        <!-- decorative tech shapes -->
+        <g transform="translate(750, 100)">
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#4F46E5" stroke-width="2" stroke-dasharray="20 10" />
+            <circle cx="100" cy="100" r="60" fill="none" stroke="#00F5FF" stroke-width="1" />
+            <path d="M100,20 L100,180 M20,100 L180,100" stroke="rgba(0, 245, 255, 0.3)" />
+            <rect x="95" y="95" width="10" height="10" fill="#FFF" />
+        </g>
+    </g>
+</svg>
