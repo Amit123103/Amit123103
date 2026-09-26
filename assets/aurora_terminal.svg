@@ -1,34 +1,448 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+    
     <defs>
         <style>
-            text { font-family: 'Courier New', Courier, monospace; fill: #38BDF8; font-size: 13px; }
-            .prompt { fill: #34D399; font-weight: bold; }
-            .cmd { fill: #F8FAFC; }
-            .success { fill: #38BDF8; }
-            .highlight { fill: #C084FC; font-weight: bold; }
-            .cursor { animation: blink 1s step-start infinite; fill: #38BDF8; }
-            @keyframes blink { 50% { opacity: 0; } }
+            @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap');
+            text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+            .mono { font-family: 'JetBrains Mono', 'Share Tech Mono', monospace; }
+
+            /* 3D Orbital Spins */
+            @keyframes orbitCW { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+            @keyframes orbitCCW { 0% { transform: rotate(0deg); } 100% { transform: rotate(-360deg); } }
+
+            /* Holographic Scan */
+            @keyframes holoScan {
+                0% { transform: translateY(-8px); opacity: 0.15; }
+                50% { opacity: 0.85; }
+                100% { transform: translateY(var(--scan-h, 500px)); opacity: 0.15; }
+            }
+
+            /* Pulse Glow */
+            @keyframes pulseNeon {
+                0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 6px var(--glow-color, #00F5FF)); }
+                50% { opacity: 1; filter: drop-shadow(0 0 22px var(--glow-color, #00F5FF)); }
+            }
+
+            /* Float 3D */
+            @keyframes float3D {
+                0%, 100% { transform: translateY(0px) scale(1); }
+                50% { transform: translateY(-12px) scale(1.02); }
+            }
+
+            /* Subtle Breathe */
+            @keyframes breathe {
+                0%, 100% { transform: scale(1); opacity: 0.8; }
+                50% { transform: scale(1.04); opacity: 1; }
+            }
+
+            /* Cursor Blink */
+            @keyframes cursorBlink {
+                0%, 49% { opacity: 1; }
+                50%, 100% { opacity: 0; }
+            }
+
+            /* Bar Fill Animate */
+            @keyframes barFill {
+                0% { transform: scaleX(0); }
+                100% { transform: scaleX(1); }
+            }
+
+            /* Particle Drift */
+            @keyframes particleDrift {
+                0% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0.2; }
+                50% { transform: translateY(-18px) translateX(8px) scale(1.2); opacity: 0.9; }
+                100% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0.2; }
+            }
+
+            /* Gradient Shift */
+            @keyframes gradientShift {
+                0% { stop-color: #00F5FF; }
+                33% { stop-color: #818CF8; }
+                66% { stop-color: #F472B6; }
+                100% { stop-color: #00F5FF; }
+            }
+
+            /* Text Typing */
+            @keyframes typeReveal {
+                from { width: 0; }
+                to { width: 100%; }
+            }
+
+            /* Hexagon Rotate */
+            @keyframes hexRotate {
+                0% { transform: rotate(0deg) scale(0.98); }
+                50% { transform: rotate(180deg) scale(1.02); }
+                100% { transform: rotate(360deg) scale(0.98); }
+            }
+
+            /* Data Stream */
+            @keyframes dataStream {
+                0% { transform: translateY(-100%); }
+                100% { transform: translateY(200%); }
+            }
         </style>
+
+        <!-- Premium Gradients -->
+        <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#030711" />
+            <stop offset="50%" stop-color="#0a0f1e" />
+            <stop offset="100%" stop-color="#020409" />
+        </linearGradient>
+
+        <linearGradient id="cyan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00F5FF" />
+            <stop offset="100%" stop-color="#38BDF8" />
+        </linearGradient>
+
+        <linearGradient id="purple-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#818CF8" />
+            <stop offset="100%" stop-color="#C084FC" />
+        </linearGradient>
+
+        <linearGradient id="green-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#34D399" />
+            <stop offset="100%" stop-color="#10B981" />
+        </linearGradient>
+
+        <linearGradient id="rose-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FB7185" />
+            <stop offset="100%" stop-color="#F472B6" />
+        </linearGradient>
+
+        <linearGradient id="amber-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FBBF24" />
+            <stop offset="100%" stop-color="#F59E0B" />
+        </linearGradient>
+
+        <linearGradient id="holo-shimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="rgba(0, 245, 255, 0.08)">
+                <animate attributeName="stop-color" values="rgba(0,245,255,0.08);rgba(129,140,248,0.08);rgba(244,114,182,0.08);rgba(0,245,255,0.08)" dur="8s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" stop-color="rgba(129, 140, 248, 0.03)">
+                <animate attributeName="stop-color" values="rgba(129,140,248,0.03);rgba(244,114,182,0.03);rgba(0,245,255,0.03);rgba(129,140,248,0.03)" dur="8s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+
+        <linearGradient id="scan-laser" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="rgba(0, 245, 255, 0)" />
+            <stop offset="30%" stop-color="rgba(0, 245, 255, 0.7)" />
+            <stop offset="50%" stop-color="rgba(255, 255, 255, 0.95)" />
+            <stop offset="70%" stop-color="rgba(0, 245, 255, 0.7)" />
+            <stop offset="100%" stop-color="rgba(0, 245, 255, 0)" />
+        </linearGradient>
+
+        <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="30%" stop-color="#00F5FF" />
+            <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+        </radialGradient>
+
+        <!-- Filters -->
+        <filter id="neon-blur"><feGaussianBlur stdDeviation="6" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+        <filter id="soft-glow"><feGaussianBlur stdDeviation="3"/></filter>
+        <filter id="heavy-glow"><feGaussianBlur stdDeviation="10" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+
+        <!-- Grid Pattern -->
+        <pattern id="iso-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="40" y2="0" stroke="rgba(56, 189, 248, 0.04)" stroke-width="0.5" />
+            <line x1="0" y1="0" x2="0" y2="40" stroke="rgba(56, 189, 248, 0.04)" stroke-width="0.5" />
+            <line x1="0" y1="0" x2="40" y2="40" stroke="rgba(129, 140, 248, 0.02)" stroke-width="0.3" />
+        </pattern>
+
+        <!-- Hex Grid Pattern -->
+        <pattern id="hex-grid" width="60" height="52" patternUnits="userSpaceOnUse" patternTransform="scale(0.8)">
+            <polygon points="30,2 55,15 55,37 30,50 5,37 5,15" fill="none" stroke="rgba(0,245,255,0.04)" stroke-width="0.5" />
+        </pattern>
     </defs>
-    
-    <!-- Terminal Window Container -->
-    <rect width="100%" height="100%" fill="#090d16" rx="12" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
-    
-    <!-- Title Bar -->
-    <rect width="100%" height="32" fill="#0f172a" rx="12" />
-    <circle cx="20" cy="16" r="5" fill="#EF4444" />
-    <circle cx="36" cy="16" r="5" fill="#F59E0B" />
-    <circle cx="52" cy="16" r="5" fill="#10B981" />
-    <text x="600" y="20" font-size="12" fill="#64748B" text-anchor="middle" font-family="-apple-system, sans-serif">amit@quantum-nexus: ~ (zsh)</text>
-    
-    <!-- Console Commands & Telemetry Output -->
-    <g transform="translate(24, 60)">
-        <text y="0"><tspan class="prompt">amit@quantum-nexus</tspan><tspan class="cmd">:~$ fetch-profile --user=Amit123103</tspan></text>
-        <text y="28" class="success">[OK] Initializing Neural Weights &amp; PyTorch Engine...</text>
-        <text y="52" class="success">[OK] Connecting to AWS Cloud Cluster (ap-south-1)...</text>
-        <text y="76" class="success">[OK] Loading Agentic RAG Workflows &amp; Vector Databases...</text>
-        <text y="100" class="highlight">&gt;&gt; STATUS: Senior AI Engineer &amp; Cloud Architect — Ready for High-Impact Roles!</text>
+
+
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="url(#bg-gradient)" rx="18" />
+    <rect width="100%" height="100%" fill="url(#iso-grid)" rx="18" />
+    <rect width="100%" height="100%" fill="url(#holo-shimmer)" rx="18" />
+
+    <!-- Constellation Network -->
+    <line x1="449" y1="346" x2="406" y2="157" stroke="#00F5FF" stroke-width="0.5" opacity="0.002" />
+<line x1="406" y1="157" x2="548" y2="108" stroke="#00F5FF" stroke-width="0.5" opacity="0.02" />
+<line x1="406" y1="157" x2="217" y2="168" stroke="#00F5FF" stroke-width="0.5" opacity="0.004" />
+<line x1="1143" y1="85" x2="1042" y2="142" stroke="#00F5FF" stroke-width="0.5" opacity="0.034" />
+<line x1="483" y1="231" x2="351" y2="276" stroke="#00F5FF" stroke-width="0.5" opacity="0.024" />
+<line x1="351" y1="276" x2="406" y2="330" stroke="#00F5FF" stroke-width="0.5" opacity="0.049" />
+<line x1="1122" y1="84" x2="1000" y2="201" stroke="#00F5FF" stroke-width="0.5" opacity="0.012" />
+<line x1="1000" y1="201" x2="864" y2="61" stroke="#00F5FF" stroke-width="0.5" opacity="0.002" />
+<line x1="591" y1="325" x2="457" y2="225" stroke="#00F5FF" stroke-width="0.5" opacity="0.013" />
+<line x1="482" y1="122" x2="403" y2="297" stroke="#00F5FF" stroke-width="0.5" opacity="0.003" />
+<line x1="400" y1="58" x2="264" y2="51" stroke="#00F5FF" stroke-width="0.5" opacity="0.026" />
+
+
+    <!-- Outer Frame Glow -->
+    <rect width="100%" height="100%" fill="none" rx="18" stroke="rgba(0, 245, 255, 0.2)" stroke-width="1.5" />
+    <rect x="0" y="0" width="100%" height="42" fill="rgba(8, 14, 32, 0.95)" rx="18" />
+    <rect x="0" y="40" width="100%" height="2" fill="url(#cyan-grad)" opacity="0.5" />
+
+    <!-- Window Controls -->
+    <circle cx="26" cy="21" r="6.5" fill="#EF4444" opacity="0.9" />
+    <circle cx="48" cy="21" r="6.5" fill="#FBBF24" opacity="0.9" />
+    <circle cx="70" cy="21" r="6.5" fill="#34D399" opacity="0.9" />
+    <text x="600" y="26" font-size="11" fill="#64748B" text-anchor="middle" class="mono" letter-spacing="1.5">⚡ QUANTUM NEXUS v5.0 // 3D HOLOGRAPHIC COMMAND INTERFACE</text>
+    <text x="1170" y="26" font-size="10" fill="#34D399" text-anchor="end" class="mono">● ONLINE</text>
+
+    <!-- LEFT: 3D Holographic Reactor Core -->
+    <g transform="translate(30, 55)">
         
-        <text y="128"><tspan class="prompt">amit@quantum-nexus</tspan><tspan class="cmd">:~$ </tspan><tspan class="cursor">█</tspan></text>
+    <rect x="0" y="0" width="320" height="325" rx="16"
+          fill="rgba(8, 14, 32, 0.65)" stroke="rgba(56, 189, 248, 0.15)" stroke-width="1" />
+    <rect x="0" y="0" width="320" height="3" rx="16" fill="#00F5FF" opacity="0.7" />
+    
+
+        <text x="160" y="30" font-size="13" font-weight="700" fill="#00F5FF" text-anchor="middle" letter-spacing="2" class="mono">◆ CORE TELEMETRY</text>
+
+        <!-- Orbital Reactor -->
+        <g transform="translate(160, 120)">
+            <!-- Outer Ring -->
+            <ellipse cx="0" cy="0" rx="75" ry="38" fill="none" stroke="url(#cyan-grad)" stroke-width="1.8"
+                     stroke-dasharray="10 8" style="transform-origin: center; animation: orbitCW 16s linear infinite;" />
+            <!-- Mid Ring -->
+            <ellipse cx="0" cy="0" rx="55" ry="28" fill="none" stroke="url(#purple-grad)" stroke-width="1.3"
+                     stroke-dasharray="6 6" style="transform-origin: center; animation: orbitCCW 24s linear infinite;" />
+            <!-- Inner Ring -->
+            <ellipse cx="0" cy="0" rx="35" ry="18" fill="none" stroke="#A78BFA" stroke-width="1"
+                     stroke-dasharray="4 4" style="transform-origin: center; animation: orbitCW 10s linear infinite;" />
+            <!-- Core -->
+            <circle cx="0" cy="0" r="18" fill="rgba(0, 245, 255, 0.15)" stroke="#00F5FF" stroke-width="2"
+                    style="animation: pulseNeon 3s ease-in-out infinite; --glow-color: #00F5FF;" filter="url(#neon-blur)" />
+            <circle cx="0" cy="0" r="8" fill="#FFFFFF" style="animation: breathe 2s ease-in-out infinite;" />
+
+            <!-- Orbital Nodes -->
+            <circle cx="75" cy="0" r="4" fill="#00F5FF" style="animation: orbitCW 16s linear infinite; transform-origin: 0 0;" />
+            <circle cx="-55" cy="0" r="3" fill="#818CF8" style="animation: orbitCCW 24s linear infinite; transform-origin: 55px 0;" />
+        </g>
+
+        <!-- System Metrics -->
+        <g transform="translate(20, 185)">
+            <text x="0" y="0" font-size="10" fill="#94A3B8" class="mono">AI INFERENCE ENGINE</text>
+            <text x="280" y="0" font-size="10" font-weight="700" fill="#00F5FF" text-anchor="end" class="mono">97.2%</text>
+            <rect x="0" y="8" width="280" height="6" rx="3" fill="rgba(255,255,255,0.06)" />
+            <rect x="0" y="8" width="272" height="6" rx="3" fill="url(#cyan-grad)" style="animation: barFill 2s ease-out forwards; transform-origin: left;" />
+
+            <text x="0" y="32" font-size="10" fill="#94A3B8" class="mono">GPU TENSOR CLUSTER</text>
+            <text x="280" y="32" font-size="10" font-weight="700" fill="#818CF8" text-anchor="end" class="mono">99.1%</text>
+            <rect x="0" y="40" width="280" height="6" rx="3" fill="rgba(255,255,255,0.06)" />
+            <rect x="0" y="40" width="277" height="6" rx="3" fill="url(#purple-grad)" style="animation: barFill 2.5s ease-out forwards; transform-origin: left;" />
+
+            <text x="0" y="64" font-size="10" fill="#94A3B8" class="mono">VECTOR DB RETRIEVAL</text>
+            <text x="280" y="64" font-size="10" font-weight="700" fill="#34D399" text-anchor="end" class="mono">0.8ms</text>
+            <rect x="0" y="72" width="280" height="6" rx="3" fill="rgba(255,255,255,0.06)" />
+            <rect x="0" y="72" width="248" height="6" rx="3" fill="url(#green-grad)" style="animation: barFill 3s ease-out forwards; transform-origin: left;" />
+
+            <!-- Status Badges -->
+            <g transform="translate(0, 96)">
+                <rect x="0" y="0" width="82" height="20" rx="10" fill="rgba(0,245,255,0.1)" stroke="rgba(0,245,255,0.35)" stroke-width="0.8" />
+                <text x="41" y="14" font-size="8" font-weight="700" fill="#00F5FF" text-anchor="middle" class="mono">RAG ACTIVE</text>
+                <rect x="92" y="0" width="82" height="20" rx="10" fill="rgba(129,140,248,0.1)" stroke="rgba(129,140,248,0.35)" stroke-width="0.8" />
+                <text x="133" y="14" font-size="8" font-weight="700" fill="#818CF8" text-anchor="middle" class="mono">LLM SERVE</text>
+                <rect x="184" y="0" width="82" height="20" rx="10" fill="rgba(52,211,153,0.1)" stroke="rgba(52,211,153,0.35)" stroke-width="0.8" />
+                <text x="225" y="14" font-size="8" font-weight="700" fill="#34D399" text-anchor="middle" class="mono">K8S CLOUD</text>
+            </g>
+        </g>
     </g>
+
+    <!-- RIGHT: Live Terminal CLI -->
+    <g transform="translate(370, 55)">
+        
+    <rect x="0" y="0" width="800" height="325" rx="16"
+          fill="rgba(8, 14, 32, 0.65)" stroke="rgba(56, 189, 248, 0.15)" stroke-width="1" />
+    <rect x="0" y="0" width="800" height="3" rx="16" fill="#818CF8" opacity="0.7" />
+    
+
+        <g transform="translate(24, 32)">
+            <text x="0" y="0" class="mono">
+                <tspan font-size="13" fill="#34D399" font-weight="700">amit@quantum-nexus</tspan><tspan font-size="13" fill="#F1F5F9">:~$ </tspan><tspan font-size="13" fill="#F1F5F9">ai-agent --init --profile=Amit123103</tspan>
+            </text>
+
+            <text x="0" y="26" font-size="12" fill="#38BDF8" class="mono">[✔] Neural Weights Loaded: Deep Learning &amp; RAG Architecture (PyTorch / CUDA)</text>
+            <text x="0" y="48" font-size="12" fill="#94A3B8" class="mono">[→] Cloud Infrastructure: AWS EKS Cluster • Docker • Microservices</text>
+            <text x="0" y="70" font-size="12" fill="#94A3B8" class="mono">[→] Vector Databases: PostgreSQL • Supabase • Vector Search Engine</text>
+
+            <text x="0" y="100" font-size="12" fill="#C084FC" font-weight="700" class="mono">&gt;&gt; PRODUCTION SYSTEMS ONLINE:</text>
+            <text x="24" y="122" font-size="12" fill="#94A3B8" class="mono">├─ <tspan fill="#FBBF24" font-weight="700">MyKernel</tspan> : High-performance OS kernel &amp; system modules (C++ / Linux)</text>
+            <text x="24" y="144" font-size="12" fill="#94A3B8" class="mono">├─ <tspan fill="#FBBF24" font-weight="700">AI-HUMANIZER-PRO</tspan> : Next-gen generative AI &amp; LLM text synthesis</text>
+            <text x="24" y="166" font-size="12" fill="#94A3B8" class="mono">└─ <tspan fill="#FBBF24" font-weight="700">AI-Interviewer</tspan> : Autonomous agentic AI evaluation simulator</text>
+
+            <text x="0" y="200" font-size="12" fill="#38BDF8" class="mono">&gt;&gt; IDENTITY: Amit Kumar | Software Developer • AI &amp; ML • MLOps</text>
+
+            <text x="0" y="230" class="mono">
+                <tspan font-size="13" fill="#34D399" font-weight="700">amit@quantum-nexus</tspan><tspan font-size="13" fill="#F1F5F9">:~$ </tspan><tspan font-size="13" fill="#F1F5F9">docker ps &amp;&amp; kubectl get pods </tspan><tspan font-size="14" fill="#00F5FF" style="animation: cursorBlink 1s step-start infinite;">█</tspan>
+            </text>
+
+            <!-- Neural Waveform -->
+            <g transform="translate(0, 260)">
+                <rect x="0" y="-4" width="10" height="4" rx="2" fill="hsl(180.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="4;14;1;11;4" dur="2.5s" begin="0.0s" repeatCount="indefinite" />
+                </rect>
+                <rect x="16" y="-9" width="10" height="9" rx="2" fill="hsl(182.66666666666666, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="9;19;6;16;9" dur="2.5s" begin="0.08s" repeatCount="indefinite" />
+                </rect>
+                <rect x="32" y="-14" width="10" height="14" rx="2" fill="hsl(185.33333333333334, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="14;24;11;21;14" dur="2.5s" begin="0.16s" repeatCount="indefinite" />
+                </rect>
+                <rect x="48" y="-17" width="10" height="17" rx="2" fill="hsl(188.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="17;27;14;24;17" dur="2.5s" begin="0.24s" repeatCount="indefinite" />
+                </rect>
+                <rect x="64" y="-17" width="10" height="17" rx="2" fill="hsl(190.66666666666666, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="17;27;14;24;17" dur="2.5s" begin="0.32s" repeatCount="indefinite" />
+                </rect>
+                <rect x="80" y="-16" width="10" height="16" rx="2" fill="hsl(193.33333333333334, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="16;26;13;23;16" dur="2.5s" begin="0.4s" repeatCount="indefinite" />
+                </rect>
+                <rect x="96" y="-13" width="10" height="13" rx="2" fill="hsl(196.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="13;23;10;20;13" dur="2.5s" begin="0.48s" repeatCount="indefinite" />
+                </rect>
+                <rect x="112" y="-8" width="10" height="8" rx="2" fill="hsl(198.66666666666666, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="8;18;5;15;8" dur="2.5s" begin="0.56s" repeatCount="indefinite" />
+                </rect>
+                <rect x="128" y="-4" width="10" height="4" rx="2" fill="hsl(201.33333333333334, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="4;14;1;11;4" dur="2.5s" begin="0.64s" repeatCount="indefinite" />
+                </rect>
+                <rect x="144" y="-10" width="10" height="10" rx="2" fill="hsl(204.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="10;20;7;17;10" dur="2.5s" begin="0.72s" repeatCount="indefinite" />
+                </rect>
+                <rect x="160" y="-14" width="10" height="14" rx="2" fill="hsl(206.66666666666666, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="14;24;11;21;14" dur="2.5s" begin="0.8s" repeatCount="indefinite" />
+                </rect>
+                <rect x="176" y="-17" width="10" height="17" rx="2" fill="hsl(209.33333333333334, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="17;27;14;24;17" dur="2.5s" begin="0.88s" repeatCount="indefinite" />
+                </rect>
+                <rect x="192" y="-17" width="10" height="17" rx="2" fill="hsl(212.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="17;27;14;24;17" dur="2.5s" begin="0.96s" repeatCount="indefinite" />
+                </rect>
+                <rect x="208" y="-16" width="10" height="16" rx="2" fill="hsl(214.66666666666666, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="16;26;13;23;16" dur="2.5s" begin="1.04s" repeatCount="indefinite" />
+                </rect>
+                <rect x="224" y="-12" width="10" height="12" rx="2" fill="hsl(217.33333333333334, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="12;22;9;19;12" dur="2.5s" begin="1.12s" repeatCount="indefinite" />
+                </rect>
+                <rect x="240" y="-7" width="10" height="7" rx="2" fill="hsl(220.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="7;17;4;14;7" dur="2.5s" begin="1.2s" repeatCount="indefinite" />
+                </rect>
+                <rect x="256" y="-5" width="10" height="5" rx="2" fill="hsl(222.66666666666669, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="5;15;2;12;5" dur="2.5s" begin="1.28s" repeatCount="indefinite" />
+                </rect>
+                <rect x="272" y="-10" width="10" height="10" rx="2" fill="hsl(225.33333333333331, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="10;20;7;17;10" dur="2.5s" begin="1.36s" repeatCount="indefinite" />
+                </rect>
+                <rect x="288" y="-15" width="10" height="15" rx="2" fill="hsl(228.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="15;25;12;22;15" dur="2.5s" begin="1.44s" repeatCount="indefinite" />
+                </rect>
+                <rect x="304" y="-17" width="10" height="17" rx="2" fill="hsl(230.66666666666666, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="17;27;14;24;17" dur="2.5s" begin="1.52s" repeatCount="indefinite" />
+                </rect>
+                <rect x="320" y="-17" width="10" height="17" rx="2" fill="hsl(233.33333333333331, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="17;27;14;24;17" dur="2.5s" begin="1.6s" repeatCount="indefinite" />
+                </rect>
+                <rect x="336" y="-15" width="10" height="15" rx="2" fill="hsl(236.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="15;25;12;22;15" dur="2.5s" begin="1.68s" repeatCount="indefinite" />
+                </rect>
+                <rect x="352" y="-12" width="10" height="12" rx="2" fill="hsl(238.66666666666666, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="12;22;9;19;12" dur="2.5s" begin="1.76s" repeatCount="indefinite" />
+                </rect>
+                <rect x="368" y="-7" width="10" height="7" rx="2" fill="hsl(241.33333333333331, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="7;17;4;14;7" dur="2.5s" begin="1.84s" repeatCount="indefinite" />
+                </rect>
+                <rect x="384" y="-6" width="10" height="6" rx="2" fill="hsl(244.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="6;16;3;13;6" dur="2.5s" begin="1.92s" repeatCount="indefinite" />
+                </rect>
+                <rect x="400" y="-11" width="10" height="11" rx="2" fill="hsl(246.66666666666669, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="11;21;8;18;11" dur="2.5s" begin="2.0s" repeatCount="indefinite" />
+                </rect>
+                <rect x="416" y="-15" width="10" height="15" rx="2" fill="hsl(249.33333333333331, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="15;25;12;22;15" dur="2.5s" begin="2.08s" repeatCount="indefinite" />
+                </rect>
+                <rect x="432" y="-17" width="10" height="17" rx="2" fill="hsl(252.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="17;27;14;24;17" dur="2.5s" begin="2.16s" repeatCount="indefinite" />
+                </rect>
+                <rect x="448" y="-17" width="10" height="17" rx="2" fill="hsl(254.66666666666669, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="17;27;14;24;17" dur="2.5s" begin="2.24s" repeatCount="indefinite" />
+                </rect>
+                <rect x="464" y="-15" width="10" height="15" rx="2" fill="hsl(257.33333333333337, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="15;25;12;22;15" dur="2.5s" begin="2.32s" repeatCount="indefinite" />
+                </rect>
+                <rect x="480" y="-11" width="10" height="11" rx="2" fill="hsl(260.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="11;21;8;18;11" dur="2.5s" begin="2.4s" repeatCount="indefinite" />
+                </rect>
+                <rect x="496" y="-6" width="10" height="6" rx="2" fill="hsl(262.6666666666667, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="6;16;3;13;6" dur="2.5s" begin="2.48s" repeatCount="indefinite" />
+                </rect>
+                <rect x="512" y="-7" width="10" height="7" rx="2" fill="hsl(265.33333333333337, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="7;17;4;14;7" dur="2.5s" begin="2.56s" repeatCount="indefinite" />
+                </rect>
+                <rect x="528" y="-12" width="10" height="12" rx="2" fill="hsl(268.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="12;22;9;19;12" dur="2.5s" begin="2.64s" repeatCount="indefinite" />
+                </rect>
+                <rect x="544" y="-16" width="10" height="16" rx="2" fill="hsl(270.66666666666663, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="16;26;13;23;16" dur="2.5s" begin="2.72s" repeatCount="indefinite" />
+                </rect>
+                <rect x="560" y="-17" width="10" height="17" rx="2" fill="hsl(273.3333333333333, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="17;27;14;24;17" dur="2.5s" begin="2.8s" repeatCount="indefinite" />
+                </rect>
+                <rect x="576" y="-17" width="10" height="17" rx="2" fill="hsl(276.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="17;27;14;24;17" dur="2.5s" begin="2.88s" repeatCount="indefinite" />
+                </rect>
+                <rect x="592" y="-15" width="10" height="15" rx="2" fill="hsl(278.66666666666663, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="15;25;12;22;15" dur="2.5s" begin="2.96s" repeatCount="indefinite" />
+                </rect>
+                <rect x="608" y="-10" width="10" height="10" rx="2" fill="hsl(281.3333333333333, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="10;20;7;17;10" dur="2.5s" begin="3.04s" repeatCount="indefinite" />
+                </rect>
+                <rect x="624" y="-5" width="10" height="5" rx="2" fill="hsl(284.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="5;15;2;12;5" dur="2.5s" begin="3.12s" repeatCount="indefinite" />
+                </rect>
+                <rect x="640" y="-8" width="10" height="8" rx="2" fill="hsl(286.66666666666663, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="8;18;5;15;8" dur="2.5s" begin="3.2s" repeatCount="indefinite" />
+                </rect>
+                <rect x="656" y="-12" width="10" height="12" rx="2" fill="hsl(289.3333333333333, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="12;22;9;19;12" dur="2.5s" begin="3.28s" repeatCount="indefinite" />
+                </rect>
+                <rect x="672" y="-16" width="10" height="16" rx="2" fill="hsl(292.0, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="16;26;13;23;16" dur="2.5s" begin="3.36s" repeatCount="indefinite" />
+                </rect>
+                <rect x="688" y="-17" width="10" height="17" rx="2" fill="hsl(294.6666666666667, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="17;27;14;24;17" dur="2.5s" begin="3.44s" repeatCount="indefinite" />
+                </rect>
+                <rect x="704" y="-17" width="10" height="17" rx="2" fill="hsl(297.3333333333333, 85%, 65%)" opacity="0.7">
+                    <animate attributeName="height" values="17;27;14;24;17" dur="2.5s" begin="3.52s" repeatCount="indefinite" />
+                </rect>
+            </g>
+        </g>
+    </g>
+
+    <!-- Scanning Holographic Laser -->
+    <g style="animation: holoScan 8s ease-in-out infinite; --scan-h: 370px;">
+        <rect x="0" y="0" width="100%" height="3" fill="url(#scan-laser)" />
+        <rect x="0" y="1" width="100%" height="1" fill="#FFFFFF" opacity="0.6" />
+    </g>
+
+    <!-- Floating Particles -->
+    <circle cx="248" cy="32" r="2.8538762493995824" fill="#00F5FF" opacity="0.6" style="animation: particleDrift 3.6s ease-in-out 1.5s infinite;" />
+<circle cx="229" cy="366" r="2.8516693616691895" fill="#38BDF8" opacity="0.6" style="animation: particleDrift 5.4s ease-in-out 3.3s infinite;" />
+<circle cx="85" cy="35" r="1.234238099653981" fill="#818CF8" opacity="0.6" style="animation: particleDrift 5.4s ease-in-out 1.4s infinite;" />
+<circle cx="1169" cy="121" r="2.7900490323060088" fill="#A78BFA" opacity="0.6" style="animation: particleDrift 4.7s ease-in-out 4.2s infinite;" />
+<circle cx="939" cy="321" r="1.695476770576657" fill="#34D399" opacity="0.6" style="animation: particleDrift 6.0s ease-in-out 5.2s infinite;" />
+<circle cx="346" cy="377" r="2.056535995383756" fill="#F472B6" opacity="0.6" style="animation: particleDrift 3.9s ease-in-out 1.7s infinite;" />
+<circle cx="709" cy="72" r="1.2318646084503697" fill="#00F5FF" opacity="0.6" style="animation: particleDrift 6.4s ease-in-out 0.6s infinite;" />
+<circle cx="561" cy="42" r="2.824329466734545" fill="#38BDF8" opacity="0.6" style="animation: particleDrift 6.9s ease-in-out 3.2s infinite;" />
+<circle cx="795" cy="60" r="2.3801015781830674" fill="#818CF8" opacity="0.6" style="animation: particleDrift 5.5s ease-in-out 5.0s infinite;" />
+<circle cx="760" cy="315" r="1.4807214756416498" fill="#A78BFA" opacity="0.6" style="animation: particleDrift 5.6s ease-in-out 0.4s infinite;" />
+<circle cx="612" cy="60" r="3.1382943025378673" fill="#34D399" opacity="0.6" style="animation: particleDrift 4.5s ease-in-out 5.2s infinite;" />
+<circle cx="948" cy="345" r="3.085276066601876" fill="#F472B6" opacity="0.6" style="animation: particleDrift 4.4s ease-in-out 1.0s infinite;" />
+<circle cx="566" cy="379" r="3.341636469281235" fill="#00F5FF" opacity="0.6" style="animation: particleDrift 5.4s ease-in-out 3.9s infinite;" />
+<circle cx="370" cy="293" r="2.822816994875873" fill="#38BDF8" opacity="0.6" style="animation: particleDrift 4.5s ease-in-out 1.0s infinite;" />
+<circle cx="1160" cy="132" r="2.7115356274746865" fill="#818CF8" opacity="0.6" style="animation: particleDrift 6.1s ease-in-out 5.1s infinite;" />
+<circle cx="489" cy="36" r="3.0126145019280357" fill="#A78BFA" opacity="0.6" style="animation: particleDrift 3.3s ease-in-out 2.4s infinite;" />
+<circle cx="664" cy="128" r="2.6385966632372" fill="#34D399" opacity="0.6" style="animation: particleDrift 6.7s ease-in-out 2.4s infinite;" />
+<circle cx="959" cy="93" r="1.6622004162451312" fill="#F472B6" opacity="0.6" style="animation: particleDrift 5.2s ease-in-out 1.5s infinite;" />
+<circle cx="558" cy="319" r="2.071084568236449" fill="#00F5FF" opacity="0.6" style="animation: particleDrift 4.4s ease-in-out 3.5s infinite;" />
+<circle cx="303" cy="280" r="2.2337895872240776" fill="#38BDF8" opacity="0.6" style="animation: particleDrift 6.4s ease-in-out 4.5s infinite;" />
+
+
 </svg>

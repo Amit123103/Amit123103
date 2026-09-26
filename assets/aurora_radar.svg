@@ -1,48 +1,218 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="100%" height="100%">
+    
     <defs>
         <style>
-            text { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; fill: #FFFFFF; }
-            .axis-line { stroke: rgba(255, 255, 255, 0.1); stroke-width: 1; }
-            .radar-poly { fill: rgba(56, 189, 248, 0.15); stroke: #38BDF8; stroke-width: 2; }
-            .dot { fill: #38BDF8; filter: drop-shadow(0 0 6px #38BDF8); }
+            @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap');
+            text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+            .mono { font-family: 'JetBrains Mono', 'Share Tech Mono', monospace; }
+
+            /* 3D Orbital Spins */
+            @keyframes orbitCW { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+            @keyframes orbitCCW { 0% { transform: rotate(0deg); } 100% { transform: rotate(-360deg); } }
+
+            /* Holographic Scan */
+            @keyframes holoScan {
+                0% { transform: translateY(-8px); opacity: 0.15; }
+                50% { opacity: 0.85; }
+                100% { transform: translateY(var(--scan-h, 500px)); opacity: 0.15; }
+            }
+
+            /* Pulse Glow */
+            @keyframes pulseNeon {
+                0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 6px var(--glow-color, #00F5FF)); }
+                50% { opacity: 1; filter: drop-shadow(0 0 22px var(--glow-color, #00F5FF)); }
+            }
+
+            /* Float 3D */
+            @keyframes float3D {
+                0%, 100% { transform: translateY(0px) scale(1); }
+                50% { transform: translateY(-12px) scale(1.02); }
+            }
+
+            /* Subtle Breathe */
+            @keyframes breathe {
+                0%, 100% { transform: scale(1); opacity: 0.8; }
+                50% { transform: scale(1.04); opacity: 1; }
+            }
+
+            /* Cursor Blink */
+            @keyframes cursorBlink {
+                0%, 49% { opacity: 1; }
+                50%, 100% { opacity: 0; }
+            }
+
+            /* Bar Fill Animate */
+            @keyframes barFill {
+                0% { transform: scaleX(0); }
+                100% { transform: scaleX(1); }
+            }
+
+            /* Particle Drift */
+            @keyframes particleDrift {
+                0% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0.2; }
+                50% { transform: translateY(-18px) translateX(8px) scale(1.2); opacity: 0.9; }
+                100% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0.2; }
+            }
+
+            /* Gradient Shift */
+            @keyframes gradientShift {
+                0% { stop-color: #00F5FF; }
+                33% { stop-color: #818CF8; }
+                66% { stop-color: #F472B6; }
+                100% { stop-color: #00F5FF; }
+            }
+
+            /* Text Typing */
+            @keyframes typeReveal {
+                from { width: 0; }
+                to { width: 100%; }
+            }
+
+            /* Hexagon Rotate */
+            @keyframes hexRotate {
+                0% { transform: rotate(0deg) scale(0.98); }
+                50% { transform: rotate(180deg) scale(1.02); }
+                100% { transform: rotate(360deg) scale(0.98); }
+            }
+
+            /* Data Stream */
+            @keyframes dataStream {
+                0% { transform: translateY(-100%); }
+                100% { transform: translateY(200%); }
+            }
         </style>
+
+        <!-- Premium Gradients -->
+        <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#030711" />
+            <stop offset="50%" stop-color="#0a0f1e" />
+            <stop offset="100%" stop-color="#020409" />
+        </linearGradient>
+
+        <linearGradient id="cyan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00F5FF" />
+            <stop offset="100%" stop-color="#38BDF8" />
+        </linearGradient>
+
+        <linearGradient id="purple-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#818CF8" />
+            <stop offset="100%" stop-color="#C084FC" />
+        </linearGradient>
+
+        <linearGradient id="green-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#34D399" />
+            <stop offset="100%" stop-color="#10B981" />
+        </linearGradient>
+
+        <linearGradient id="rose-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FB7185" />
+            <stop offset="100%" stop-color="#F472B6" />
+        </linearGradient>
+
+        <linearGradient id="amber-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FBBF24" />
+            <stop offset="100%" stop-color="#F59E0B" />
+        </linearGradient>
+
+        <linearGradient id="holo-shimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="rgba(0, 245, 255, 0.08)">
+                <animate attributeName="stop-color" values="rgba(0,245,255,0.08);rgba(129,140,248,0.08);rgba(244,114,182,0.08);rgba(0,245,255,0.08)" dur="8s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" stop-color="rgba(129, 140, 248, 0.03)">
+                <animate attributeName="stop-color" values="rgba(129,140,248,0.03);rgba(244,114,182,0.03);rgba(0,245,255,0.03);rgba(129,140,248,0.03)" dur="8s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+
+        <linearGradient id="scan-laser" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="rgba(0, 245, 255, 0)" />
+            <stop offset="30%" stop-color="rgba(0, 245, 255, 0.7)" />
+            <stop offset="50%" stop-color="rgba(255, 255, 255, 0.95)" />
+            <stop offset="70%" stop-color="rgba(0, 245, 255, 0.7)" />
+            <stop offset="100%" stop-color="rgba(0, 245, 255, 0)" />
+        </linearGradient>
+
+        <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="30%" stop-color="#00F5FF" />
+            <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+        </radialGradient>
+
+        <!-- Filters -->
+        <filter id="neon-blur"><feGaussianBlur stdDeviation="6" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+        <filter id="soft-glow"><feGaussianBlur stdDeviation="3"/></filter>
+        <filter id="heavy-glow"><feGaussianBlur stdDeviation="10" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+
+        <!-- Grid Pattern -->
+        <pattern id="iso-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="40" y2="0" stroke="rgba(56, 189, 248, 0.04)" stroke-width="0.5" />
+            <line x1="0" y1="0" x2="0" y2="40" stroke="rgba(56, 189, 248, 0.04)" stroke-width="0.5" />
+            <line x1="0" y1="0" x2="40" y2="40" stroke="rgba(129, 140, 248, 0.02)" stroke-width="0.3" />
+        </pattern>
+
+        <!-- Hex Grid Pattern -->
+        <pattern id="hex-grid" width="60" height="52" patternUnits="userSpaceOnUse" patternTransform="scale(0.8)">
+            <polygon points="30,2 55,15 55,37 30,50 5,37 5,15" fill="none" stroke="rgba(0,245,255,0.04)" stroke-width="0.5" />
+        </pattern>
     </defs>
+
+    <rect width="100%" height="100%" fill="url(#bg-gradient)" rx="18" />
+    <rect width="100%" height="100%" fill="url(#hex-grid)" rx="18" />
+
     
-    <rect width="100%" height="100%" fill="rgba(15, 23, 42, 0.75)" rx="14" stroke="rgba(255, 255, 255, 0.08)" />
+    <text x="600" y="38" font-size="22" font-weight="800" fill="#F1F5F9" letter-spacing="3" text-anchor="middle">ENGINEERING COMPETENCY RADAR</text>
+    <rect x="570" y="46" width="60" height="2.5" rx="1.25" fill="url(#cyan-grad)" />
+    <text x="600" y="66" font-size="12" fill="#64748B" text-anchor="middle" letter-spacing="1">Multi-Dimensional Skill Analysis</text>
+<polygon points="600.0,220.0 626.0,235.0 626.0,265.0 600.0,280.0 574.0,265.0 574.0,235.0" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.8" />
+<polygon points="600.0,190.0 652.0,220.0 652.0,280.0 600.0,310.0 548.0,280.0 548.0,220.0" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.8" />
+<polygon points="600.0,160.0 677.9,205.0 677.9,295.0 600.0,340.0 522.1,295.0 522.1,205.0" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.8" />
+<polygon points="600.0,130.0 703.9,190.0 703.9,310.0 600.0,370.0 496.1,310.0 496.1,190.0" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.8" />
+<polygon points="600.0,100.0 729.9,175.0 729.9,325.0 600.0,400.0 470.1,325.0 470.1,175.0" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.8" />
+<line x1="600" y1="250" x2="600.0" y2="100.0" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" />
+<line x1="600" y1="250" x2="729.9" y2="175.0" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" />
+<line x1="600" y1="250" x2="729.9" y2="325.0" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" />
+<line x1="600" y1="250" x2="600.0" y2="400.0" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" />
+<line x1="600" y1="250" x2="470.1" y2="325.0" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" />
+<line x1="600" y1="250" x2="470.1" y2="175.0" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" />
+
+    <polygon points="600.0,107.5 714.3,184.0 706.5,311.5 600.0,370.0 498.7,308.5 489.6,186.2" fill="rgba(0, 245, 255, 0.08)" stroke="#00F5FF" stroke-width="2"
+             style="animation: breathe 4s ease-in-out infinite;" filter="url(#soft-glow)" />
+    <circle cx="600.0" cy="107.5" r="5" fill="#00F5FF" stroke="#FFF" stroke-width="1.5"
+            style="animation: pulseNeon 3s ease-in-out 0.0s infinite; --glow-color: #00F5FF;" />
+    <text x="600.0" y="70.0" font-size="11" font-weight="700" fill="#E2E8F0" text-anchor="middle">AI/ML</text>
+    <text x="600.0" y="86.0" font-size="9" fill="#00F5FF" text-anchor="middle" class="mono">95%</text>
+    <circle cx="714.3" cy="184.0" r="5" fill="#00F5FF" stroke="#FFF" stroke-width="1.5"
+            style="animation: pulseNeon 3s ease-in-out 0.3s infinite; --glow-color: #00F5FF;" />
+    <text x="755.9" y="160.0" font-size="11" font-weight="700" fill="#E2E8F0" text-anchor="middle">Backend</text>
+    <text x="755.9" y="176.0" font-size="9" fill="#00F5FF" text-anchor="middle" class="mono">88%</text>
+    <circle cx="706.5" cy="311.5" r="5" fill="#00F5FF" stroke="#FFF" stroke-width="1.5"
+            style="animation: pulseNeon 3s ease-in-out 0.6s infinite; --glow-color: #00F5FF;" />
+    <text x="755.9" y="340.0" font-size="11" font-weight="700" fill="#E2E8F0" text-anchor="middle">Cloud</text>
+    <text x="755.9" y="356.0" font-size="9" fill="#00F5FF" text-anchor="middle" class="mono">82%</text>
+    <circle cx="600.0" cy="370.0" r="5" fill="#00F5FF" stroke="#FFF" stroke-width="1.5"
+            style="animation: pulseNeon 3s ease-in-out 0.8999999999999999s infinite; --glow-color: #00F5FF;" />
+    <text x="600.0" y="430.0" font-size="11" font-weight="700" fill="#E2E8F0" text-anchor="middle">DevOps</text>
+    <text x="600.0" y="446.0" font-size="9" fill="#00F5FF" text-anchor="middle" class="mono">80%</text>
+    <circle cx="498.7" cy="308.5" r="5" fill="#00F5FF" stroke="#FFF" stroke-width="1.5"
+            style="animation: pulseNeon 3s ease-in-out 1.2s infinite; --glow-color: #00F5FF;" />
+    <text x="444.1" y="340.0" font-size="11" font-weight="700" fill="#E2E8F0" text-anchor="middle">Frontend</text>
+    <text x="444.1" y="356.0" font-size="9" fill="#00F5FF" text-anchor="middle" class="mono">78%</text>
+    <circle cx="489.6" cy="186.2" r="5" fill="#00F5FF" stroke="#FFF" stroke-width="1.5"
+            style="animation: pulseNeon 3s ease-in-out 1.5s infinite; --glow-color: #00F5FF;" />
+    <text x="444.1" y="160.0" font-size="11" font-weight="700" fill="#E2E8F0" text-anchor="middle">System Design</text>
+    <text x="444.1" y="176.0" font-size="9" fill="#00F5FF" text-anchor="middle" class="mono">85%</text>
+    <ellipse cx="600" cy="250" rx="210" ry="60" fill="none"
+             stroke="rgba(129, 140, 248, 0.12)" stroke-width="1" stroke-dasharray="8 12"
+             style="transform-origin: 600px 250px; animation: orbitCW 30s linear infinite;" />
     
-    <!-- Title -->
-    <text x="600" y="38" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="2" fill="#38BDF8">ENGINEERING COMPETENCY RADAR</text>
-    <rect x="580" y="48" width="40" height="2" fill="#818CF8" />
+<circle cx="248" cy="32" r="2.8538762493995824" fill="#00F5FF" opacity="0.6" style="animation: particleDrift 3.6s ease-in-out 1.5s infinite;" />
+<circle cx="229" cy="366" r="2.8516693616691895" fill="#38BDF8" opacity="0.6" style="animation: particleDrift 5.4s ease-in-out 3.3s infinite;" />
+<circle cx="85" cy="35" r="1.234238099653981" fill="#818CF8" opacity="0.6" style="animation: particleDrift 5.4s ease-in-out 1.4s infinite;" />
+<circle cx="1169" cy="121" r="2.7900490323060088" fill="#A78BFA" opacity="0.6" style="animation: particleDrift 4.7s ease-in-out 4.2s infinite;" />
+<circle cx="939" cy="321" r="1.695476770576657" fill="#34D399" opacity="0.6" style="animation: particleDrift 6.0s ease-in-out 5.2s infinite;" />
+<circle cx="346" cy="377" r="2.056535995383756" fill="#F472B6" opacity="0.6" style="animation: particleDrift 3.9s ease-in-out 1.7s infinite;" />
+<circle cx="709" cy="72" r="1.2318646084503697" fill="#00F5FF" opacity="0.6" style="animation: particleDrift 6.4s ease-in-out 0.6s infinite;" />
+<circle cx="561" cy="42" r="2.824329466734545" fill="#38BDF8" opacity="0.6" style="animation: particleDrift 6.9s ease-in-out 3.2s infinite;" />
+<circle cx="795" cy="60" r="2.3801015781830674" fill="#818CF8" opacity="0.6" style="animation: particleDrift 5.5s ease-in-out 5.0s infinite;" />
+<circle cx="760" cy="315" r="1.4807214756416498" fill="#A78BFA" opacity="0.6" style="animation: particleDrift 5.6s ease-in-out 0.4s infinite;" />
 
-    <g transform="translate(600, 200)">
-        <!-- Concentric Pentagon Web Grid -->
-        <polygon points="0,-120 114,-37 70,97 -70,97 -114,-37" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-        <polygon points="0,-90 85,-28 53,73 -53,73 -85,-28" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-        <polygon points="0,-60 57,-18 35,48 -35,48 -57,-18" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
-
-        <!-- Axis Lines -->
-        <line x1="0" y1="0" x2="0" y2="-120" class="axis-line" />
-        <line x1="0" y1="0" x2="114" y2="-37" class="axis-line" />
-        <line x1="0" y1="0" x2="70" y2="97" class="axis-line" />
-        <line x1="0" y1="0" x2="-70" y2="97" class="axis-line" />
-        <line x1="0" y1="0" x2="-114" y2="-37" class="axis-line" />
-
-        <!-- Engineering Competency Polygon Data -->
-        <!-- Top: AI/ML (95%), Top-Right: Cloud (90%), Bottom-Right: System Design (92%), Bottom-Left: DevOps (88%), Top-Left: Full Stack (85%) -->
-        <polygon points="0,-114 102,-33 64,89 -61,85 -97,-31" class="radar-poly" />
-
-        <!-- Radar Nodes -->
-        <circle cx="0" cy="-114" r="4" class="dot" />
-        <circle cx="102" cy="-33" r="4" class="dot" />
-        <circle cx="64" cy="89" r="4" class="dot" />
-        <circle cx="-61" cy="85" r="4" class="dot" />
-        <circle cx="-97" cy="-31" r="4" class="dot" />
-
-        <!-- Axis Labels -->
-        <text x="0" y="-132" font-size="12" font-weight="700" fill="#38BDF8" text-anchor="middle">AI &amp; LLM Engineering (95%)</text>
-        <text x="130" y="-32" font-size="12" font-weight="700" fill="#818CF8" text-anchor="start">Cloud Infra (90%)</text>
-        <text x="80" y="115" font-size="12" font-weight="700" fill="#C084FC" text-anchor="start">System Design (92%)</text>
-        <text x="-80" y="115" font-size="12" font-weight="700" fill="#34D399" text-anchor="end">DevOps &amp; MLOps (88%)</text>
-        <text x="-130" y="-32" font-size="12" font-weight="700" fill="#F472B6" text-anchor="end">Full Stack APIs (85%)</text>
-    </g>
 </svg>

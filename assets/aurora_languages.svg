@@ -1,60 +1,319 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="100%" height="100%">
+    
     <defs>
         <style>
-            text { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; fill: #FFFFFF; }
-            .bar-bg { fill: rgba(30, 41, 59, 0.6); rx: 6; }
-            .bar-fill { rx: 6; }
+            @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap');
+            text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+            .mono { font-family: 'JetBrains Mono', 'Share Tech Mono', monospace; }
+
+            /* 3D Orbital Spins */
+            @keyframes orbitCW { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+            @keyframes orbitCCW { 0% { transform: rotate(0deg); } 100% { transform: rotate(-360deg); } }
+
+            /* Holographic Scan */
+            @keyframes holoScan {
+                0% { transform: translateY(-8px); opacity: 0.15; }
+                50% { opacity: 0.85; }
+                100% { transform: translateY(var(--scan-h, 500px)); opacity: 0.15; }
+            }
+
+            /* Pulse Glow */
+            @keyframes pulseNeon {
+                0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 6px var(--glow-color, #00F5FF)); }
+                50% { opacity: 1; filter: drop-shadow(0 0 22px var(--glow-color, #00F5FF)); }
+            }
+
+            /* Float 3D */
+            @keyframes float3D {
+                0%, 100% { transform: translateY(0px) scale(1); }
+                50% { transform: translateY(-12px) scale(1.02); }
+            }
+
+            /* Subtle Breathe */
+            @keyframes breathe {
+                0%, 100% { transform: scale(1); opacity: 0.8; }
+                50% { transform: scale(1.04); opacity: 1; }
+            }
+
+            /* Cursor Blink */
+            @keyframes cursorBlink {
+                0%, 49% { opacity: 1; }
+                50%, 100% { opacity: 0; }
+            }
+
+            /* Bar Fill Animate */
+            @keyframes barFill {
+                0% { transform: scaleX(0); }
+                100% { transform: scaleX(1); }
+            }
+
+            /* Particle Drift */
+            @keyframes particleDrift {
+                0% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0.2; }
+                50% { transform: translateY(-18px) translateX(8px) scale(1.2); opacity: 0.9; }
+                100% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0.2; }
+            }
+
+            /* Gradient Shift */
+            @keyframes gradientShift {
+                0% { stop-color: #00F5FF; }
+                33% { stop-color: #818CF8; }
+                66% { stop-color: #F472B6; }
+                100% { stop-color: #00F5FF; }
+            }
+
+            /* Text Typing */
+            @keyframes typeReveal {
+                from { width: 0; }
+                to { width: 100%; }
+            }
+
+            /* Hexagon Rotate */
+            @keyframes hexRotate {
+                0% { transform: rotate(0deg) scale(0.98); }
+                50% { transform: rotate(180deg) scale(1.02); }
+                100% { transform: rotate(360deg) scale(0.98); }
+            }
+
+            /* Data Stream */
+            @keyframes dataStream {
+                0% { transform: translateY(-100%); }
+                100% { transform: translateY(200%); }
+            }
         </style>
+
+        <!-- Premium Gradients -->
+        <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#030711" />
+            <stop offset="50%" stop-color="#0a0f1e" />
+            <stop offset="100%" stop-color="#020409" />
+        </linearGradient>
+
+        <linearGradient id="cyan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00F5FF" />
+            <stop offset="100%" stop-color="#38BDF8" />
+        </linearGradient>
+
+        <linearGradient id="purple-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#818CF8" />
+            <stop offset="100%" stop-color="#C084FC" />
+        </linearGradient>
+
+        <linearGradient id="green-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#34D399" />
+            <stop offset="100%" stop-color="#10B981" />
+        </linearGradient>
+
+        <linearGradient id="rose-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FB7185" />
+            <stop offset="100%" stop-color="#F472B6" />
+        </linearGradient>
+
+        <linearGradient id="amber-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FBBF24" />
+            <stop offset="100%" stop-color="#F59E0B" />
+        </linearGradient>
+
+        <linearGradient id="holo-shimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="rgba(0, 245, 255, 0.08)">
+                <animate attributeName="stop-color" values="rgba(0,245,255,0.08);rgba(129,140,248,0.08);rgba(244,114,182,0.08);rgba(0,245,255,0.08)" dur="8s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" stop-color="rgba(129, 140, 248, 0.03)">
+                <animate attributeName="stop-color" values="rgba(129,140,248,0.03);rgba(244,114,182,0.03);rgba(0,245,255,0.03);rgba(129,140,248,0.03)" dur="8s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+
+        <linearGradient id="scan-laser" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="rgba(0, 245, 255, 0)" />
+            <stop offset="30%" stop-color="rgba(0, 245, 255, 0.7)" />
+            <stop offset="50%" stop-color="rgba(255, 255, 255, 0.95)" />
+            <stop offset="70%" stop-color="rgba(0, 245, 255, 0.7)" />
+            <stop offset="100%" stop-color="rgba(0, 245, 255, 0)" />
+        </linearGradient>
+
+        <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="30%" stop-color="#00F5FF" />
+            <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+        </radialGradient>
+
+        <!-- Filters -->
+        <filter id="neon-blur"><feGaussianBlur stdDeviation="6" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+        <filter id="soft-glow"><feGaussianBlur stdDeviation="3"/></filter>
+        <filter id="heavy-glow"><feGaussianBlur stdDeviation="10" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+
+        <!-- Grid Pattern -->
+        <pattern id="iso-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="40" y2="0" stroke="rgba(56, 189, 248, 0.04)" stroke-width="0.5" />
+            <line x1="0" y1="0" x2="0" y2="40" stroke="rgba(56, 189, 248, 0.04)" stroke-width="0.5" />
+            <line x1="0" y1="0" x2="40" y2="40" stroke="rgba(129, 140, 248, 0.02)" stroke-width="0.3" />
+        </pattern>
+
+        <!-- Hex Grid Pattern -->
+        <pattern id="hex-grid" width="60" height="52" patternUnits="userSpaceOnUse" patternTransform="scale(0.8)">
+            <polygon points="30,2 55,15 55,37 30,50 5,37 5,15" fill="none" stroke="rgba(0,245,255,0.04)" stroke-width="0.5" />
+        </pattern>
     </defs>
+
+    <rect width="100%" height="100%" fill="url(#bg-gradient)" rx="18" />
+    <rect width="100%" height="100%" fill="url(#hex-grid)" rx="18" />
+
     
-    <rect width="100%" height="100%" fill="rgba(15, 23, 42, 0.7)" rx="14" stroke="rgba(255, 255, 255, 0.08)" />
-    
-    <!-- Title -->
-    <text x="600" y="38" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="2" fill="#38BDF8">CORE PROFICIENCY &amp; SKILL BREAKDOWN</text>
-    <rect x="580" y="48" width="40" height="2" fill="#818CF8" />
+    <text x="600" y="38" font-size="22" font-weight="800" fill="#F1F5F9" letter-spacing="3" text-anchor="middle">LANGUAGE PROFICIENCY</text>
+    <rect x="570" y="46" width="60" height="2.5" rx="1.25" fill="url(#cyan-grad)" />
+    <text x="600" y="66" font-size="12" fill="#64748B" text-anchor="middle" letter-spacing="1">Core Programming Languages</text>
 
-        <!-- Skill Row -->
-        <g transform="translate(80, 85)">
-            <text x="0" y="14" font-size="13" font-weight="600" fill="#E2E8F0">Python &amp; Deep Learning (PyTorch/TF)</text>
-            <text x="960" y="14" font-size="13" font-weight="700" fill="#38BDF8" text-anchor="end">95%</text>
-            
-            <rect x="0" y="24" width="960" height="12" class="bar-bg" />
-            <rect x="0" y="24" width="760" height="12" fill="#38BDF8" class="bar-fill" />
-        </g>
+    <g transform="translate(110, 190)" style="animation: float3D 6s ease-in-out 0.0s infinite;">
+        <!-- Background Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="5" />
+        <!-- Filled Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="#00F5FF" stroke-width="5"
+                stroke-dasharray="250.7 263.9"
+                stroke-dashoffset="66.0" stroke-linecap="round"
+                style="animation: barFill 1.5s ease-out forwards; transform-origin: center;"
+                filter="url(#soft-glow)" />
+        <!-- Inner Glow -->
+        <circle cx="0" cy="0" r="30" fill="rgba(255,255,255,0.02)" stroke="#00F5FF" stroke-width="0.5" stroke-opacity="0.2" />
+        <!-- Center Label -->
+        <text x="0" y="-4" font-size="14" font-weight="800" fill="#F1F5F9" text-anchor="middle">95%</text>
+        <text x="0" y="12" font-size="8" fill="#00F5FF" text-anchor="middle" class="mono">Python</text>
+        <!-- Color Dot -->
+        <circle cx="0" cy="-40" r="4" fill="#3776AB" stroke="#FFF" stroke-width="1"
+                style="animation: pulseNeon 2s ease-in-out 0.0s infinite; --glow-color: #00F5FF;" />
+    </g>
+    <g transform="translate(250, 190)" style="animation: float3D 6s ease-in-out 0.25s infinite;">
+        <!-- Background Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="5" />
+        <!-- Filled Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="#38BDF8" stroke-width="5"
+                stroke-dasharray="211.1 263.9"
+                stroke-dashoffset="66.0" stroke-linecap="round"
+                style="animation: barFill 1.75s ease-out forwards; transform-origin: center;"
+                filter="url(#soft-glow)" />
+        <!-- Inner Glow -->
+        <circle cx="0" cy="0" r="30" fill="rgba(255,255,255,0.02)" stroke="#38BDF8" stroke-width="0.5" stroke-opacity="0.2" />
+        <!-- Center Label -->
+        <text x="0" y="-4" font-size="14" font-weight="800" fill="#F1F5F9" text-anchor="middle">80%</text>
+        <text x="0" y="12" font-size="8" fill="#38BDF8" text-anchor="middle" class="mono">C++</text>
+        <!-- Color Dot -->
+        <circle cx="0" cy="-40" r="4" fill="#00599C" stroke="#FFF" stroke-width="1"
+                style="animation: pulseNeon 2s ease-in-out 0.25s infinite; --glow-color: #38BDF8;" />
+    </g>
+    <g transform="translate(390, 190)" style="animation: float3D 6s ease-in-out 0.5s infinite;">
+        <!-- Background Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="5" />
+        <!-- Filled Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="#FBBF24" stroke-width="5"
+                stroke-dasharray="221.7 263.9"
+                stroke-dashoffset="66.0" stroke-linecap="round"
+                style="animation: barFill 2.0s ease-out forwards; transform-origin: center;"
+                filter="url(#soft-glow)" />
+        <!-- Inner Glow -->
+        <circle cx="0" cy="0" r="30" fill="rgba(255,255,255,0.02)" stroke="#FBBF24" stroke-width="0.5" stroke-opacity="0.2" />
+        <!-- Center Label -->
+        <text x="0" y="-4" font-size="14" font-weight="800" fill="#F1F5F9" text-anchor="middle">84%</text>
+        <text x="0" y="12" font-size="8" fill="#FBBF24" text-anchor="middle" class="mono">JavaScript</text>
+        <!-- Color Dot -->
+        <circle cx="0" cy="-40" r="4" fill="#F7DF1E" stroke="#FFF" stroke-width="1"
+                style="animation: pulseNeon 2s ease-in-out 0.5s infinite; --glow-color: #FBBF24;" />
+    </g>
+    <g transform="translate(530, 190)" style="animation: float3D 6s ease-in-out 0.75s infinite;">
+        <!-- Background Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="5" />
+        <!-- Filled Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="#F59E0B" stroke-width="5"
+                stroke-dasharray="200.6 263.9"
+                stroke-dashoffset="66.0" stroke-linecap="round"
+                style="animation: barFill 2.25s ease-out forwards; transform-origin: center;"
+                filter="url(#soft-glow)" />
+        <!-- Inner Glow -->
+        <circle cx="0" cy="0" r="30" fill="rgba(255,255,255,0.02)" stroke="#F59E0B" stroke-width="0.5" stroke-opacity="0.2" />
+        <!-- Center Label -->
+        <text x="0" y="-4" font-size="14" font-weight="800" fill="#F1F5F9" text-anchor="middle">76%</text>
+        <text x="0" y="12" font-size="8" fill="#F59E0B" text-anchor="middle" class="mono">Java</text>
+        <!-- Color Dot -->
+        <circle cx="0" cy="-40" r="4" fill="#ED8B00" stroke="#FFF" stroke-width="1"
+                style="animation: pulseNeon 2s ease-in-out 0.75s infinite; --glow-color: #F59E0B;" />
+    </g>
+    <g transform="translate(670, 190)" style="animation: float3D 6s ease-in-out 1.0s infinite;">
+        <!-- Background Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="5" />
+        <!-- Filled Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="#818CF8" stroke-width="5"
+                stroke-dasharray="200.6 263.9"
+                stroke-dashoffset="66.0" stroke-linecap="round"
+                style="animation: barFill 2.5s ease-out forwards; transform-origin: center;"
+                filter="url(#soft-glow)" />
+        <!-- Inner Glow -->
+        <circle cx="0" cy="0" r="30" fill="rgba(255,255,255,0.02)" stroke="#818CF8" stroke-width="0.5" stroke-opacity="0.2" />
+        <!-- Center Label -->
+        <text x="0" y="-4" font-size="14" font-weight="800" fill="#F1F5F9" text-anchor="middle">76%</text>
+        <text x="0" y="12" font-size="8" fill="#818CF8" text-anchor="middle" class="mono">TypeScript</text>
+        <!-- Color Dot -->
+        <circle cx="0" cy="-40" r="4" fill="#3178C6" stroke="#FFF" stroke-width="1"
+                style="animation: pulseNeon 2s ease-in-out 1.0s infinite; --glow-color: #818CF8;" />
+    </g>
+    <g transform="translate(810, 190)" style="animation: float3D 6s ease-in-out 1.25s infinite;">
+        <!-- Background Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="5" />
+        <!-- Filled Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="#94A3B8" stroke-width="5"
+                stroke-dasharray="190.0 263.9"
+                stroke-dashoffset="66.0" stroke-linecap="round"
+                style="animation: barFill 2.75s ease-out forwards; transform-origin: center;"
+                filter="url(#soft-glow)" />
+        <!-- Inner Glow -->
+        <circle cx="0" cy="0" r="30" fill="rgba(255,255,255,0.02)" stroke="#94A3B8" stroke-width="0.5" stroke-opacity="0.2" />
+        <!-- Center Label -->
+        <text x="0" y="-4" font-size="14" font-weight="800" fill="#F1F5F9" text-anchor="middle">72%</text>
+        <text x="0" y="12" font-size="8" fill="#94A3B8" text-anchor="middle" class="mono">C</text>
+        <!-- Color Dot -->
+        <circle cx="0" cy="-40" r="4" fill="#555555" stroke="#FFF" stroke-width="1"
+                style="animation: pulseNeon 2s ease-in-out 1.25s infinite; --glow-color: #94A3B8;" />
+    </g>
+    <g transform="translate(950, 190)" style="animation: float3D 6s ease-in-out 1.5s infinite;">
+        <!-- Background Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="5" />
+        <!-- Filled Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="#34D399" stroke-width="5"
+                stroke-dasharray="221.7 263.9"
+                stroke-dashoffset="66.0" stroke-linecap="round"
+                style="animation: barFill 3.0s ease-out forwards; transform-origin: center;"
+                filter="url(#soft-glow)" />
+        <!-- Inner Glow -->
+        <circle cx="0" cy="0" r="30" fill="rgba(255,255,255,0.02)" stroke="#34D399" stroke-width="0.5" stroke-opacity="0.2" />
+        <!-- Center Label -->
+        <text x="0" y="-4" font-size="14" font-weight="800" fill="#F1F5F9" text-anchor="middle">84%</text>
+        <text x="0" y="12" font-size="8" fill="#34D399" text-anchor="middle" class="mono">SQL</text>
+        <!-- Color Dot -->
+        <circle cx="0" cy="-40" r="4" fill="#4479A1" stroke="#FFF" stroke-width="1"
+                style="animation: pulseNeon 2s ease-in-out 1.5s infinite; --glow-color: #34D399;" />
+    </g>
+    <g transform="translate(1090, 190)" style="animation: float3D 6s ease-in-out 1.75s infinite;">
+        <!-- Background Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="5" />
+        <!-- Filled Ring -->
+        <circle cx="0" cy="0" r="42" fill="none" stroke="#FB7185" stroke-width="5"
+                stroke-dasharray="224.3 263.9"
+                stroke-dashoffset="66.0" stroke-linecap="round"
+                style="animation: barFill 3.25s ease-out forwards; transform-origin: center;"
+                filter="url(#soft-glow)" />
+        <!-- Inner Glow -->
+        <circle cx="0" cy="0" r="30" fill="rgba(255,255,255,0.02)" stroke="#FB7185" stroke-width="0.5" stroke-opacity="0.2" />
+        <!-- Center Label -->
+        <text x="0" y="-4" font-size="14" font-weight="800" fill="#F1F5F9" text-anchor="middle">85%</text>
+        <text x="0" y="12" font-size="8" fill="#FB7185" text-anchor="middle" class="mono">HTML/CSS</text>
+        <!-- Color Dot -->
+        <circle cx="0" cy="-40" r="4" fill="#E34F26" stroke="#FFF" stroke-width="1"
+                style="animation: pulseNeon 2s ease-in-out 1.75s infinite; --glow-color: #FB7185;" />
+    </g>
+<circle cx="248" cy="32" r="2.8538762493995824" fill="#00F5FF" opacity="0.6" style="animation: particleDrift 3.6s ease-in-out 1.5s infinite;" />
+<circle cx="229" cy="299" r="1.2173470815735403" fill="#38BDF8" opacity="0.6" style="animation: particleDrift 3.1s ease-in-out 2.5s infinite;" />
+<circle cx="467" cy="139" r="2.263388220258406" fill="#818CF8" opacity="0.6" style="animation: particleDrift 3.8s ease-in-out 0.2s infinite;" />
+<circle cx="1136" cy="234" r="1.5511015551017417" fill="#A78BFA" opacity="0.6" style="animation: particleDrift 6.2s ease-in-out 3.5s infinite;" />
+<circle cx="33" cy="101" r="2.745348487470567" fill="#34D399" opacity="0.6" style="animation: particleDrift 3.6s ease-in-out 2.0s infinite;" />
+<circle cx="709" cy="72" r="1.2318646084503697" fill="#F472B6" opacity="0.6" style="animation: particleDrift 6.4s ease-in-out 0.6s infinite;" />
+<circle cx="561" cy="42" r="2.824329466734545" fill="#00F5FF" opacity="0.6" style="animation: particleDrift 6.9s ease-in-out 3.2s infinite;" />
+<circle cx="795" cy="60" r="2.3801015781830674" fill="#38BDF8" opacity="0.6" style="animation: particleDrift 5.5s ease-in-out 5.0s infinite;" />
 
-        <!-- Skill Row -->
-        <g transform="translate(80, 130)">
-            <text x="0" y="14" font-size="13" font-weight="600" fill="#E2E8F0">Generative AI &amp; RAG (LangChain/LLMs)</text>
-            <text x="960" y="14" font-size="13" font-weight="700" fill="#818CF8" text-anchor="end">92%</text>
-            
-            <rect x="0" y="24" width="960" height="12" class="bar-bg" />
-            <rect x="0" y="24" width="736" height="12" fill="#818CF8" class="bar-fill" />
-        </g>
-
-        <!-- Skill Row -->
-        <g transform="translate(80, 175)">
-            <text x="0" y="14" font-size="13" font-weight="600" fill="#E2E8F0">Cloud Infrastructure (AWS/Docker/K8s)</text>
-            <text x="960" y="14" font-size="13" font-weight="700" fill="#C084FC" text-anchor="end">88%</text>
-            
-            <rect x="0" y="24" width="960" height="12" class="bar-bg" />
-            <rect x="0" y="24" width="704" height="12" fill="#C084FC" class="bar-fill" />
-        </g>
-
-        <!-- Skill Row -->
-        <g transform="translate(80, 220)">
-            <text x="0" y="14" font-size="13" font-weight="600" fill="#E2E8F0">Backend APIs (FastAPI/Node.js/PostgreSQL)</text>
-            <text x="960" y="14" font-size="13" font-weight="700" fill="#34D399" text-anchor="end">90%</text>
-            
-            <rect x="0" y="24" width="960" height="12" class="bar-bg" />
-            <rect x="0" y="24" width="720" height="12" fill="#34D399" class="bar-fill" />
-        </g>
-
-        <!-- Skill Row -->
-        <g transform="translate(80, 265)">
-            <text x="0" y="14" font-size="13" font-weight="600" fill="#E2E8F0">Frontend &amp; UI (TypeScript/React/Next.js)</text>
-            <text x="960" y="14" font-size="13" font-weight="700" fill="#F472B6" text-anchor="end">85%</text>
-            
-            <rect x="0" y="24" width="960" height="12" class="bar-bg" />
-            <rect x="0" y="24" width="680" height="12" fill="#F472B6" class="bar-fill" />
-        </g>
 </svg>

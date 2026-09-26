@@ -1,55 +1,317 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="100%" height="100%">
+    
     <defs>
         <style>
-            text { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; fill: #FFFFFF; }
-            .node { fill: rgba(15, 23, 42, 0.85); stroke-width: 1.5; rx: 10; }
-            .conn-line { stroke: rgba(56, 189, 248, 0.4); stroke-width: 2; stroke-dasharray: 6 4; animation: flow 2s linear infinite; }
-            @keyframes flow { 100% { stroke-dashoffset: -20; } }
+            @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap');
+            text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+            .mono { font-family: 'JetBrains Mono', 'Share Tech Mono', monospace; }
+
+            /* 3D Orbital Spins */
+            @keyframes orbitCW { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+            @keyframes orbitCCW { 0% { transform: rotate(0deg); } 100% { transform: rotate(-360deg); } }
+
+            /* Holographic Scan */
+            @keyframes holoScan {
+                0% { transform: translateY(-8px); opacity: 0.15; }
+                50% { opacity: 0.85; }
+                100% { transform: translateY(var(--scan-h, 500px)); opacity: 0.15; }
+            }
+
+            /* Pulse Glow */
+            @keyframes pulseNeon {
+                0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 6px var(--glow-color, #00F5FF)); }
+                50% { opacity: 1; filter: drop-shadow(0 0 22px var(--glow-color, #00F5FF)); }
+            }
+
+            /* Float 3D */
+            @keyframes float3D {
+                0%, 100% { transform: translateY(0px) scale(1); }
+                50% { transform: translateY(-12px) scale(1.02); }
+            }
+
+            /* Subtle Breathe */
+            @keyframes breathe {
+                0%, 100% { transform: scale(1); opacity: 0.8; }
+                50% { transform: scale(1.04); opacity: 1; }
+            }
+
+            /* Cursor Blink */
+            @keyframes cursorBlink {
+                0%, 49% { opacity: 1; }
+                50%, 100% { opacity: 0; }
+            }
+
+            /* Bar Fill Animate */
+            @keyframes barFill {
+                0% { transform: scaleX(0); }
+                100% { transform: scaleX(1); }
+            }
+
+            /* Particle Drift */
+            @keyframes particleDrift {
+                0% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0.2; }
+                50% { transform: translateY(-18px) translateX(8px) scale(1.2); opacity: 0.9; }
+                100% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0.2; }
+            }
+
+            /* Gradient Shift */
+            @keyframes gradientShift {
+                0% { stop-color: #00F5FF; }
+                33% { stop-color: #818CF8; }
+                66% { stop-color: #F472B6; }
+                100% { stop-color: #00F5FF; }
+            }
+
+            /* Text Typing */
+            @keyframes typeReveal {
+                from { width: 0; }
+                to { width: 100%; }
+            }
+
+            /* Hexagon Rotate */
+            @keyframes hexRotate {
+                0% { transform: rotate(0deg) scale(0.98); }
+                50% { transform: rotate(180deg) scale(1.02); }
+                100% { transform: rotate(360deg) scale(0.98); }
+            }
+
+            /* Data Stream */
+            @keyframes dataStream {
+                0% { transform: translateY(-100%); }
+                100% { transform: translateY(200%); }
+            }
         </style>
+
+        <!-- Premium Gradients -->
+        <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#030711" />
+            <stop offset="50%" stop-color="#0a0f1e" />
+            <stop offset="100%" stop-color="#020409" />
+        </linearGradient>
+
+        <linearGradient id="cyan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00F5FF" />
+            <stop offset="100%" stop-color="#38BDF8" />
+        </linearGradient>
+
+        <linearGradient id="purple-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#818CF8" />
+            <stop offset="100%" stop-color="#C084FC" />
+        </linearGradient>
+
+        <linearGradient id="green-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#34D399" />
+            <stop offset="100%" stop-color="#10B981" />
+        </linearGradient>
+
+        <linearGradient id="rose-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FB7185" />
+            <stop offset="100%" stop-color="#F472B6" />
+        </linearGradient>
+
+        <linearGradient id="amber-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FBBF24" />
+            <stop offset="100%" stop-color="#F59E0B" />
+        </linearGradient>
+
+        <linearGradient id="holo-shimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="rgba(0, 245, 255, 0.08)">
+                <animate attributeName="stop-color" values="rgba(0,245,255,0.08);rgba(129,140,248,0.08);rgba(244,114,182,0.08);rgba(0,245,255,0.08)" dur="8s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" stop-color="rgba(129, 140, 248, 0.03)">
+                <animate attributeName="stop-color" values="rgba(129,140,248,0.03);rgba(244,114,182,0.03);rgba(0,245,255,0.03);rgba(129,140,248,0.03)" dur="8s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+
+        <linearGradient id="scan-laser" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="rgba(0, 245, 255, 0)" />
+            <stop offset="30%" stop-color="rgba(0, 245, 255, 0.7)" />
+            <stop offset="50%" stop-color="rgba(255, 255, 255, 0.95)" />
+            <stop offset="70%" stop-color="rgba(0, 245, 255, 0.7)" />
+            <stop offset="100%" stop-color="rgba(0, 245, 255, 0)" />
+        </linearGradient>
+
+        <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="30%" stop-color="#00F5FF" />
+            <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+        </radialGradient>
+
+        <!-- Filters -->
+        <filter id="neon-blur"><feGaussianBlur stdDeviation="6" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+        <filter id="soft-glow"><feGaussianBlur stdDeviation="3"/></filter>
+        <filter id="heavy-glow"><feGaussianBlur stdDeviation="10" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+
+        <!-- Grid Pattern -->
+        <pattern id="iso-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="40" y2="0" stroke="rgba(56, 189, 248, 0.04)" stroke-width="0.5" />
+            <line x1="0" y1="0" x2="0" y2="40" stroke="rgba(56, 189, 248, 0.04)" stroke-width="0.5" />
+            <line x1="0" y1="0" x2="40" y2="40" stroke="rgba(129, 140, 248, 0.02)" stroke-width="0.3" />
+        </pattern>
+
+        <!-- Hex Grid Pattern -->
+        <pattern id="hex-grid" width="60" height="52" patternUnits="userSpaceOnUse" patternTransform="scale(0.8)">
+            <polygon points="30,2 55,15 55,37 30,50 5,37 5,15" fill="none" stroke="rgba(0,245,255,0.04)" stroke-width="0.5" />
+        </pattern>
     </defs>
+
+    <rect width="100%" height="100%" fill="url(#bg-gradient)" rx="18" />
+    <rect width="100%" height="100%" fill="url(#iso-grid)" rx="18" />
+
     
-    <rect width="100%" height="100%" fill="rgba(15, 23, 42, 0.75)" rx="14" stroke="rgba(255, 255, 255, 0.08)" />
-    
-    <!-- Title -->
-    <text x="600" y="38" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="2" fill="#38BDF8">ENTERPRISE RAG &amp; AGENTIC SYSTEM ARCHITECTURE</text>
-    <rect x="580" y="48" width="40" height="2" fill="#818CF8" />
+    <text x="600" y="38" font-size="22" font-weight="800" fill="#F1F5F9" letter-spacing="3" text-anchor="middle">SYSTEM ARCHITECTURE BLUEPRINT</text>
+    <rect x="570" y="46" width="60" height="2.5" rx="1.25" fill="url(#cyan-grad)" />
+    <text x="600" y="66" font-size="12" fill="#64748B" text-anchor="middle" letter-spacing="1">Enterprise RAG &amp; Agentic AI Pipeline</text>
 
-    <!-- Connecting Flow Lines -->
-    <line x1="220" y1="150" x2="380" y2="150" class="conn-line" />
-    <line x1="560" y1="150" x2="720" y2="150" class="conn-line" />
-    <line x1="900" y1="150" x2="1040" y2="150" class="conn-line" />
-
-    <g transform="translate(40, 95)">
-        <!-- Node 1: Client Query -->
-        <g transform="translate(0, 0)">
-            <rect x="0" y="0" width="180" height="110" class="node" stroke="#38BDF8" />
-            <text x="90" y="40" font-size="14" font-weight="700" fill="#38BDF8" text-anchor="middle">🖥️ CLIENT / APP</text>
-            <text x="90" y="68" font-size="12" fill="#94A3B8" text-anchor="middle">React / Next.js</text>
-            <text x="90" y="88" font-size="11" fill="#64748B" text-anchor="middle">User Prompt Query</text>
-        </g>
-
-        <!-- Node 2: FastAPI Gateway -->
-        <g transform="translate(340, 0)">
-            <rect x="0" y="0" width="180" height="110" class="node" stroke="#818CF8" />
-            <text x="90" y="40" font-size="14" font-weight="700" fill="#818CF8" text-anchor="middle">⚡ API GATEWAY</text>
-            <text x="90" y="68" font-size="12" fill="#94A3B8" text-anchor="middle">FastAPI / Node.js</text>
-            <text x="90" y="88" font-size="11" fill="#64748B" text-anchor="middle">Auth &amp; Rate Limit</text>
-        </g>
-
-        <!-- Node 3: Vector DB & RAG -->
-        <g transform="translate(680, 0)">
-            <rect x="0" y="0" width="180" height="110" class="node" stroke="#C084FC" />
-            <text x="90" y="40" font-size="14" font-weight="700" fill="#C084FC" text-anchor="middle">📦 VECTOR DB</text>
-            <text x="90" y="68" font-size="12" fill="#94A3B8" text-anchor="middle">Qdrant / Pinecone</text>
-            <text x="90" y="88" font-size="11" fill="#64748B" text-anchor="middle">Similarity Retrieval</text>
-        </g>
-
-        <!-- Node 4: LLM Model -->
-        <g transform="translate(1000, 0)">
-            <rect x="0" y="0" width="160" height="110" class="node" stroke="#34D399" />
-            <text x="80" y="40" font-size="14" font-weight="700" fill="#34D399" text-anchor="middle">🤖 LLM ENGINE</text>
-            <text x="80" y="68" font-size="12" fill="#94A3B8" text-anchor="middle">PyTorch / Llama 3</text>
-            <text x="80" y="88" font-size="11" fill="#64748B" text-anchor="middle">Streamed Output</text>
-        </g>
+    <text x="60" y="90" font-size="10" font-weight="700" fill="#00F5FF" class="mono" letter-spacing="1">CLIENT LAYER</text>
+    <line x1="180" y1="87" x2="1140" y2="87" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4" />
+    <g transform="translate(200, 70)" style="animation: float3D 7s ease-in-out 0.0s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#00F5FF" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#00F5FF" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">React UI</text>
     </g>
+    <g transform="translate(440, 70)" style="animation: float3D 7s ease-in-out 0.15s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#00F5FF" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#00F5FF" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Next.js SSR</text>
+    </g>
+    <g transform="translate(680, 70)" style="animation: float3D 7s ease-in-out 0.3s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#00F5FF" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#00F5FF" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">WebSocket</text>
+    </g>
+    <g transform="translate(920, 70)" style="animation: float3D 7s ease-in-out 0.45s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#00F5FF" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#00F5FF" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">gRPC</text>
+    </g>
+    <line x1="300" y1="108" x2="300" y2="142" stroke="#00F5FF" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="3 3">
+        <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3s" begin="0.0s" repeatCount="indefinite" />
+    </line>
+    <line x1="540" y1="108" x2="540" y2="142" stroke="#00F5FF" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="3 3">
+        <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3s" begin="0.3s" repeatCount="indefinite" />
+    </line>
+    <line x1="780" y1="108" x2="780" y2="142" stroke="#00F5FF" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="3 3">
+        <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3s" begin="0.6s" repeatCount="indefinite" />
+    </line>
+    <line x1="1020" y1="108" x2="1020" y2="142" stroke="#00F5FF" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="3 3">
+        <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3s" begin="0.8999999999999999s" repeatCount="indefinite" />
+    </line>
+    <text x="60" y="180" font-size="10" font-weight="700" fill="#818CF8" class="mono" letter-spacing="1">API GATEWAY</text>
+    <line x1="180" y1="177" x2="1140" y2="177" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4" />
+    <g transform="translate(200, 160)" style="animation: float3D 7s ease-in-out 0.3s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#818CF8" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#818CF8" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">FastAPI</text>
+    </g>
+    <g transform="translate(440, 160)" style="animation: float3D 7s ease-in-out 0.45s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#818CF8" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#818CF8" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Auth/JWT</text>
+    </g>
+    <g transform="translate(680, 160)" style="animation: float3D 7s ease-in-out 0.6s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#818CF8" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#818CF8" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Rate Limiter</text>
+    </g>
+    <g transform="translate(920, 160)" style="animation: float3D 7s ease-in-out 0.75s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#818CF8" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#818CF8" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Load Balancer</text>
+    </g>
+    <line x1="300" y1="198" x2="300" y2="232" stroke="#818CF8" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="3 3">
+        <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3s" begin="0.0s" repeatCount="indefinite" />
+    </line>
+    <line x1="540" y1="198" x2="540" y2="232" stroke="#818CF8" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="3 3">
+        <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3s" begin="0.3s" repeatCount="indefinite" />
+    </line>
+    <line x1="780" y1="198" x2="780" y2="232" stroke="#818CF8" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="3 3">
+        <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3s" begin="0.6s" repeatCount="indefinite" />
+    </line>
+    <line x1="1020" y1="198" x2="1020" y2="232" stroke="#818CF8" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="3 3">
+        <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3s" begin="0.8999999999999999s" repeatCount="indefinite" />
+    </line>
+    <text x="60" y="270" font-size="10" font-weight="700" fill="#A78BFA" class="mono" letter-spacing="1">AI ENGINE</text>
+    <line x1="180" y1="267" x2="1140" y2="267" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4" />
+    <g transform="translate(200, 250)" style="animation: float3D 7s ease-in-out 0.6s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#A78BFA" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#A78BFA" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">LLM Orchestrator</text>
+    </g>
+    <g transform="translate(440, 250)" style="animation: float3D 7s ease-in-out 0.75s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#A78BFA" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#A78BFA" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">RAG Pipeline</text>
+    </g>
+    <g transform="translate(680, 250)" style="animation: float3D 7s ease-in-out 0.9s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#A78BFA" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#A78BFA" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Vector Search</text>
+    </g>
+    <g transform="translate(920, 250)" style="animation: float3D 7s ease-in-out 1.05s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#A78BFA" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#A78BFA" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Embeddings</text>
+    </g>
+    <line x1="300" y1="288" x2="300" y2="322" stroke="#A78BFA" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="3 3">
+        <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3s" begin="0.0s" repeatCount="indefinite" />
+    </line>
+    <line x1="540" y1="288" x2="540" y2="322" stroke="#A78BFA" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="3 3">
+        <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3s" begin="0.3s" repeatCount="indefinite" />
+    </line>
+    <line x1="780" y1="288" x2="780" y2="322" stroke="#A78BFA" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="3 3">
+        <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3s" begin="0.6s" repeatCount="indefinite" />
+    </line>
+    <line x1="1020" y1="288" x2="1020" y2="322" stroke="#A78BFA" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="3 3">
+        <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3s" begin="0.8999999999999999s" repeatCount="indefinite" />
+    </line>
+    <text x="60" y="360" font-size="10" font-weight="700" fill="#34D399" class="mono" letter-spacing="1">INFRA LAYER</text>
+    <line x1="180" y1="357" x2="1140" y2="357" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4" />
+    <g transform="translate(200, 340)" style="animation: float3D 7s ease-in-out 0.9s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#34D399" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#34D399" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">AWS EKS</text>
+    </g>
+    <g transform="translate(440, 340)" style="animation: float3D 7s ease-in-out 1.05s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#34D399" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#34D399" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Docker Swarm</text>
+    </g>
+    <g transform="translate(680, 340)" style="animation: float3D 7s ease-in-out 1.2s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#34D399" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#34D399" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">PostgreSQL</text>
+    </g>
+    <g transform="translate(920, 340)" style="animation: float3D 7s ease-in-out 1.35s infinite;">
+        <rect x="0" y="0" width="200" height="38" rx="8"
+              fill="rgba(8, 14, 32, 0.7)" stroke="#34D399" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="18" cy="19" r="6" fill="#34D399" opacity="0.4" />
+        <text x="108" y="24" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Redis Cache</text>
+    </g>
+<circle cx="248" cy="32" r="2.8538762493995824" fill="#00F5FF" opacity="0.6" style="animation: particleDrift 3.6s ease-in-out 1.5s infinite;" />
+<circle cx="229" cy="366" r="2.8516693616691895" fill="#38BDF8" opacity="0.6" style="animation: particleDrift 5.4s ease-in-out 3.3s infinite;" />
+<circle cx="85" cy="35" r="1.234238099653981" fill="#818CF8" opacity="0.6" style="animation: particleDrift 5.4s ease-in-out 1.4s infinite;" />
+<circle cx="1169" cy="121" r="2.7900490323060088" fill="#A78BFA" opacity="0.6" style="animation: particleDrift 4.7s ease-in-out 4.2s infinite;" />
+<circle cx="939" cy="321" r="1.695476770576657" fill="#34D399" opacity="0.6" style="animation: particleDrift 6.0s ease-in-out 5.2s infinite;" />
+<circle cx="346" cy="377" r="2.056535995383756" fill="#F472B6" opacity="0.6" style="animation: particleDrift 3.9s ease-in-out 1.7s infinite;" />
+<circle cx="709" cy="72" r="1.2318646084503697" fill="#00F5FF" opacity="0.6" style="animation: particleDrift 6.4s ease-in-out 0.6s infinite;" />
+<circle cx="561" cy="42" r="2.824329466734545" fill="#38BDF8" opacity="0.6" style="animation: particleDrift 6.9s ease-in-out 3.2s infinite;" />
+<circle cx="795" cy="60" r="2.3801015781830674" fill="#818CF8" opacity="0.6" style="animation: particleDrift 5.5s ease-in-out 5.0s infinite;" />
+<circle cx="760" cy="315" r="1.4807214756416498" fill="#A78BFA" opacity="0.6" style="animation: particleDrift 5.6s ease-in-out 0.4s infinite;" />
+
 </svg>
