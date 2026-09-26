@@ -242,9 +242,9 @@ def generate_aurora_projects():
 '''
 
     projects = [
-        ("AI Vision System", "Real-time object tracking &amp; computer vision pipeline.", ["PyTorch", "OpenCV"], 60),
-        ("Quantum RAG Engine", "High-performance generative retrieval AI framework.", ["LangChain", "FastAPI"], 440),
-        ("Cloud MLOps Pipeline", "Automated deployment &amp; monitoring architecture.", ["AWS", "Docker"], 820)
+        ("MyKernel", "High-performance OS kernel &amp; system architecture module.", ["C++", "Linux"], 60),
+        ("AI-HUMANIZER-PRO", "Next-gen LLM generative AI &amp; text humanization engine.", ["Python", "FastAPI"], 440),
+        ("AI-Interviewer", "Agentic AI automated evaluation &amp; interview simulator.", ["React", "Agentic AI"], 820)
     ]
     
     for title, desc, tags, x in projects:

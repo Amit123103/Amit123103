@@ -1,8 +1,8 @@
 <div align="center">
 
-<!-- Aurora Hero Banner -->
+<!-- Futuristic Terminal Profile & ASCII Code-Art Flagship Artwork -->
 <picture>
-  <img src="assets/aurora_hero_v2.svg" alt="Amit Kumar - Senior AI Engineer &amp; Cloud Architect" width="100%">
+  <img src="assets/terminal_profile_artwork.jpg" alt="Amit Kumar - Software Developer | AI &amp; ML | MLOps - Futuristic Terminal Dashboard" width="100%">
 </picture>
 
 <br><br>
@@ -78,12 +78,12 @@
 
 ### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Milky%20Way.png" alt="Milky Way" width="32" height="32" /> About Me
 
-> **Senior AI Engineer & Cloud Architect** specializing in building high-performance AI systems, agentic LLM workflows, and resilient cloud microservices.
+> **Software Developer | AI & ML | MLOps** specializing in building high-performance AI systems, agentic LLM workflows, and resilient full-stack applications.
 
-- 🔭 **Currently Building**: Production Agentic RAG Pipelines, Fine-tuning Open Source Models (Llama 3, Mistral), and Cloud-Native Infrastructure.
-- ⚡ **Core Strengths**: Deep Learning, Vector Search Optimization, High-Availability Systems, Full-Stack Architecture.
+- 🔭 **Currently Building**: **MyKernel**, **AI-HUMANIZER-PRO**, and **AI-Interviewer**.
+- ⚡ **Core Strengths**: Deep Learning, Vector Search & Vector DBs, RAG & Agentic AI, Cloud-Native Infrastructure, MLOps.
 - 📍 **Location**: India 🇮🇳 (UTC+5:30)
-- 💬 **Ask Me About**: PyTorch, LangChain, FastAPI, Docker, Kubernetes, AWS, System Architecture.
+- 💬 **Ask Me About**: Python, C++, Java, JavaScript, Docker, Kubernetes, Linux, FastAPI, React, Next.js.
 
 </div>
 
