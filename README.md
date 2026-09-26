@@ -1,8 +1,9 @@
 <div align="center">
 
-<!-- Futuristic Terminal Profile & ASCII Code-Art Flagship Artwork -->
+<!-- 3D Cinematic Futuristic Terminal & Motion Graphics Flagship Artwork -->
 <picture>
-  <img src="assets/terminal_profile_artwork.jpg" alt="Amit Kumar - Software Developer | AI &amp; ML | MLOps - Futuristic Terminal Dashboard" width="100%">
+  <source type="image/webp" srcset="assets/terminal_profile_3d.webp">
+  <img src="assets/terminal_profile_3d.gif" alt="Amit Kumar - Software Developer | AI &amp; ML | MLOps - 3D Motion Terminal Profile" width="100%">
 </picture>
 
 <br><br>
